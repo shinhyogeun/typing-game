@@ -15,3 +15,4 @@ This repository is for typing-game.
 9. 일단 우리가 다음에 해야하는 부분은 완성하고 부드럽게 넘기는 것과 속도 측정.
 10.DATABASE는 FIREBASE
 11. UI/UX는 Sketch로 한다.
+12. 시험끝나면 바로 Sketch와 FIREBASE를 배운다.
