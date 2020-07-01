@@ -106,11 +106,6 @@ class MainViewController: UIViewController, UITextFieldDelegate {
                         completeTrigger2 = Array(whatYouAlreadyWrite).count
                         print(completeTrigger2)
                         for a in 0..<Array(Jamo.getJamo(String(Array(whatYouHaveToWrite)[completeTrigger2-1]))).count{
-                            do {
-                                try
-                            } catch <#pattern#> {
-                                <#statements#>
-                            }
                             if Array(Jamo.getJamo(String(Array(whatYouHaveToWrite)[completeTrigger2-1])))[a] !=
                                 Array(Jamo.getJamo(String(Array(whatYouAlreadyWrite)[completeTrigger2-1])))[a]{
                                 miss += 1
