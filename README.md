@@ -16,4 +16,4 @@ This repository is for typing-game.
 10.DATABASE는 FIREBASE
 11. UI/UX는 Sketch로 한다.
 12. 시험끝나면 바로 Sketch와 FIREBASE를 배운다.
-13. 6/29 Sketch구매를 알아보고 스위프트 고급 기법 공부(방식), 타닥을 진행한다.(0)
+13. 6/29 Sketch구매를 알아보고 스위프트 고급 기법 공부(방식), 타닥을 진행한다.(0)3
