@@ -35,6 +35,7 @@ class MainViewController: UIViewController, UITextFieldDelegate {
     var calculate = Calculate.init()
     var input = ""
     var completeTrigger = 1
+    var completeTrigger2 = 1
     var ab = 0
     var miss = 0
     
@@ -98,23 +99,30 @@ class MainViewController: UIViewController, UITextFieldDelegate {
                 
                 
 //              오타개수 계산하기(실시간)
-                for i in 0...Array(whatYouHaveToWrite).count-1{
-                    completeTrigger = Array(whatYouAlreadyWrite).count
-                    if i <= Array(whatYouAlreadyWrite).count-1{
-                        if i + 1 == completeTrigger{
-                            for a in 0..<Array(Jamo.getJamo(String(Array(whatYouHaveToWrite)[i]))).count{
-                                if a < Array(Jamo.getJamo(String(Array(whatYouAlreadyWrite)[i]))).count{
-                                    if Array(Jamo.getJamo(String(Array(whatYouAlreadyWrite)[i])))[a] != Array(Jamo.getJamo(String(Array(whatYouHaveToWrite)[i])))[a]{
-                                        miss += 1
-                                    }
-                                }
+            for i in 0...Array(whatYouHaveToWrite).count-1{
+                if i <= Array(whatYouAlreadyWrite).count-1{
+                    print(completeTrigger2)
+                    if Array(whatYouAlreadyWrite).count > completeTrigger2 {
+                        completeTrigger2 = Array(whatYouAlreadyWrite).count
+                        print(completeTrigger2)
+                        for a in 0..<Array(Jamo.getJamo(String(Array(whatYouHaveToWrite)[completeTrigger2-1]))).count{
+                            do {
+                                try
+                            } catch <#pattern#> {
+                                <#statements#>
                             }
+                            if Array(Jamo.getJamo(String(Array(whatYouHaveToWrite)[completeTrigger2-1])))[a] !=
+                                Array(Jamo.getJamo(String(Array(whatYouAlreadyWrite)[completeTrigger2-1])))[a]{
+                                miss += 1
+                            }
+                            
                         }
-                    } else {
-                        print(miss)
-                        ab = 0
                     }
+                } else {
+//                    print(miss)
+                    ab = 0
                 }
+            }
                 
                 //타자를 치고있고 쳤는데 내용이 동일한 경우
                 if Array(jamoYouHaveToWrite) == Array(jamoYouAlreadyWrite){
