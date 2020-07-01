@@ -114,7 +114,7 @@ class MainViewController: UIViewController, UITextFieldDelegate {
                         }
                     }
                 } else {
-//                    print(miss)
+                    print(miss)
                     ab = 0
                 }
             }
