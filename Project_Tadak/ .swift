@@ -25,6 +25,7 @@ class MainViewController: UIViewController, UITextFieldDelegate {
     
     let jamoArray : Array<String> = []
     var a = 0
+    var aa = 2
     var timeTrigger = true
     var realTime = Timer()
     var second : Double = 00.00
@@ -35,7 +36,7 @@ class MainViewController: UIViewController, UITextFieldDelegate {
     var calculate = Calculate.init()
     var input = ""
     var completeTrigger = 1
-    var completeTrigger2 = 1
+    var completeTrigger2 = 0
     var ab = 0
     var miss = 0
     
@@ -99,25 +100,44 @@ class MainViewController: UIViewController, UITextFieldDelegate {
                 
                 
 //              오타개수 계산하기(실시간)
-            for i in 0...Array(whatYouHaveToWrite).count-1{
-                if i <= Array(whatYouAlreadyWrite).count-1{
-                    print(completeTrigger2)
-                    if Array(whatYouAlreadyWrite).count > completeTrigger2 {
-                        completeTrigger2 = Array(whatYouAlreadyWrite).count
-                        print(completeTrigger2)
-                        for a in 0..<Array(Jamo.getJamo(String(Array(whatYouHaveToWrite)[completeTrigger2-1]))).count{
-                            if Array(Jamo.getJamo(String(Array(whatYouHaveToWrite)[completeTrigger2-1])))[a] !=
-                                Array(Jamo.getJamo(String(Array(whatYouAlreadyWrite)[completeTrigger2-1])))[a]{
-                                miss += 1
+                for i in 0...Array(whatYouHaveToWrite).count-1{
+                    completeTrigger2 = Array(whatYouAlreadyWrite).count
+                    if i <= Array(whatYouAlreadyWrite).count-1{
+                        if i + 1 == completeTrigger2 && i > 0 && completeTrigger2 - aa == 0{
+                            aa += 1
+                            var compare1 = Array(Jamo.getJamo(String(Array(whatYouAlreadyWrite)[i-1]))).count
+                            var compare2 = Array(Jamo.getJamo(String(Array(whatYouHaveToWrite)[i-1]))).count
+                            if compare2 > compare1 {
+                                for a in 0...compare1-1{
+                                    if Array(Jamo.getJamo(String(Array(whatYouAlreadyWrite)[i-1])))[a] !=
+                                        Array(Jamo.getJamo(String(Array(whatYouHaveToWrite)[i-1])))[a]{
+                                        miss += 1
+                                    }
+                                }
+                                miss += compare2 - compare1
+                            } else if compare2 == compare1 {
+                                for a in 0...compare1-1{
+                                    if Array(Jamo.getJamo(String(Array(whatYouAlreadyWrite)[i-1])))[a] !=
+                                        Array(Jamo.getJamo(String(Array(whatYouHaveToWrite)[i-1])))[a]{
+                                        miss += 1
+                                    }
+                                }
+                            } else if compare2 < compare1{
+                                for a in 0...compare2-1{
+                                    if Array(Jamo.getJamo(String(Array(whatYouAlreadyWrite)[i-1])))[a] !=
+                                        Array(Jamo.getJamo(String(Array(whatYouHaveToWrite)[i-1])))[a]{
+                                        miss += 1
+                                    }
+                                }
+                                miss += compare2 - compare1
                             }
-                            
+                            print(miss)
+                        }
+                        if <#condition#> {
+                            <#code#>
                         }
                     }
-                } else {
-                    print(miss)
-                    ab = 0
                 }
-            }
                 
                 //타자를 치고있고 쳤는데 내용이 동일한 경우
                 if Array(jamoYouHaveToWrite) == Array(jamoYouAlreadyWrite){
@@ -125,6 +145,7 @@ class MainViewController: UIViewController, UITextFieldDelegate {
                     completeTrigger = 1
                     showArrays()
                     viewLabel.textColor = .black
+                    completeTrigger2 = 0
                 }
                 //내용이 틀리지만 글자수가 동일한 경우
                 else if Array(viewLabel.text!).count < Array(input).count{
@@ -132,6 +153,7 @@ class MainViewController: UIViewController, UITextFieldDelegate {
                     completeTrigger = 1
                     showArrays()
                     viewLabel.textColor = .black
+                    completeTrigger2 = 0
                 }
                 
             }
@@ -191,4 +213,20 @@ class MainViewController: UIViewController, UITextFieldDelegate {
         endStatus = false
     }
     
+
+    func arbitrua(firstInt : Int, SecondInt : Int, WW : Array<String>) throws {
+        guard Array(Jamo.getJamo(String(Array(WW)[firstInt-1]))).count > SecondInt else {
+            throw error.outOfRange
+        }
+    }
+    
+    enum error : Error {
+        case outOfRange
+    }
+}
+
+extension Array {
+    subscript(safe index: Index) -> Element? {
+        return indices.contains(index) ? self[index] : nil
+    }
 }
