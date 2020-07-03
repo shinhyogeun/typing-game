@@ -20,7 +20,7 @@
 		9399C4BE2476585500F73CDD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9399C4BD2476585500F73CDD /* Assets.xcassets */; };
 		9399C4C12476585500F73CDD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9399C4BF2476585500F73CDD /* LaunchScreen.storyboard */; };
 		9399C4C92476608900F73CDD /* SelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9399C4C82476608900F73CDD /* SelectionViewController.swift */; };
-		9399C4CB247660BC00F73CDD /*  .swift in Sources */ = {isa = PBXBuildFile; fileRef = 9399C4CA247660BC00F73CDD /*  .swift */; };
+		9399C4CB247660BC00F73CDD /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9399C4CA247660BC00F73CDD /* MainViewController.swift */; };
 		9399C4CD247660E500F73CDD /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9399C4CC247660E500F73CDD /* ResultViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -40,7 +40,7 @@
 		9399C4C02476585500F73CDD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9399C4C22476585500F73CDD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9399C4C82476608900F73CDD /* SelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionViewController.swift; sourceTree = "<group>"; };
-		9399C4CA247660BC00F73CDD /*  .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = " .swift"; sourceTree = "<group>"; };
+		9399C4CA247660BC00F73CDD /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		9399C4CC247660E500F73CDD /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -97,7 +97,7 @@
 				93790AE6247D5BFA0046349E /* img */,
 				9399C4BA2476585400F73CDD /* Main.storyboard */,
 				9399C4CC247660E500F73CDD /* ResultViewController.swift */,
-				9399C4CA247660BC00F73CDD /*  .swift */,
+				9399C4CA247660BC00F73CDD /* MainViewController.swift */,
 				9399C4B42476585400F73CDD /* AppDelegate.swift */,
 				9399C4B62476585400F73CDD /* SceneDelegate.swift */,
 				9399C4B82476585400F73CDD /* LoginViewController.swift */,
@@ -190,7 +190,7 @@
 				1572F2C524816D1C004EB34D /* Calculate.swift in Sources */,
 				9399C4B52476585400F73CDD /* AppDelegate.swift in Sources */,
 				9399C4B72476585400F73CDD /* SceneDelegate.swift in Sources */,
-				9399C4CB247660BC00F73CDD /*  .swift in Sources */,
+				9399C4CB247660BC00F73CDD /* MainViewController.swift in Sources */,
 				158F26A4247FE0260046356C /* Jamo.swift in Sources */,
 				9399C4CD247660E500F73CDD /* ResultViewController.swift in Sources */,
 			);

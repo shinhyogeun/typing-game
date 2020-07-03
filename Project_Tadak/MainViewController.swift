@@ -68,6 +68,23 @@ class MainViewController: UIViewController, UITextFieldDelegate {
                 //비교를 위한 자모음 분해한 배열
                 let jamoYouHaveToWrite = Jamo.getJamo(viewLabel.text!)
                 let jamoYouAlreadyWrite = Jamo.getJamo(input)
+                let luxuryJamoArrayYouAlreadyWrite : Array<Any>
+                let luxuryJamoArrayYouHaveToWrite : Array<Any>
+                
+                if Array(input).count < aa-1 {
+                    if Array(input).count == 0{
+                    aa = 2
+                    }else{
+                    aa = Array(input).count + 1
+                    }
+                }
+                
+                if Array(input).count == aa {
+                    luxuryJamoArrayYouAlreadyWrite = Array(Jamo.getJamo(String(Array(input)[0...aa-2])))
+                    luxuryJamoArrayYouHaveToWrite =
+                        Array(Jamo.getJamo(String(Array(input)[0...aa-2])))
+                    aa += 1
+                }
                 
                 //비교를 위한 글자 분해한 배열
                 let whatYouHaveToWrite = Text.init().textArray[a]
@@ -102,7 +119,6 @@ class MainViewController: UIViewController, UITextFieldDelegate {
 //              오타개수 계산하기(실시간)
                 for i in 0...Array(whatYouHaveToWrite).count-1{
                     completeTrigger2 = Array(whatYouAlreadyWrite).count
-                    if i <= Array(whatYouAlreadyWrite).count-1{
                         if i + 1 == completeTrigger2 && i > 0 && completeTrigger2 - aa == 0{
                             aa += 1
                             var compare1 = Array(Jamo.getJamo(String(Array(whatYouAlreadyWrite)[i-1]))).count
@@ -133,10 +149,6 @@ class MainViewController: UIViewController, UITextFieldDelegate {
                             }
                             print(miss)
                         }
-                        if <#condition#> {
-                            <#code#>
-                        }
-                    }
                 }
                 
                 //타자를 치고있고 쳤는데 내용이 동일한 경우
