@@ -68,8 +68,12 @@ class MainViewController: UIViewController, UITextFieldDelegate {
                 //비교를 위한 자모음 분해한 배열
                 let jamoYouHaveToWrite = Jamo.getJamo(viewLabel.text!)
                 let jamoYouAlreadyWrite = Jamo.getJamo(input)
-                let luxuryJamoArrayYouAlreadyWrite : Array<Any>
-                let luxuryJamoArrayYouHaveToWrite : Array<Any>
+//                let luxuryJamoArrayYouAlreadyWrite : Array<Any>
+//                let luxuryJamoArrayYouHaveToWrite : Array<Any>
+                
+                //비교를 위한 글자 분해한 배열
+                let whatYouHaveToWrite = Text.init().textArray[a]
+                let whatYouAlreadyWrite = input
                 
                 if Array(input).count < aa-1 {
                     if Array(input).count == 0{
@@ -77,18 +81,40 @@ class MainViewController: UIViewController, UITextFieldDelegate {
                     }else{
                     aa = Array(input).count + 1
                     }
-                }
-                
-                if Array(input).count == aa {
-                    luxuryJamoArrayYouAlreadyWrite = Array(Jamo.getJamo(String(Array(input)[0...aa-2])))
-                    luxuryJamoArrayYouHaveToWrite =
-                        Array(Jamo.getJamo(String(Array(input)[0...aa-2])))
+                } else if Array(input).count == aa {
+//                    luxuryJamoArrayYouAlreadyWrite = Array(Jamo.getJamo(String(Array(input)[0...aa-2])))
+//                    luxuryJamoArrayYouHaveToWrite = Array(Jamo.getJamo(String(Array(input)[0...aa-2])))
+                        
+                        var compare1 = Array(Jamo.getJamo(String(Array(whatYouAlreadyWrite)[aa-2]))).count
+                        var compare2 = Array(Jamo.getJamo(String(Array(whatYouHaveToWrite)[aa-2]))).count
+                    
+                        if compare2 > compare1 {
+                            for a in 0...compare1-1{
+                                if Array(Jamo.getJamo(String(Array(whatYouAlreadyWrite)[aa-2])))[a] !=
+                                    Array(Jamo.getJamo(String(Array(whatYouHaveToWrite)[aa-2])))[a]{
+                                    miss += 1
+                                }
+                            }
+                            miss += compare2 - compare1
+                        } else if compare2 == compare1 {
+                            for a in 0...compare1-1{
+                                if Array(Jamo.getJamo(String(Array(whatYouAlreadyWrite)[aa-2])))[a] !=
+                                    Array(Jamo.getJamo(String(Array(whatYouHaveToWrite)[aa-2])))[a]{
+                                    miss += 1
+                                }
+                            }
+                        } else if compare2 < compare1{
+                            for a in 0...compare2-1{
+                                if Array(Jamo.getJamo(String(Array(whatYouAlreadyWrite)[aa-2])))[a] !=
+                                    Array(Jamo.getJamo(String(Array(whatYouHaveToWrite)[aa-2])))[a]{
+                                    miss += 1
+                                }
+                            }
+                            miss += compare2 - compare1
+                        }
+                    print(miss)
                     aa += 1
                 }
-                
-                //비교를 위한 글자 분해한 배열
-                let whatYouHaveToWrite = Text.init().textArray[a]
-                let whatYouAlreadyWrite = input
                 
                 let attr = NSMutableAttributedString(string: viewLabel.text!)
                 
