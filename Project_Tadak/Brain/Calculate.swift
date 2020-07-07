@@ -50,7 +50,6 @@ class Calculate {
                                     }
                                     miss += compare2 - compare1
                                 }
-                            print(miss)
                             aa += 1
                         }
         return miss
