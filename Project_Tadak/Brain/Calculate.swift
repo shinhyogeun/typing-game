@@ -11,47 +11,49 @@ import UIKit
 
 class Calculate {
     
-    var miss = 0
     var aa = 2
     
-     func countMiss(_ input : String, whatYouHaveToWrite : String, whatYouAlreadyWrite : String) -> Int {
+    func countMiss(_ input : String, whatYouHaveToWrite : String, whatYouAlreadyWrite : String) -> Int {
+        var miss = 0
         if Array(input).count < aa-1 {
-                            if Array(input).count == 0{
-                                self.aa = 2
-                            }else{
-                                self.aa = Array(input).count + 1
-                            }
-                        } else if Array(input).count == aa {
-                                
-                                var compare1 = Array(Jamo.getJamo(String(Array(whatYouAlreadyWrite)[aa-2]))).count
-                                var compare2 = Array(Jamo.getJamo(String(Array(whatYouHaveToWrite)[aa-2]))).count
-                            
-                                if compare2 > compare1 {
-                                    for a in 0...compare1-1{
-                                        if Array(Jamo.getJamo(String(Array(whatYouAlreadyWrite)[aa-2])))[a] !=
-                                            Array(Jamo.getJamo(String(Array(whatYouHaveToWrite)[aa-2])))[a]{
-                                            miss += 1
-                                        }
-                                    }
-                                    miss += compare2 - compare1
-                                } else if compare2 == compare1 {
-                                    for a in 0...compare1-1{
-                                        if Array(Jamo.getJamo(String(Array(whatYouAlreadyWrite)[aa-2])))[a] !=
-                                            Array(Jamo.getJamo(String(Array(whatYouHaveToWrite)[aa-2])))[a]{
-                                            miss += 1
-                                        }
-                                    }
-                                } else if compare2 < compare1{
-                                    for a in 0...compare2-1{
-                                        if Array(Jamo.getJamo(String(Array(whatYouAlreadyWrite)[aa-2])))[a] !=
-                                            Array(Jamo.getJamo(String(Array(whatYouHaveToWrite)[aa-2])))[a]{
-                                            miss += 1
-                                        }
-                                    }
-                                    miss += compare2 - compare1
-                                }
-                            aa += 1
+            if Array(input).count == 0{
+                self.aa = 2
+            }else{
+                self.aa = Array(input).count + 1
+            }
+        } else if Array(input).count == aa {
+            for i in 0 ... aa-2{
+                let compare1 = Array(Jamo.getJamo(String(Array(whatYouAlreadyWrite)[i]))).count
+                let compare2 = Array(Jamo.getJamo(String(Array(whatYouHaveToWrite)[i]))).count
+                
+                if compare2 > compare1 {
+                    for a in 0...compare1-1{
+                        if Array(Jamo.getJamo(String(Array(whatYouAlreadyWrite)[i])))[a] !=
+                            Array(Jamo.getJamo(String(Array(whatYouHaveToWrite)[i])))[a]{
+                            miss += 1
                         }
+                    }
+                    miss += compare2 - compare1
+                } else if compare2 == compare1 {
+                    for a in 0...compare1-1{
+                        if Array(Jamo.getJamo(String(Array(whatYouAlreadyWrite)[i])))[a] !=
+                            Array(Jamo.getJamo(String(Array(whatYouHaveToWrite)[i])))[a]{
+                            miss += 1
+                        }
+                    }
+                } else if compare2 < compare1{
+                    for a in 0...compare2-1{
+                        if Array(Jamo.getJamo(String(Array(whatYouAlreadyWrite)[i])))[a] !=
+                            Array(Jamo.getJamo(String(Array(whatYouHaveToWrite)[i])))[a]{
+                            miss += 1
+                        }
+                    }
+                    miss += compare2 - compare1
+                }
+            }
+            print(miss)
+            aa += 1
+        }
         return miss
     }
     

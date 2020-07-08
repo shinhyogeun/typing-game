@@ -52,7 +52,7 @@ class MainViewController: UIViewController, UITextFieldDelegate {
     //input에 입력될 시 실행
     @objc func textFieldDidChange(textField: UITextField){
         if let input = textField.text{
-            print(Array(input).count + baseWholeArraycount)
+            Array(input).count + baseWholeArraycount
             //첫 실행시 타이머 작동 메소드
             if timeTrigger { checkTimeTrigger() }
             //게임종료 조건 전까지 계속 실행
