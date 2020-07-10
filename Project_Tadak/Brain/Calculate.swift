@@ -12,6 +12,7 @@ import UIKit
 class Calculate {
     
     var aa = 2
+    let GREEN = UIColor(named: "ColorGreen")
     
     func countMiss(_ input : String, whatYouHaveToWrite : String, whatYouAlreadyWrite : String) -> Int {
         var miss = 0
@@ -63,7 +64,7 @@ class Calculate {
                             let completeTrigger = Array(whatYouAlreadyWrite).count
                             if i <= Array(whatYouAlreadyWrite).count-1{
                                 if Array(String(whatYouAlreadyWrite))[i] == Array(whatYouHaveToWrite)[i] {
-                                    attr.addAttribute(.foregroundColor, value: UIColor.systemBlue, range: NSRange(location:i,length:1))
+                                    attr.addAttribute(.foregroundColor, value: self.GREEN, range: NSRange(location:i,length:1))
                                     if i + 1 == completeTrigger{
                                         textField.text?.append("*")
                                         textField.text = textField.text?.trimmingCharacters(in: ["*"])

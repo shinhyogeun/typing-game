@@ -16,8 +16,6 @@ class MainViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet var afterLabel: UILabel!
     @IBOutlet var beforeLabel: UILabel!
-    @IBOutlet var timeView: UIView!
-    @IBOutlet var labelsView: UIView!
     var WrongCount = 0
     
     
@@ -26,7 +24,7 @@ class MainViewController: UIViewController, UITextFieldDelegate {
     var aa = 2
     var timeTrigger = true
     var realTime = Timer()
-    var second : Double = 3000.00
+    var second : Double = 60.00
     //종료조건 추가 : M
     var endStatus = true
     //문장 개수 : M
@@ -39,12 +37,14 @@ class MainViewController: UIViewController, UITextFieldDelegate {
     var miss = 0
     var baseWholeArraycount = 0
     
+    let LABEL = UIColor(named: "ColorLabel")
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.hideKeyboard()
-        timeView.layer.cornerRadius = 14
-        labelsView.layer.cornerRadius = 14
+        timeLabel.text = String(format: "%.2f",second)
         beforeLabel.text = Text.init().textArray[0]
+        beforeLabel.textColor = LABEL
         inputTextField.addTarget(self, action: #selector(textFieldDidChange(textField:)), for: UIControl.Event.editingChanged)
         let calculate = Calculate()
     }
@@ -57,12 +57,7 @@ class MainViewController: UIViewController, UITextFieldDelegate {
             if timeTrigger { checkTimeTrigger() }
             //게임종료 조건 전까지 계속 실행
             if endStatus {
-                //문장 설정
-                if a == 0 {
-                    afterLabel.text = ""
-                    viewLabel.text = Text.init().textArray[a]
-                    beforeLabel.text = Text.init().textArray[a+1]
-                }
+                
                 //비교를 위한 자모음 분해한 배열
                 let whatYouHaveToWrite = Text.init().textArray[a]
                 let whatYouAlreadyWrite = input
@@ -76,7 +71,7 @@ class MainViewController: UIViewController, UITextFieldDelegate {
                     a = a + 1
                     completeTrigger = 1
                     showArrays()
-                    viewLabel.textColor = .black
+                    viewLabel.textColor = .white
                     completeTrigger2 = 0
                 }
                 //내용이 틀리지만 글자수가 동일한 경우
@@ -85,7 +80,7 @@ class MainViewController: UIViewController, UITextFieldDelegate {
                     a = a + 1
                     completeTrigger = 1
                     showArrays()
-                    viewLabel.textColor = .black
+                    viewLabel.textColor = .white
                     completeTrigger2 = 0
                 }
                 
@@ -112,6 +107,24 @@ class MainViewController: UIViewController, UITextFieldDelegate {
         realTime = Timer.scheduledTimer(timeInterval: 0.01, target: self, selector: #selector(updateCounter), userInfo: nil, repeats: true)
         numOfArray = Text.init().textArray.count
         timeTrigger = false
+        
+        afterLabel.text = ""
+        viewLabel.text = Text.init().textArray[a]
+        beforeLabel.text = Text.init().textArray[a+1]
+        
+        self.viewLabel.transform = CGAffineTransform(translationX: 0, y: 37)
+        self.viewLabel.alpha = 0.5
+        UIView.animate(withDuration: 0.4) {
+            self.viewLabel.transform = CGAffineTransform(translationX: 0, y: 0).concatenating(CGAffineTransform(scaleX: 1.2, y: 1.2))
+            self.viewLabel.alpha = 1
+        }
+
+        self.beforeLabel.transform = CGAffineTransform(translationX: 0, y: 37)
+        self.beforeLabel.alpha = 0
+        UIView.animate(withDuration: 0.4) {
+            self.beforeLabel.alpha = 0.5
+            self.beforeLabel.transform = CGAffineTransform(translationX: 0, y: 0)
+        }
     }
     
     func showArrays() {
@@ -121,52 +134,84 @@ class MainViewController: UIViewController, UITextFieldDelegate {
             afterLabel.text = Text.init().textArray[a-1]
             viewLabel.text = Text.init().textArray[a]
             
-            self.beforeLabel.transform = CGAffineTransform(translationX: 0, y: 75)
-            beforeLabel.alpha = 0
+            self.afterLabel.transform = CGAffineTransform(translationX: 0, y: 37)
+            self.afterLabel.alpha = 1
+            UIView.animate(withDuration: 0.4) {
+                self.afterLabel.alpha = 0;
+                self.afterLabel.transform = CGAffineTransform(translationX: 0, y: 0).concatenating(CGAffineTransform(scaleX: 1.0, y: 1.0))
+            }
+            
+            self.viewLabel.transform = CGAffineTransform(translationX: 0, y: 37)
+            self.viewLabel.alpha = 0.5
+            UIView.animate(withDuration: 0.4) {
+                self.viewLabel.transform = CGAffineTransform(translationX: 0, y: 0).concatenating(CGAffineTransform(scaleX: 1.2, y: 1.2))
+                self.viewLabel.alpha = 1
+            }
+
+            self.beforeLabel.transform = CGAffineTransform(translationX: 0, y: 37)
+            self.beforeLabel.alpha = 0
             UIView.animate(withDuration: 0.4) {
                 self.beforeLabel.alpha = 1;
                 self.beforeLabel.transform = CGAffineTransform(translationX: 0, y: 0)
             }
-            
-            self.viewLabel.transform = CGAffineTransform(translationX: 0, y: 75)
-//            viewLabel.alpha = 0
-            UIView.animate(withDuration: 0.4) {
-//                self.viewLabel.alpha = 1;
-                self.viewLabel.transform = CGAffineTransform(translationX: 0, y: 0)
-            }
-            
-            self.afterLabel.transform = CGAffineTransform(translationX: 0, y: 75)
-            afterLabel.alpha = 1
-            UIView.animate(withDuration: 0.4) {
-                self.afterLabel.alpha = 0;
-                self.afterLabel.transform = CGAffineTransform(translationX: 0, y: 0)
-            }
-            
+
             beforeLabel.text = Text.init().textArray[a+1]
             inputTextField.text = ""
+            
+            
         }
         else if a == numOfArray-1
         {
             afterLabel.text = Text.init().textArray[a-1]
             viewLabel.text = Text.init().textArray[a]
+            
+            self.afterLabel.transform = CGAffineTransform(translationX: 0, y: 37)
+            self.afterLabel.alpha = 1
+            UIView.animate(withDuration: 0.4) {
+                self.afterLabel.alpha = 0;
+                self.afterLabel.transform = CGAffineTransform(translationX: 0, y: 0).concatenating(CGAffineTransform(scaleX: 1.0, y: 1.0))
+            }
+            
+            self.viewLabel.transform = CGAffineTransform(translationX: 0, y: 37)
+            self.viewLabel.alpha = 0.5
+            UIView.animate(withDuration: 0.4) {
+                self.viewLabel.transform = CGAffineTransform(translationX: 0, y: 0).concatenating(CGAffineTransform(scaleX: 1.2, y: 1.2))
+                self.viewLabel.alpha = 1
+            }
+            
             beforeLabel.text = ""
             inputTextField.text = ""
         }
         else if a > numOfArray-1
         {
+            afterLabel.text = Text.init().textArray[a-1]
+            
+            self.afterLabel.transform = CGAffineTransform(translationX: 0, y: 37)
+            self.afterLabel.alpha = 1
+            UIView.animate(withDuration: 0.4) {
+                self.afterLabel.alpha = 0;
+                self.afterLabel.transform = CGAffineTransform(translationX: 0, y: 0).concatenating(CGAffineTransform(scaleX: 1.0, y: 1.0))
+            }
             endGame()
+            self.viewLabel.transform = CGAffineTransform(translationX: 0, y: 37)
+            viewLabel.alpha = 0
+            UIView.animate(withDuration: 0.4) {
+                self.viewLabel.transform = CGAffineTransform(translationX: 0, y: 0)
+                self.viewLabel.alpha = 1
+            }
         }
     }
     
     func endGame() {
         realTime.invalidate()
         //종료시 보이는 문장 수정 : M
-        afterLabel.text = ""
+//        afterLabel.text = ""
         viewLabel.text = "게임이 종료되었습니다."
         beforeLabel.text = ""
         inputTextField.isHidden = true
         //종료조건 : M
         endStatus = false
+        self.view.endEditing(true)
     }
 
     

@@ -10,6 +10,12 @@
 		1572F2C524816D1C004EB34D /* Calculate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1572F2C424816D1C004EB34D /* Calculate.swift */; };
 		158F26A4247FE0260046356C /* Jamo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 158F26A3247FE0260046356C /* Jamo.swift */; };
 		158F26A6247FE5B10046356C /* Text.swift in Sources */ = {isa = PBXBuildFile; fileRef = 158F26A5247FE5B10046356C /* Text.swift */; };
+		930E38F224B8612C00D957FE /* HGGGOTHICSSI_PRO_20G.otf in Resources */ = {isa = PBXBuildFile; fileRef = 930E38EC24B8612C00D957FE /* HGGGOTHICSSI_PRO_20G.otf */; };
+		930E38F324B8612C00D957FE /* HGGGOTHICSSI_PRO_60G.otf in Resources */ = {isa = PBXBuildFile; fileRef = 930E38ED24B8612C00D957FE /* HGGGOTHICSSI_PRO_60G.otf */; };
+		930E38F424B8612C00D957FE /* HGGGOTHICSSI_PRO_00G.otf in Resources */ = {isa = PBXBuildFile; fileRef = 930E38EE24B8612C00D957FE /* HGGGOTHICSSI_PRO_00G.otf */; };
+		930E38F524B8612C00D957FE /* HGGGOTHICSSI_PRO_40G.otf in Resources */ = {isa = PBXBuildFile; fileRef = 930E38EF24B8612C00D957FE /* HGGGOTHICSSI_PRO_40G.otf */; };
+		930E38F624B8612C00D957FE /* HGGGOTHICSSI_PRO_80G.otf in Resources */ = {isa = PBXBuildFile; fileRef = 930E38F024B8612C00D957FE /* HGGGOTHICSSI_PRO_80G.otf */; };
+		930E38F724B8612C00D957FE /* HGGGOTHICSSI_PRO_99G.otf in Resources */ = {isa = PBXBuildFile; fileRef = 930E38F124B8612C00D957FE /* HGGGOTHICSSI_PRO_99G.otf */; };
 		93790AE9247D5C090046349E /* user.png in Resources */ = {isa = PBXBuildFile; fileRef = 93790AE7247D5C090046349E /* user.png */; };
 		93790AEA247D5C090046349E /* password.png in Resources */ = {isa = PBXBuildFile; fileRef = 93790AE8247D5C090046349E /* password.png */; };
 		93790AEC247D64B00046349E /* key.png in Resources */ = {isa = PBXBuildFile; fileRef = 93790AEB247D64B00046349E /* key.png */; };
@@ -28,6 +34,12 @@
 		1572F2C424816D1C004EB34D /* Calculate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calculate.swift; sourceTree = "<group>"; };
 		158F26A3247FE0260046356C /* Jamo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Jamo.swift; sourceTree = "<group>"; };
 		158F26A5247FE5B10046356C /* Text.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Text.swift; sourceTree = "<group>"; };
+		930E38EC24B8612C00D957FE /* HGGGOTHICSSI_PRO_20G.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = HGGGOTHICSSI_PRO_20G.otf; path = "고딕씨+윈도우/HGGGOTHICSSI_PRO_20G.otf"; sourceTree = SOURCE_ROOT; };
+		930E38ED24B8612C00D957FE /* HGGGOTHICSSI_PRO_60G.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = HGGGOTHICSSI_PRO_60G.otf; path = "고딕씨+윈도우/HGGGOTHICSSI_PRO_60G.otf"; sourceTree = SOURCE_ROOT; };
+		930E38EE24B8612C00D957FE /* HGGGOTHICSSI_PRO_00G.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = HGGGOTHICSSI_PRO_00G.otf; path = "고딕씨+윈도우/HGGGOTHICSSI_PRO_00G.otf"; sourceTree = SOURCE_ROOT; };
+		930E38EF24B8612C00D957FE /* HGGGOTHICSSI_PRO_40G.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = HGGGOTHICSSI_PRO_40G.otf; path = "고딕씨+윈도우/HGGGOTHICSSI_PRO_40G.otf"; sourceTree = SOURCE_ROOT; };
+		930E38F024B8612C00D957FE /* HGGGOTHICSSI_PRO_80G.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = HGGGOTHICSSI_PRO_80G.otf; path = "고딕씨+윈도우/HGGGOTHICSSI_PRO_80G.otf"; sourceTree = SOURCE_ROOT; };
+		930E38F124B8612C00D957FE /* HGGGOTHICSSI_PRO_99G.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = HGGGOTHICSSI_PRO_99G.otf; path = "../../고딕씨+윈도우/HGGGOTHICSSI_PRO_99G.otf"; sourceTree = "<group>"; };
 		93790AE7247D5C090046349E /* user.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = user.png; sourceTree = "<group>"; };
 		93790AE8247D5C090046349E /* password.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = password.png; sourceTree = "<group>"; };
 		93790AEB247D64B00046349E /* key.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = key.png; sourceTree = "<group>"; };
@@ -65,6 +77,19 @@
 			path = Brain;
 			sourceTree = "<group>";
 		};
+		930E38EB24B860E100D957FE /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				930E38EE24B8612C00D957FE /* HGGGOTHICSSI_PRO_00G.otf */,
+				930E38EC24B8612C00D957FE /* HGGGOTHICSSI_PRO_20G.otf */,
+				930E38EF24B8612C00D957FE /* HGGGOTHICSSI_PRO_40G.otf */,
+				930E38ED24B8612C00D957FE /* HGGGOTHICSSI_PRO_60G.otf */,
+				930E38F024B8612C00D957FE /* HGGGOTHICSSI_PRO_80G.otf */,
+				930E38F124B8612C00D957FE /* HGGGOTHICSSI_PRO_99G.otf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		93790AE6247D5BFA0046349E /* img */ = {
 			isa = PBXGroup;
 			children = (
@@ -94,6 +119,7 @@
 		9399C4B32476585400F73CDD /* Project_Tadak */ = {
 			isa = PBXGroup;
 			children = (
+				930E38EB24B860E100D957FE /* Fonts */,
 				93790AE6247D5BFA0046349E /* img */,
 				9399C4BA2476585400F73CDD /* Main.storyboard */,
 				9399C4CC247660E500F73CDD /* ResultViewController.swift */,
@@ -170,9 +196,15 @@
 			files = (
 				9399C4C12476585500F73CDD /* LaunchScreen.storyboard in Resources */,
 				9399C4BE2476585500F73CDD /* Assets.xcassets in Resources */,
+				930E38F624B8612C00D957FE /* HGGGOTHICSSI_PRO_80G.otf in Resources */,
 				93790AEA247D5C090046349E /* password.png in Resources */,
 				93790AEC247D64B00046349E /* key.png in Resources */,
+				930E38F224B8612C00D957FE /* HGGGOTHICSSI_PRO_20G.otf in Resources */,
+				930E38F724B8612C00D957FE /* HGGGOTHICSSI_PRO_99G.otf in Resources */,
 				93790AE9247D5C090046349E /* user.png in Resources */,
+				930E38F524B8612C00D957FE /* HGGGOTHICSSI_PRO_40G.otf in Resources */,
+				930E38F424B8612C00D957FE /* HGGGOTHICSSI_PRO_00G.otf in Resources */,
+				930E38F324B8612C00D957FE /* HGGGOTHICSSI_PRO_60G.otf in Resources */,
 				9399C4BC2476585400F73CDD /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
