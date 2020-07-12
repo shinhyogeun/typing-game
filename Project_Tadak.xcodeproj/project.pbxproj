@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1525D9A524BA07CE00B8AA60 /* AnimatedBlurLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1525D9A424BA07CE00B8AA60 /* AnimatedBlurLabel.swift */; };
 		1572F2C524816D1C004EB34D /* Calculate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1572F2C424816D1C004EB34D /* Calculate.swift */; };
 		158F26A4247FE0260046356C /* Jamo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 158F26A3247FE0260046356C /* Jamo.swift */; };
 		158F26A6247FE5B10046356C /* Text.swift in Sources */ = {isa = PBXBuildFile; fileRef = 158F26A5247FE5B10046356C /* Text.swift */; };
@@ -31,6 +32,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1525D9A424BA07CE00B8AA60 /* AnimatedBlurLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimatedBlurLabel.swift; sourceTree = "<group>"; };
 		1572F2C424816D1C004EB34D /* Calculate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calculate.swift; sourceTree = "<group>"; };
 		158F26A3247FE0260046356C /* Jamo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Jamo.swift; sourceTree = "<group>"; };
 		158F26A5247FE5B10046356C /* Text.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Text.swift; sourceTree = "<group>"; };
@@ -128,6 +130,7 @@
 				9399C4B62476585400F73CDD /* SceneDelegate.swift */,
 				9399C4B82476585400F73CDD /* LoginViewController.swift */,
 				9399C4C82476608900F73CDD /* SelectionViewController.swift */,
+				1525D9A424BA07CE00B8AA60 /* AnimatedBlurLabel.swift */,
 				158F26A2247FDF5E0046356C /* Brain */,
 				9399C4BD2476585500F73CDD /* Assets.xcassets */,
 				9399C4BF2476585500F73CDD /* LaunchScreen.storyboard */,
@@ -224,6 +227,7 @@
 				9399C4B72476585400F73CDD /* SceneDelegate.swift in Sources */,
 				9399C4CB247660BC00F73CDD /* MainViewController.swift in Sources */,
 				158F26A4247FE0260046356C /* Jamo.swift in Sources */,
+				1525D9A524BA07CE00B8AA60 /* AnimatedBlurLabel.swift in Sources */,
 				9399C4CD247660E500F73CDD /* ResultViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
