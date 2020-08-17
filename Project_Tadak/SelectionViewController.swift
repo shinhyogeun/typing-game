@@ -10,36 +10,36 @@ import UIKit
 
 class SelectionViewController: UIViewController {
 
-    
-    
-    @IBOutlet var ViewChoose: UIView!
-    @IBOutlet var ButtonEasy: UIButton!
-    @IBOutlet var ButtonNomal: UIButton!
-    @IBOutlet var ButtonHard: UIButton!
-    @IBOutlet var ViewButtons: UIView!
-    
-    
-    
     override func viewDidLoad() {
+        navigationController?.isNavigationBarHidden = true
         super.viewDidLoad()
 
-        ViewChoose.layer.cornerRadius = 10
-        ButtonEasy.layer.cornerRadius = 10
-        ButtonNomal.layer.cornerRadius = 10
-        ButtonHard.layer.cornerRadius = 10
-        ViewButtons.layer.cornerRadius = 14
-        // Do any additional setup after loading the view.
+        
+        
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
+//    @IBAction func Button_Test1(_ sender: UIButton) {
+//        performSegue(withIdentifier: "test1", sender: self)
+//    }
+//    
+//    @IBAction func Button_Test2(_ sender: UIButton) {
+//        performSegue(withIdentifier: "test2", sender: self)
+//    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        
+        if segue.identifier == "test1"{
+            let secondVC = segue.destination as! MainViewController
+            secondVC.gameInt = 1
+        }
+        else if segue.identifier == "test2"{
+            let secondVC = segue.destination as! MainViewController
+            secondVC.gameInt = 2
+        }
+        else if segue.identifier == "test3"{
+            let secondVC = segue.destination as! MainViewController
+            secondVC.gameInt = 3
+        }
     }
-    */
-
+    
 }

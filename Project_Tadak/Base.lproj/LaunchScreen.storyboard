@@ -1,19 +1,61 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="HGGGOTHICSSI_PRO_60G.otf">
+            <string>HGGGothicssiP60g</string>
+        </array>
+        <array key="HGGGOTHICSSI_PRO_80G.otf">
+            <string>HGGGothicssiP80g</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="EHf-IW-A2E">
             <objects>
                 <viewController id="01J-lp-oVM" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DYa-cj-LkB">
+                                <rect key="frame" x="142.5" y="387.5" width="129.5" height="121.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="타닥" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2pr-KV-hZt">
+                                        <rect key="frame" x="4" y="4" width="121.5" height="82"/>
+                                        <fontDescription key="fontDescription" name="HGGGothicssiP80g" family="HGGGothicssi_Pro" pointSize="70"/>
+                                        <color key="textColor" name="ColorBlue"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="타 자 게 임" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tIJ-sl-R6G">
+                                        <rect key="frame" x="6.5" y="86" width="116" height="31.5"/>
+                                        <fontDescription key="fontDescription" name="HGGGothicssiP60g" family="HGGGothicssi_Pro" pointSize="27"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="tIJ-sl-R6G" firstAttribute="centerX" secondItem="DYa-cj-LkB" secondAttribute="centerX" id="3Wh-hG-Srd"/>
+                                    <constraint firstItem="tIJ-sl-R6G" firstAttribute="top" secondItem="2pr-KV-hZt" secondAttribute="bottom" id="5MK-gL-0oC"/>
+                                    <constraint firstItem="2pr-KV-hZt" firstAttribute="top" secondItem="DYa-cj-LkB" secondAttribute="top" constant="4" id="9cG-Ti-0cY"/>
+                                    <constraint firstItem="2pr-KV-hZt" firstAttribute="centerX" secondItem="DYa-cj-LkB" secondAttribute="centerX" id="Tco-HW-Z7c"/>
+                                    <constraint firstItem="2pr-KV-hZt" firstAttribute="leading" secondItem="DYa-cj-LkB" secondAttribute="leading" constant="4" id="UWF-D0-OGE"/>
+                                    <constraint firstAttribute="trailing" secondItem="2pr-KV-hZt" secondAttribute="trailing" constant="4" id="a4X-90-5bx"/>
+                                    <constraint firstAttribute="bottom" secondItem="tIJ-sl-R6G" secondAttribute="bottom" constant="4" id="xfI-kI-5d8"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="DYa-cj-LkB" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="Hia-9D-av2"/>
+                            <constraint firstItem="DYa-cj-LkB" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="tde-sM-7IN"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
@@ -22,4 +64,9 @@
             <point key="canvasLocation" x="53" y="375"/>
         </scene>
     </scenes>
+    <resources>
+        <namedColor name="ColorBlue">
+            <color red="0.0" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
 </document>

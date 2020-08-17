@@ -3,20 +3,22 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1525D9A524BA07CE00B8AA60 /* AnimatedBlurLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1525D9A424BA07CE00B8AA60 /* AnimatedBlurLabel.swift */; };
 		1572F2C524816D1C004EB34D /* Calculate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1572F2C424816D1C004EB34D /* Calculate.swift */; };
 		158F26A4247FE0260046356C /* Jamo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 158F26A3247FE0260046356C /* Jamo.swift */; };
 		158F26A6247FE5B10046356C /* Text.swift in Sources */ = {isa = PBXBuildFile; fileRef = 158F26A5247FE5B10046356C /* Text.swift */; };
-		930E38F224B8612C00D957FE /* HGGGOTHICSSI_PRO_20G.otf in Resources */ = {isa = PBXBuildFile; fileRef = 930E38EC24B8612C00D957FE /* HGGGOTHICSSI_PRO_20G.otf */; };
-		930E38F324B8612C00D957FE /* HGGGOTHICSSI_PRO_60G.otf in Resources */ = {isa = PBXBuildFile; fileRef = 930E38ED24B8612C00D957FE /* HGGGOTHICSSI_PRO_60G.otf */; };
-		930E38F424B8612C00D957FE /* HGGGOTHICSSI_PRO_00G.otf in Resources */ = {isa = PBXBuildFile; fileRef = 930E38EE24B8612C00D957FE /* HGGGOTHICSSI_PRO_00G.otf */; };
-		930E38F524B8612C00D957FE /* HGGGOTHICSSI_PRO_40G.otf in Resources */ = {isa = PBXBuildFile; fileRef = 930E38EF24B8612C00D957FE /* HGGGOTHICSSI_PRO_40G.otf */; };
-		930E38F624B8612C00D957FE /* HGGGOTHICSSI_PRO_80G.otf in Resources */ = {isa = PBXBuildFile; fileRef = 930E38F024B8612C00D957FE /* HGGGOTHICSSI_PRO_80G.otf */; };
-		930E38F724B8612C00D957FE /* HGGGOTHICSSI_PRO_99G.otf in Resources */ = {isa = PBXBuildFile; fileRef = 930E38F124B8612C00D957FE /* HGGGOTHICSSI_PRO_99G.otf */; };
+		7720FDF524E6C6BE007552B2 /* NewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7720FDF424E6C6BE007552B2 /* NewViewController.swift */; };
+		77671E6B24E8CEB3009A1A4A /* Text2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77671E6A24E8CEB3009A1A4A /* Text2.swift */; };
+		778B1CC624E9082800BB68C6 /* CustomIntensityVisualEffectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 778B1CC524E9082800BB68C6 /* CustomIntensityVisualEffectView.swift */; };
+		77A3373824E51EEA00B3159F /* HGGGOTHICSSI_PRO_80G.otf in Resources */ = {isa = PBXBuildFile; fileRef = 77A3373224E51EE900B3159F /* HGGGOTHICSSI_PRO_80G.otf */; };
+		77A3373924E51EEA00B3159F /* HGGGOTHICSSI_PRO_99G.otf in Resources */ = {isa = PBXBuildFile; fileRef = 77A3373324E51EE900B3159F /* HGGGOTHICSSI_PRO_99G.otf */; };
+		77A3373A24E51EEA00B3159F /* HGGGOTHICSSI_PRO_40G.otf in Resources */ = {isa = PBXBuildFile; fileRef = 77A3373424E51EE900B3159F /* HGGGOTHICSSI_PRO_40G.otf */; };
+		77A3373B24E51EEA00B3159F /* HGGGOTHICSSI_PRO_00G.otf in Resources */ = {isa = PBXBuildFile; fileRef = 77A3373524E51EE900B3159F /* HGGGOTHICSSI_PRO_00G.otf */; };
+		77A3373C24E51EEA00B3159F /* HGGGOTHICSSI_PRO_20G.otf in Resources */ = {isa = PBXBuildFile; fileRef = 77A3373624E51EE900B3159F /* HGGGOTHICSSI_PRO_20G.otf */; };
+		77A3373D24E51EEA00B3159F /* HGGGOTHICSSI_PRO_60G.otf in Resources */ = {isa = PBXBuildFile; fileRef = 77A3373724E51EEA00B3159F /* HGGGOTHICSSI_PRO_60G.otf */; };
 		93790AE9247D5C090046349E /* user.png in Resources */ = {isa = PBXBuildFile; fileRef = 93790AE7247D5C090046349E /* user.png */; };
 		93790AEA247D5C090046349E /* password.png in Resources */ = {isa = PBXBuildFile; fileRef = 93790AE8247D5C090046349E /* password.png */; };
 		93790AEC247D64B00046349E /* key.png in Resources */ = {isa = PBXBuildFile; fileRef = 93790AEB247D64B00046349E /* key.png */; };
@@ -29,19 +31,24 @@
 		9399C4C92476608900F73CDD /* SelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9399C4C82476608900F73CDD /* SelectionViewController.swift */; };
 		9399C4CB247660BC00F73CDD /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9399C4CA247660BC00F73CDD /* MainViewController.swift */; };
 		9399C4CD247660E500F73CDD /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9399C4CC247660E500F73CDD /* ResultViewController.swift */; };
+		B507B0213BA65C14BF6B7AE6 /* libPods-Project_Tadak.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 418F3E9CCD0A91B1680A9BB5 /* libPods-Project_Tadak.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		1525D9A424BA07CE00B8AA60 /* AnimatedBlurLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimatedBlurLabel.swift; sourceTree = "<group>"; };
+		00D2ED0CE0BAFFD65AB37233 /* Pods-Project_Tadak.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Project_Tadak.release.xcconfig"; path = "Target Support Files/Pods-Project_Tadak/Pods-Project_Tadak.release.xcconfig"; sourceTree = "<group>"; };
 		1572F2C424816D1C004EB34D /* Calculate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calculate.swift; sourceTree = "<group>"; };
 		158F26A3247FE0260046356C /* Jamo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Jamo.swift; sourceTree = "<group>"; };
 		158F26A5247FE5B10046356C /* Text.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Text.swift; sourceTree = "<group>"; };
-		930E38EC24B8612C00D957FE /* HGGGOTHICSSI_PRO_20G.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = HGGGOTHICSSI_PRO_20G.otf; path = "고딕씨+윈도우/HGGGOTHICSSI_PRO_20G.otf"; sourceTree = SOURCE_ROOT; };
-		930E38ED24B8612C00D957FE /* HGGGOTHICSSI_PRO_60G.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = HGGGOTHICSSI_PRO_60G.otf; path = "고딕씨+윈도우/HGGGOTHICSSI_PRO_60G.otf"; sourceTree = SOURCE_ROOT; };
-		930E38EE24B8612C00D957FE /* HGGGOTHICSSI_PRO_00G.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = HGGGOTHICSSI_PRO_00G.otf; path = "고딕씨+윈도우/HGGGOTHICSSI_PRO_00G.otf"; sourceTree = SOURCE_ROOT; };
-		930E38EF24B8612C00D957FE /* HGGGOTHICSSI_PRO_40G.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = HGGGOTHICSSI_PRO_40G.otf; path = "고딕씨+윈도우/HGGGOTHICSSI_PRO_40G.otf"; sourceTree = SOURCE_ROOT; };
-		930E38F024B8612C00D957FE /* HGGGOTHICSSI_PRO_80G.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = HGGGOTHICSSI_PRO_80G.otf; path = "고딕씨+윈도우/HGGGOTHICSSI_PRO_80G.otf"; sourceTree = SOURCE_ROOT; };
-		930E38F124B8612C00D957FE /* HGGGOTHICSSI_PRO_99G.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = HGGGOTHICSSI_PRO_99G.otf; path = "../../고딕씨+윈도우/HGGGOTHICSSI_PRO_99G.otf"; sourceTree = "<group>"; };
+		418F3E9CCD0A91B1680A9BB5 /* libPods-Project_Tadak.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Project_Tadak.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7720FDF424E6C6BE007552B2 /* NewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewViewController.swift; sourceTree = "<group>"; };
+		77671E6A24E8CEB3009A1A4A /* Text2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Text2.swift; sourceTree = "<group>"; };
+		778B1CC524E9082800BB68C6 /* CustomIntensityVisualEffectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomIntensityVisualEffectView.swift; sourceTree = "<group>"; };
+		77A3373224E51EE900B3159F /* HGGGOTHICSSI_PRO_80G.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = HGGGOTHICSSI_PRO_80G.otf; path = "고딕씨+윈도우/HGGGOTHICSSI_PRO_80G.otf"; sourceTree = SOURCE_ROOT; };
+		77A3373324E51EE900B3159F /* HGGGOTHICSSI_PRO_99G.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = HGGGOTHICSSI_PRO_99G.otf; path = "고딕씨+윈도우/HGGGOTHICSSI_PRO_99G.otf"; sourceTree = SOURCE_ROOT; };
+		77A3373424E51EE900B3159F /* HGGGOTHICSSI_PRO_40G.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = HGGGOTHICSSI_PRO_40G.otf; path = "고딕씨+윈도우/HGGGOTHICSSI_PRO_40G.otf"; sourceTree = SOURCE_ROOT; };
+		77A3373524E51EE900B3159F /* HGGGOTHICSSI_PRO_00G.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = HGGGOTHICSSI_PRO_00G.otf; path = "고딕씨+윈도우/HGGGOTHICSSI_PRO_00G.otf"; sourceTree = SOURCE_ROOT; };
+		77A3373624E51EE900B3159F /* HGGGOTHICSSI_PRO_20G.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = HGGGOTHICSSI_PRO_20G.otf; path = "고딕씨+윈도우/HGGGOTHICSSI_PRO_20G.otf"; sourceTree = SOURCE_ROOT; };
+		77A3373724E51EEA00B3159F /* HGGGOTHICSSI_PRO_60G.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = HGGGOTHICSSI_PRO_60G.otf; path = "고딕씨+윈도우/HGGGOTHICSSI_PRO_60G.otf"; sourceTree = SOURCE_ROOT; };
 		93790AE7247D5C090046349E /* user.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = user.png; sourceTree = "<group>"; };
 		93790AE8247D5C090046349E /* password.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = password.png; sourceTree = "<group>"; };
 		93790AEB247D64B00046349E /* key.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = key.png; sourceTree = "<group>"; };
@@ -56,6 +63,7 @@
 		9399C4C82476608900F73CDD /* SelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionViewController.swift; sourceTree = "<group>"; };
 		9399C4CA247660BC00F73CDD /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		9399C4CC247660E500F73CDD /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
+		B2B362BA645F102EC05C5901 /* Pods-Project_Tadak.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Project_Tadak.debug.xcconfig"; path = "Target Support Files/Pods-Project_Tadak/Pods-Project_Tadak.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +71,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B507B0213BA65C14BF6B7AE6 /* libPods-Project_Tadak.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,21 +84,22 @@
 				158F26A3247FE0260046356C /* Jamo.swift */,
 				158F26A5247FE5B10046356C /* Text.swift */,
 				1572F2C424816D1C004EB34D /* Calculate.swift */,
+				77671E6A24E8CEB3009A1A4A /* Text2.swift */,
 			);
 			path = Brain;
 			sourceTree = "<group>";
 		};
-		930E38EB24B860E100D957FE /* Fonts */ = {
+		77A3373124E51EDA00B3159F /* fonts */ = {
 			isa = PBXGroup;
 			children = (
-				930E38EE24B8612C00D957FE /* HGGGOTHICSSI_PRO_00G.otf */,
-				930E38EC24B8612C00D957FE /* HGGGOTHICSSI_PRO_20G.otf */,
-				930E38EF24B8612C00D957FE /* HGGGOTHICSSI_PRO_40G.otf */,
-				930E38ED24B8612C00D957FE /* HGGGOTHICSSI_PRO_60G.otf */,
-				930E38F024B8612C00D957FE /* HGGGOTHICSSI_PRO_80G.otf */,
-				930E38F124B8612C00D957FE /* HGGGOTHICSSI_PRO_99G.otf */,
+				77A3373524E51EE900B3159F /* HGGGOTHICSSI_PRO_00G.otf */,
+				77A3373624E51EE900B3159F /* HGGGOTHICSSI_PRO_20G.otf */,
+				77A3373424E51EE900B3159F /* HGGGOTHICSSI_PRO_40G.otf */,
+				77A3373724E51EEA00B3159F /* HGGGOTHICSSI_PRO_60G.otf */,
+				77A3373224E51EE900B3159F /* HGGGOTHICSSI_PRO_80G.otf */,
+				77A3373324E51EE900B3159F /* HGGGOTHICSSI_PRO_99G.otf */,
 			);
-			path = Fonts;
+			path = fonts;
 			sourceTree = "<group>";
 		};
 		93790AE6247D5BFA0046349E /* img */ = {
@@ -107,6 +117,8 @@
 			children = (
 				9399C4B32476585400F73CDD /* Project_Tadak */,
 				9399C4B22476585400F73CDD /* Products */,
+				CB9BB0853D0EB4FDBDFFC538 /* Pods */,
+				BE525D2D1C80C43D7671EE3B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -121,22 +133,40 @@
 		9399C4B32476585400F73CDD /* Project_Tadak */ = {
 			isa = PBXGroup;
 			children = (
-				930E38EB24B860E100D957FE /* Fonts */,
+				77A3373124E51EDA00B3159F /* fonts */,
 				93790AE6247D5BFA0046349E /* img */,
 				9399C4BA2476585400F73CDD /* Main.storyboard */,
+				7720FDF424E6C6BE007552B2 /* NewViewController.swift */,
 				9399C4CC247660E500F73CDD /* ResultViewController.swift */,
 				9399C4CA247660BC00F73CDD /* MainViewController.swift */,
 				9399C4B42476585400F73CDD /* AppDelegate.swift */,
 				9399C4B62476585400F73CDD /* SceneDelegate.swift */,
 				9399C4B82476585400F73CDD /* LoginViewController.swift */,
 				9399C4C82476608900F73CDD /* SelectionViewController.swift */,
-				1525D9A424BA07CE00B8AA60 /* AnimatedBlurLabel.swift */,
 				158F26A2247FDF5E0046356C /* Brain */,
 				9399C4BD2476585500F73CDD /* Assets.xcassets */,
 				9399C4BF2476585500F73CDD /* LaunchScreen.storyboard */,
 				9399C4C22476585500F73CDD /* Info.plist */,
+				778B1CC524E9082800BB68C6 /* CustomIntensityVisualEffectView.swift */,
 			);
 			path = Project_Tadak;
+			sourceTree = "<group>";
+		};
+		BE525D2D1C80C43D7671EE3B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				418F3E9CCD0A91B1680A9BB5 /* libPods-Project_Tadak.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CB9BB0853D0EB4FDBDFFC538 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B2B362BA645F102EC05C5901 /* Pods-Project_Tadak.debug.xcconfig */,
+				00D2ED0CE0BAFFD65AB37233 /* Pods-Project_Tadak.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -146,9 +176,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9399C4C52476585500F73CDD /* Build configuration list for PBXNativeTarget "Project_Tadak" */;
 			buildPhases = (
+				F0D62C20EFEF724342164148 /* [CP] Check Pods Manifest.lock */,
 				9399C4AD2476585400F73CDD /* Sources */,
 				9399C4AE2476585400F73CDD /* Frameworks */,
 				9399C4AF2476585400F73CDD /* Resources */,
+				9249BF55E0E29E22CD258ECF /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -197,22 +229,64 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				77A3373C24E51EEA00B3159F /* HGGGOTHICSSI_PRO_20G.otf in Resources */,
+				77A3373B24E51EEA00B3159F /* HGGGOTHICSSI_PRO_00G.otf in Resources */,
 				9399C4C12476585500F73CDD /* LaunchScreen.storyboard in Resources */,
 				9399C4BE2476585500F73CDD /* Assets.xcassets in Resources */,
-				930E38F624B8612C00D957FE /* HGGGOTHICSSI_PRO_80G.otf in Resources */,
+				77A3373924E51EEA00B3159F /* HGGGOTHICSSI_PRO_99G.otf in Resources */,
 				93790AEA247D5C090046349E /* password.png in Resources */,
+				77A3373824E51EEA00B3159F /* HGGGOTHICSSI_PRO_80G.otf in Resources */,
 				93790AEC247D64B00046349E /* key.png in Resources */,
-				930E38F224B8612C00D957FE /* HGGGOTHICSSI_PRO_20G.otf in Resources */,
-				930E38F724B8612C00D957FE /* HGGGOTHICSSI_PRO_99G.otf in Resources */,
+				77A3373A24E51EEA00B3159F /* HGGGOTHICSSI_PRO_40G.otf in Resources */,
 				93790AE9247D5C090046349E /* user.png in Resources */,
-				930E38F524B8612C00D957FE /* HGGGOTHICSSI_PRO_40G.otf in Resources */,
-				930E38F424B8612C00D957FE /* HGGGOTHICSSI_PRO_00G.otf in Resources */,
-				930E38F324B8612C00D957FE /* HGGGOTHICSSI_PRO_60G.otf in Resources */,
+				77A3373D24E51EEA00B3159F /* HGGGOTHICSSI_PRO_60G.otf in Resources */,
 				9399C4BC2476585400F73CDD /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		9249BF55E0E29E22CD258ECF /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Project_Tadak/Pods-Project_Tadak-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Project_Tadak/Pods-Project_Tadak-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Project_Tadak/Pods-Project_Tadak-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F0D62C20EFEF724342164148 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Project_Tadak-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		9399C4AD2476585400F73CDD /* Sources */ = {
@@ -221,13 +295,15 @@
 			files = (
 				9399C4B92476585400F73CDD /* LoginViewController.swift in Sources */,
 				9399C4C92476608900F73CDD /* SelectionViewController.swift in Sources */,
+				778B1CC624E9082800BB68C6 /* CustomIntensityVisualEffectView.swift in Sources */,
+				77671E6B24E8CEB3009A1A4A /* Text2.swift in Sources */,
 				158F26A6247FE5B10046356C /* Text.swift in Sources */,
 				1572F2C524816D1C004EB34D /* Calculate.swift in Sources */,
 				9399C4B52476585400F73CDD /* AppDelegate.swift in Sources */,
 				9399C4B72476585400F73CDD /* SceneDelegate.swift in Sources */,
 				9399C4CB247660BC00F73CDD /* MainViewController.swift in Sources */,
+				7720FDF524E6C6BE007552B2 /* NewViewController.swift in Sources */,
 				158F26A4247FE0260046356C /* Jamo.swift in Sources */,
-				1525D9A524BA07CE00B8AA60 /* AnimatedBlurLabel.swift in Sources */,
 				9399C4CD247660E500F73CDD /* ResultViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -370,6 +446,7 @@
 		};
 		9399C4C62476585500F73CDD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B2B362BA645F102EC05C5901 /* Pods-Project_Tadak.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -389,6 +466,7 @@
 		};
 		9399C4C72476585500F73CDD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 00D2ED0CE0BAFFD65AB37233 /* Pods-Project_Tadak.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

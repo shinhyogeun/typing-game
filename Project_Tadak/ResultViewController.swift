@@ -10,21 +10,46 @@ import UIKit
 
 class ResultViewController: UIViewController {
 
+    
+    @IBOutlet weak var Label_title: UILabel!
+    @IBOutlet weak var Label_secondResult: UILabel!
+    
+    var data: Double = 0.0
+    var gameTitle: String = ""
+    var gameInt: Int = 1
+    
     override func viewDidLoad() {
+        navigationController?.isNavigationBarHidden = true
         super.viewDidLoad()
+        
+        Label_title.text = gameTitle
+        if(data < 0)
+        {
+            data = 0
+        }
+        Label_secondResult.text = String(format: "%.2f",data)
 
-        // Do any additional setup after loading the view.
+        
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        
+        if segue.identifier == "regame"{
+            let secondVC = segue.destination as! MainViewController
+            switch gameInt
+            {
+            case 1:
+                secondVC.gameInt = 1
+            case 2:
+                secondVC.gameInt = 2
+            case 3:
+                secondVC.gameInt = 3
+            default:
+                secondVC.gameInt = 1
+            }
+        }
+        
     }
-    */
+
 
 }

@@ -11,11 +11,20 @@ import Foundation
 
 class MainViewController: UIViewController, UITextFieldDelegate {
     
-    @IBOutlet weak var viewLabel: UILabel!
     @IBOutlet weak var inputTextField: UITextField!
     @IBOutlet weak var timeLabel: UILabel!
-    @IBOutlet var afterLabel: UILabel!
-    @IBOutlet var beforeLabel: UILabel!
+    @IBOutlet weak var afterLabel2: UILabel!
+    @IBOutlet weak var afterLabel: UILabel!
+    @IBOutlet weak var viewLabel: UILabel!
+    @IBOutlet weak var beforeLabel: UILabel!
+    @IBOutlet weak var Label_title: UILabel!
+    
+    //blur
+    @IBOutlet weak var ImageBackground: UIImageView!
+    @IBOutlet weak var upperView: UIView!
+    
+    
+    
     var WrongCount = 0
     
     
@@ -38,13 +47,72 @@ class MainViewController: UIViewController, UITextFieldDelegate {
     var baseWholeArraycount = 0
     
     let LABEL = UIColor(named: "ColorLabel")
+    let BLUE = UIColor(named: "ColorBlue")
+    let RED = UIColor(named: "ColorRed")
+    
+    //가사선택 테스트
+    var gameInt: Int = 1
+    var gameTitle: String = ""
+    var gameData: Array<String> = []
+    
+    //심장박동
+    var beatNum: Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //blur
+        let blur = UIBlurEffect(style: .dark)
+        let underBlur = UIBlurEffect(style: .dark)
+        
+        let blurView = CustomIntensityVisualEffectView(effect: blur, intensity: 0.05)
+        let underBlurView = CustomIntensityVisualEffectView(effect: underBlur, intensity: 1)
+        
+        blurView.frame = self.view.bounds
+        underBlurView.frame = self.view.bounds
+        
+        ImageBackground.addSubview(underBlurView)
+        ImageBackground.sendSubviewToBack(underBlurView)
+        upperView.addSubview(blurView)
+        upperView.sendSubviewToBack(blurView)
+        
+        switch gameInt
+        {
+        case 1:
+            gameTitle = Text2().getTitle(num: 1)
+        case 2:
+            gameTitle = Text2().getTitle(num: 2)
+        case 3:
+            gameTitle = Text2().getTitle(num: 3)
+        default:
+            gameTitle = Text2().getTitle(num: 1)
+        }
+        Label_title.text = gameTitle
+        
+        switch gameInt
+        {
+        case 1:
+            gameData = Text2().getData(num: 1)
+        case 2:
+            gameData = Text2().getData(num: 2)
+        case 3:
+            gameData = Text2().getData(num: 3)
+        default:
+            gameData = Text2().getData(num: 1)
+        }
+        
+        navigationController?.isNavigationBarHidden = true
+        
         self.hideKeyboard()
+        
+        inputTextField.keyboardType = .default
         timeLabel.text = String(format: "%.2f",second)
-        beforeLabel.text = Text.init().textArray[0]
-        beforeLabel.textColor = LABEL
+        beforeLabel.text = gameData[0]
+        self.beforeLabel.alpha = 1
+//        beforeLabel.textColor = LABEL
+        viewLabel.text = ""
+        afterLabel.text = ""
+        afterLabel2.text = ""
         inputTextField.addTarget(self, action: #selector(textFieldDidChange(textField:)), for: UIControl.Event.editingChanged)
         let calculate = Calculate()
     }
@@ -59,11 +127,13 @@ class MainViewController: UIViewController, UITextFieldDelegate {
             if endStatus {
                 
                 //비교를 위한 자모음 분해한 배열
-                let whatYouHaveToWrite = Text.init().textArray[a]
+//                let whatYouHaveToWrite = Text.init().textArray[a]
+                let whatYouHaveToWrite = gameData[a]
                 let whatYouAlreadyWrite = input
                 
                 miss = calculate.countMiss(input, whatYouHaveToWrite: whatYouHaveToWrite, whatYouAlreadyWrite: whatYouAlreadyWrite)
                 calculate.changeColor(viewLabel, whatYouHaveToWrite: whatYouHaveToWrite, whatYouAlreadyWrite: whatYouAlreadyWrite, textField: textField)
+                print("Miss Count : " + String(miss))
                
                 //타자를 치고있고 쳤는데 내용이 동일한 경우
                 if Array(whatYouHaveToWrite) == Array(whatYouAlreadyWrite){
@@ -90,112 +160,166 @@ class MainViewController: UIViewController, UITextFieldDelegate {
     }
     
     @objc func updateCounter(){
-        if second < 0.00 {
+        if second < 0.01 {
             endGame()
             timeLabel.text = String(0.00)
 //          calculate.calculateSpeed( timeLabel.text, )
             //시간제한이 끝났을때 일어날 일(세그웨이로 실패한 페이지 혹은 팝업을 띄운다.)
-        } else {
+        }
+        else {
             second = second - 0.01
             timeLabel.text = String(format: "%.2f",second)
 //          calculate.calculateSpeed()
+            
+            //심장박동 함수
+            checkBeat()
         }
     }
     
     //첫 실행시 타이머 작동 메소드
     func checkTimeTrigger() {
         realTime = Timer.scheduledTimer(timeInterval: 0.01, target: self, selector: #selector(updateCounter), userInfo: nil, repeats: true)
-        numOfArray = Text.init().textArray.count
+        numOfArray = gameData.count
         timeTrigger = false
         
-        afterLabel.text = ""
-        viewLabel.text = Text.init().textArray[a]
-        beforeLabel.text = Text.init().textArray[a+1]
+        setTextFirst()
         
-        self.viewLabel.transform = CGAffineTransform(translationX: 0, y: 37)
+        self.viewLabel.transform = CGAffineTransform(translationX: 0, y: 48)
         self.viewLabel.alpha = 0.5
-        UIView.animate(withDuration: 0.4) {
-            self.viewLabel.transform = CGAffineTransform(translationX: 0, y: 0).concatenating(CGAffineTransform(scaleX: 1.2, y: 1.2))
+        UIView.animate(withDuration: 0.3) {
+            self.viewLabel.transform = CGAffineTransform(translationX: 0, y: 0)
             self.viewLabel.alpha = 1
         }
+        
+//        viewLabel.layer.shadowColor = BLUE?.cgColor
+//        viewLabel.layer.shadowRadius = 2
+//        viewLabel.layer.shadowOffset = CGSize(width: 0, height: 0)
+//        viewLabel.layer.shadowOpacity = 0.7
 
-        self.beforeLabel.transform = CGAffineTransform(translationX: 0, y: 37)
+        self.beforeLabel.transform = CGAffineTransform(translationX: 0, y: 48)
         self.beforeLabel.alpha = 0
-        UIView.animate(withDuration: 0.4) {
-            self.beforeLabel.alpha = 0.5
+        UIView.animate(withDuration: 0.3) {
+            self.beforeLabel.alpha = 0.3
             self.beforeLabel.transform = CGAffineTransform(translationX: 0, y: 0)
         }
     }
     
     func showArrays() {
         //화면에 내용을 보이는 코드
-        if a > 0 && a < numOfArray-1
+        if(a == 1)
         {
-            afterLabel.text = Text.init().textArray[a-1]
-            viewLabel.text = Text.init().textArray[a]
+            setTextSecond()
             
-            self.afterLabel.transform = CGAffineTransform(translationX: 0, y: 37)
+            self.afterLabel.transform = CGAffineTransform(translationX: 0, y: 48)
             self.afterLabel.alpha = 1
-            UIView.animate(withDuration: 0.4) {
-                self.afterLabel.alpha = 0;
-                self.afterLabel.transform = CGAffineTransform(translationX: 0, y: 0).concatenating(CGAffineTransform(scaleX: 1.0, y: 1.0))
+            UIView.animate(withDuration: 0.3) {
+                self.afterLabel.alpha = 0.3
+                self.afterLabel.transform = CGAffineTransform(translationX: 0, y: 0)
             }
             
-            self.viewLabel.transform = CGAffineTransform(translationX: 0, y: 37)
-            self.viewLabel.alpha = 0.5
-            UIView.animate(withDuration: 0.4) {
-                self.viewLabel.transform = CGAffineTransform(translationX: 0, y: 0).concatenating(CGAffineTransform(scaleX: 1.2, y: 1.2))
+            self.viewLabel.transform = CGAffineTransform(translationX: 0, y: 48)
+            self.viewLabel.alpha = 0.2
+            UIView.animate(withDuration: 0.3) {
+                self.viewLabel.transform = CGAffineTransform(translationX: 0, y: 0)
                 self.viewLabel.alpha = 1
             }
 
-            self.beforeLabel.transform = CGAffineTransform(translationX: 0, y: 37)
+            self.beforeLabel.transform = CGAffineTransform(translationX: 0, y: 48)
             self.beforeLabel.alpha = 0
-            UIView.animate(withDuration: 0.4) {
-                self.beforeLabel.alpha = 1;
+            UIView.animate(withDuration: 0.3) {
+                self.beforeLabel.alpha = 0.3
                 self.beforeLabel.transform = CGAffineTransform(translationX: 0, y: 0)
             }
 
-            beforeLabel.text = Text.init().textArray[a+1]
+            
+            inputTextField.text = ""
+        }
+        else if a >= 2 && a <= numOfArray-2
+        {
+            setTextNomal()
+            
+            self.afterLabel2.transform = CGAffineTransform(translationX: 0, y: 48)
+            self.afterLabel2.alpha = 0.3
+            UIView.animate(withDuration: 0.3) {
+                self.afterLabel2.alpha = 0
+                self.afterLabel2.transform = CGAffineTransform(translationX: 0, y: 0)
+            }
+            
+            self.afterLabel.transform = CGAffineTransform(translationX: 0, y: 48)
+            self.afterLabel.alpha = 1
+            UIView.animate(withDuration: 0.3) {
+                self.afterLabel.alpha = 0.3
+                self.afterLabel.transform = CGAffineTransform(translationX: 0, y: 0)
+            }
+            
+            self.viewLabel.transform = CGAffineTransform(translationX: 0, y: 48)
+            self.viewLabel.alpha = 0.2
+            UIView.animate(withDuration: 0.3) {
+                self.viewLabel.transform = CGAffineTransform(translationX: 0, y: 0)
+                self.viewLabel.alpha = 1
+            }
+
+            self.beforeLabel.transform = CGAffineTransform(translationX: 0, y: 48)
+            self.beforeLabel.alpha = 0
+            UIView.animate(withDuration: 0.3) {
+                self.beforeLabel.alpha = 0.3
+                self.beforeLabel.transform = CGAffineTransform(translationX: 0, y: 0)
+            }
             inputTextField.text = ""
             
             
         }
+        
         else if a == numOfArray-1
         {
-            afterLabel.text = Text.init().textArray[a-1]
-            viewLabel.text = Text.init().textArray[a]
+            setTextLast()
             
-            self.afterLabel.transform = CGAffineTransform(translationX: 0, y: 37)
-            self.afterLabel.alpha = 1
-            UIView.animate(withDuration: 0.4) {
-                self.afterLabel.alpha = 0;
-                self.afterLabel.transform = CGAffineTransform(translationX: 0, y: 0).concatenating(CGAffineTransform(scaleX: 1.0, y: 1.0))
+            self.afterLabel2.transform = CGAffineTransform(translationX: 0, y: 48)
+            self.afterLabel2.alpha = 0.3
+            UIView.animate(withDuration: 0.3) {
+                self.afterLabel2.alpha = 0
+                self.afterLabel2.transform = CGAffineTransform(translationX: 0, y: 0)
             }
             
-            self.viewLabel.transform = CGAffineTransform(translationX: 0, y: 37)
-            self.viewLabel.alpha = 0.5
-            UIView.animate(withDuration: 0.4) {
-                self.viewLabel.transform = CGAffineTransform(translationX: 0, y: 0).concatenating(CGAffineTransform(scaleX: 1.2, y: 1.2))
+            self.afterLabel.transform = CGAffineTransform(translationX: 0, y: 48)
+            self.afterLabel.alpha = 1
+            UIView.animate(withDuration: 0.3) {
+                self.afterLabel.alpha = 0.3
+                self.afterLabel.transform = CGAffineTransform(translationX: 0, y: 0)
+            }
+            
+            self.viewLabel.transform = CGAffineTransform(translationX: 0, y: 48)
+            self.viewLabel.alpha = 0.2
+            UIView.animate(withDuration: 0.3) {
+                self.viewLabel.transform = CGAffineTransform(translationX: 0, y: 0)
                 self.viewLabel.alpha = 1
             }
             
-            beforeLabel.text = ""
+            
             inputTextField.text = ""
         }
         else if a > numOfArray-1
         {
-            afterLabel.text = Text.init().textArray[a-1]
-            
-            self.afterLabel.transform = CGAffineTransform(translationX: 0, y: 37)
-            self.afterLabel.alpha = 1
-            UIView.animate(withDuration: 0.4) {
-                self.afterLabel.alpha = 0;
-                self.afterLabel.transform = CGAffineTransform(translationX: 0, y: 0).concatenating(CGAffineTransform(scaleX: 1.0, y: 1.0))
-            }
+            setTextEnd()
             endGame()
-            self.viewLabel.transform = CGAffineTransform(translationX: 0, y: 37)
+            
+            self.afterLabel2.transform = CGAffineTransform(translationX: 0, y: 50)
+            self.afterLabel2.alpha = 0.3
+            UIView.animate(withDuration: 0.3) {
+                self.afterLabel2.alpha = 0
+                self.afterLabel2.transform = CGAffineTransform(translationX: 0, y: 0)
+            }
+            
+            self.afterLabel.transform = CGAffineTransform(translationX: 0, y: 50)
+            self.afterLabel.alpha = 1
+            UIView.animate(withDuration: 0.3) {
+                self.afterLabel.alpha = 0.5
+                self.afterLabel.transform = CGAffineTransform(translationX: 0, y: 0)
+            }
+            
+            self.viewLabel.transform = CGAffineTransform(translationX: 0, y: 50)
             viewLabel.alpha = 0
-            UIView.animate(withDuration: 0.4) {
+            UIView.animate(withDuration: 0.3) {
                 self.viewLabel.transform = CGAffineTransform(translationX: 0, y: 0)
                 self.viewLabel.alpha = 1
             }
@@ -206,19 +330,188 @@ class MainViewController: UIViewController, UITextFieldDelegate {
         realTime.invalidate()
         //종료시 보이는 문장 수정 : M
 //        afterLabel.text = ""
-        viewLabel.text = "게임이 종료되었습니다."
-        beforeLabel.text = ""
+        
         inputTextField.isHidden = true
         //종료조건 : M
         endStatus = false
         self.view.endEditing(true)
+        
+        
+        performSegue(withIdentifier: "endView", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "endView"{
+            
+            let secondVC = segue.destination as! ResultViewController
+            secondVC.data = second
+            secondVC.gameTitle = gameTitle
+            secondVC.gameInt = gameInt
+        }
+    }
+    
+    func setTextFirst()
+    {
+//        viewLabel.text = Text.init().textArray[a]
+//        beforeLabel.text = Text.init().textArray[a+1]
+        viewLabel.text = gameData[a]
+        beforeLabel.text = gameData[a+1]
+    }
+    
+    func setTextSecond()
+    {
+//        afterLabel.text = Text.init().textArray[a-1]
+//        viewLabel.text = Text.init().textArray[a]
+//        beforeLabel.text = Text.init().textArray[a+1]
+        afterLabel.text = gameData[a-1]
+        viewLabel.text = gameData[a]
+        beforeLabel.text = gameData[a+1]
+    }
+    
+    func setTextNomal()
+    {
+//        afterLabel2.text = Text.init().textArray[a-2]
+//        afterLabel.text = Text.init().textArray[a-1]
+//        viewLabel.text = Text.init().textArray[a]
+//        beforeLabel.text = Text.init().textArray[a+1]
+        afterLabel2.text = gameData[a-2]
+        afterLabel.text = gameData[a-1]
+        viewLabel.text = gameData[a]
+        beforeLabel.text = gameData[a+1]
+    }
+    
+    func setTextLast()
+    {
+//        afterLabel2.text = Text.init().textArray[a-2]
+//        afterLabel.text = Text.init().textArray[a-1]
+//        viewLabel.text = Text.init().textArray[a]
+//        beforeLabel.text = ""
+        afterLabel2.text = gameData[a-2]
+        afterLabel.text = gameData[a-1]
+        viewLabel.text = gameData[a]
+        beforeLabel.text = ""
+    }
+    
+    func setTextEnd()
+    {
+//        afterLabel2.text = Text.init().textArray[a-2]
+//        afterLabel.text = Text.init().textArray[a-1]
+//        viewLabel.text = "게임이 종료되었습니다."
+//        beforeLabel.text = ""
+        afterLabel2.text = gameData[a-2]
+        afterLabel.text = gameData[a-1]
+        viewLabel.text = "게임이 종료되었습니다."
+        beforeLabel.text = ""
+    }
+    
+    func heartBeat()
+    {
+        self.timeLabel.transform = CGAffineTransform(scaleX: 1, y: 1)
+        UIView.animate(withDuration: 0.2, animations: {
+            self.timeLabel.transform = CGAffineTransform(scaleX: 1.5, y: 1.5)
+        })
+        self.timeLabel.transform = CGAffineTransform(scaleX: 1.5, y: 1.5)
+        UIView.animate(withDuration: 0.2, delay: 0.2, options: .curveEaseIn, animations: {
+            self.timeLabel.transform = CGAffineTransform(scaleX: 1, y: 1)
+        }, completion: nil)
+    }
+    
+    func checkBeat()
+    {
+        if(second < 1)
+        {
+            if(beatNum == 9)
+            {
+                heartBeat()
+                beatNum = 10
+            }
+            
+        }
+        else if(second < 2)
+        {
+            if(beatNum == 8)
+            {
+                heartBeat()
+                beatNum = 9
+            }
+            
+        }
+        else if(second < 3)
+        {
+            if(beatNum == 7)
+            {
+                heartBeat()
+                beatNum = 8
+            }
+            
+        }
+        else if(second < 4)
+        {
+            if(beatNum == 6)
+            {
+                heartBeat()
+                beatNum = 7
+            }
+            
+        }
+        else if(second < 5)
+        {
+            if(beatNum == 5)
+            {
+                heartBeat()
+                beatNum = 6
+            }
+            
+        }
+        else if(second < 6)
+        {
+            if(beatNum == 4)
+            {
+                heartBeat()
+                beatNum = 5
+            }
+            
+        }
+        else if(second < 7)
+        {
+            if(beatNum == 3)
+            {
+                heartBeat()
+                beatNum = 4
+            }
+            
+        }
+        else if(second < 8)
+        {
+            if(beatNum == 2)
+            {
+                heartBeat()
+                beatNum = 3
+            }
+            
+        }
+        else if(second < 9)
+        {
+            if(beatNum == 1)
+            {
+                heartBeat()
+                beatNum = 2
+            }
+            
+        }
+        else if(second < 10)
+        {
+            if(beatNum == 0)
+            {
+                timeLabel.textColor = UIColor.red
+                heartBeat()
+                beatNum = 1
+            }
+            
+        }
     }
 
     
 }
 
-//extension Array {
-//    subscript(safe index: Index) -> Element? {
-//        return indices.contains(index) ? self[index] : nil
-//    }
-//}
