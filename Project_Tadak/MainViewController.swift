@@ -23,17 +23,15 @@ class MainViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var ImageBackground: UIImageView!
     @IBOutlet weak var upperView: UIView!
     
-    
-    
     var WrongCount = 0
-    
+    var calculateBaseArr : Array<Int> = []
     
     let jamoArray : Array<String> = []
     var a = 0
     var aa = 2
     var timeTrigger = true
     var realTime = Timer()
-    var second : Double = 60.00
+    var second : Double = 00.00
     //종료조건 추가 : M
     var endStatus = true
     //문장 개수 : M
@@ -133,10 +131,18 @@ class MainViewController: UIViewController, UITextFieldDelegate {
                 
                 miss = calculate.countMiss(input, whatYouHaveToWrite: whatYouHaveToWrite, whatYouAlreadyWrite: whatYouAlreadyWrite)
                 calculate.changeColor(viewLabel, whatYouHaveToWrite: whatYouHaveToWrite, whatYouAlreadyWrite: whatYouAlreadyWrite, textField: textField)
-                print("Miss Count : " + String(miss))
-               
+                
+                
+                //여기서 미스를 누적해서 시간을 건드려라!!!
+                second = second + Double(miss)
+                timeLabel.text = String(format: "%.2f",second)
+//                calculateBaseArr.append(miss)
+//                print(calculateBaseArr)
+//                if calculateBaseArr.count >= 2 { print(calculateBaseArr.last! - calculateBaseArr[calculateBaseArr.count-2]) }
+                
                 //타자를 치고있고 쳤는데 내용이 동일한 경우
                 if Array(whatYouHaveToWrite) == Array(whatYouAlreadyWrite){
+                    calculate.missArr = []
                     baseWholeArraycount += Array(whatYouAlreadyWrite).count
                     a = a + 1
                     completeTrigger = 1
@@ -146,6 +152,7 @@ class MainViewController: UIViewController, UITextFieldDelegate {
                 }
                 //내용이 틀리지만 글자수가 동일한 경우
                 else if Array(viewLabel.text!).count < Array(input).count{
+                    calculate.missArr = []
                     baseWholeArraycount += Array(input).count
                     a = a + 1
                     completeTrigger = 1
@@ -160,14 +167,14 @@ class MainViewController: UIViewController, UITextFieldDelegate {
     }
     
     @objc func updateCounter(){
-        if second < 0.01 {
+        if second < 0.0 {
             endGame()
             timeLabel.text = String(0.00)
 //          calculate.calculateSpeed( timeLabel.text, )
             //시간제한이 끝났을때 일어날 일(세그웨이로 실패한 페이지 혹은 팝업을 띄운다.)
         }
         else {
-            second = second - 0.01
+            second = second + 0.01
             timeLabel.text = String(format: "%.2f",second)
 //          calculate.calculateSpeed()
             

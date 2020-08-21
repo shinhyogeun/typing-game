@@ -22,12 +22,12 @@ class LoginViewController: UIViewController, GIDSignInDelegate {
          
         performSegue(withIdentifier: "goToSecondView", sender: self)
         
-         let userId = user.userID
-         let idToken = user.authentication.idToken
-         let fullName = user.profile.name
-         let givenName = user.profile.givenName
-         let familyName = user.profile.familyName
-         let email = user.profile.email
+//         let userId = user.userID
+//         let idToken = user.authentication.idToken
+//         let fullName = user.profile.name
+//         let givenName = user.profile.givenName
+//         let familyName = user.profile.familyName
+//         let email = user.profile.email
     }
     
 

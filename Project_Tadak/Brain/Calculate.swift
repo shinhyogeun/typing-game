@@ -13,16 +13,21 @@ class Calculate {
     
     var aa = 2
     let BLUE = UIColor(named: "ColorBlue")
-    
+    var missArr : Array<Int> = []
+    var firstCharThatExceptionInArr : Int = 0
     func countMiss(_ input : String, whatYouHaveToWrite : String, whatYouAlreadyWrite : String) -> Int {
         var miss = 0
+        var returnValue = 0
         if Array(input).count < aa-1 {
+            
             if Array(input).count == 0{
                 self.aa = 2
             }else{
                 self.aa = Array(input).count + 1
             }
+            
         } else if Array(input).count == aa {
+            
             for i in 0 ... aa-2{
                 let compare1 = Array(Jamo.getJamo(String(Array(whatYouAlreadyWrite)[i]))).count
                 let compare2 = Array(Jamo.getJamo(String(Array(whatYouHaveToWrite)[i]))).count
@@ -49,14 +54,27 @@ class Calculate {
                             miss += 1
                         }
                     }
-                    miss += compare2 - compare1
+                    miss += compare1 - compare2
                 }
             }
-            print(miss)
+            missArr.append(miss)
+            if missArr.count >= 2 {
+                returnValue = missArr.last!-missArr[missArr.count-2]
+                print(missArr.last!-missArr[missArr.count-2])
+            } else if missArr.count == 1 {
+                if missArr.first! != 0 {
+                    returnValue = missArr.first!
+                    print(returnValue)
+                } else {
+                    returnValue = -firstCharThatExceptionInArr
+                    print(returnValue)
+                }
+            }
             aa += 1
         }
-        return miss
+        return returnValue
     }
+    
     
     func changeColor(_ viewLabel : UILabel, whatYouHaveToWrite : String, whatYouAlreadyWrite : String, textField : UITextField) {
         let attr = NSMutableAttributedString(string: viewLabel.text!)
@@ -78,7 +96,7 @@ class Calculate {
                                 }
                             } else{ break }
                         }
-                        viewLabel.attributedText = attr
+        viewLabel.attributedText = attr
     }
     
 }

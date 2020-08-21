@@ -24,17 +24,17 @@
             <objects>
                 <viewController id="dgK-lB-TLz" customClass="NewViewController" customModule="Project_Tadak" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VCt-we-3VE">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="회원가입" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ggU-SA-Dc0">
-                                <rect key="frame" x="135.5" y="94" width="104" height="35"/>
+                                <rect key="frame" x="135.5" y="50" width="104" height="35"/>
                                 <fontDescription key="fontDescription" name="HGGGothicssiP80g" family="HGGGothicssi_Pro" pointSize="30"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ka5-vI-PWO">
-                                <rect key="frame" x="36" y="138" width="303" height="43"/>
+                                <rect key="frame" x="36" y="128" width="303" height="43"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MvE-cu-85y">
                                         <rect key="frame" x="119" y="4" width="180" height="33"/>
@@ -77,7 +77,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1TJ-3V-nnG">
-                                <rect key="frame" x="36" y="196" width="303" height="43"/>
+                                <rect key="frame" x="36" y="186" width="303" height="43"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oiM-P6-iib">
                                         <rect key="frame" x="119" y="4" width="180" height="33"/>
@@ -120,7 +120,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="klq-Yx-uNR">
-                                <rect key="frame" x="36" y="254" width="303" height="43"/>
+                                <rect key="frame" x="36" y="244" width="303" height="43"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bFS-70-bhy">
                                         <rect key="frame" x="119" y="4" width="180" height="33"/>
@@ -163,7 +163,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CY8-Gh-g4z">
-                                <rect key="frame" x="36" y="312" width="303" height="43"/>
+                                <rect key="frame" x="36" y="302" width="303" height="43"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hm0-dL-FJj">
                                         <rect key="frame" x="119" y="4" width="180" height="33"/>
@@ -206,7 +206,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jEM-5H-HON">
-                                <rect key="frame" x="36" y="370" width="303" height="43"/>
+                                <rect key="frame" x="36" y="360" width="303" height="43"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qM6-u8-qo3">
                                         <rect key="frame" x="119" y="4" width="180" height="33"/>
@@ -249,7 +249,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A0l-U5-Lu2">
-                                <rect key="frame" x="58.5" y="534" width="258" height="53"/>
+                                <rect key="frame" x="58.5" y="514" width="258" height="53"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VqP-sR-Tyb">
                                         <rect key="frame" x="4" y="4" width="80" height="45"/>
@@ -329,11 +329,11 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="Project_Tadak" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E3e-Ld-Lxa">
-                                <rect key="frame" x="32" y="57" width="311" height="553"/>
+                                <rect key="frame" x="32" y="47" width="311" height="553"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="타닥" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hjY-hK-SYb">
                                         <rect key="frame" x="112.5" y="4" width="86.5" height="58.5"/>
@@ -972,7 +972,7 @@
     <inferredMetricsTieBreakers>
         <segue reference="48b-JK-MTZ"/>
         <segue reference="D3A-jj-xUE"/>
-        <segue reference="QL9-1Z-aGF"/>
+        <segue reference="UiM-ND-oXy"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="background2" width="190" height="191"/>

@@ -82,8 +82,8 @@
 			isa = PBXGroup;
 			children = (
 				158F26A3247FE0260046356C /* Jamo.swift */,
-				158F26A5247FE5B10046356C /* Text.swift */,
 				1572F2C424816D1C004EB34D /* Calculate.swift */,
+				158F26A5247FE5B10046356C /* Text.swift */,
 				77671E6A24E8CEB3009A1A4A /* Text2.swift */,
 			);
 			path = Brain;
