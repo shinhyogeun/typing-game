@@ -7,35 +7,13 @@
 //
 
 import UIKit
-import GoogleSignIn
 
-class LoginViewController: UIViewController, GIDSignInDelegate {
-    func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
-         if let error = error {
-           if (error as NSError).code == GIDSignInErrorCode.hasNoAuthInKeychain.rawValue {
-             print("The user has not signed in before or they have since signed out.")
-           } else {
-             print("\(error.localizedDescription)")
-           }
-           return
-         }
-         
-        performSegue(withIdentifier: "goToSecondView", sender: self)
-        
-//         let userId = user.userID
-//         let idToken = user.authentication.idToken
-//         let fullName = user.profile.name
-//         let givenName = user.profile.givenName
-//         let familyName = user.profile.familyName
-//         let email = user.profile.email
-    }
-    
+class LoginViewController: UIViewController{
 
     @IBOutlet var TextFieldId: UITextField!
     @IBOutlet var TextFieldPassword: UITextField!
     @IBOutlet var ButtonLogin: UIButton!
     @IBOutlet weak var Labeltest: UILabel!
-    @IBOutlet weak var googleButton: GIDSignInButton!
     
     var inputId: String = ""
     var inputPw: String = ""
@@ -44,9 +22,7 @@ class LoginViewController: UIViewController, GIDSignInDelegate {
     
     override func viewDidLoad() {
         navigationController?.isNavigationBarHidden = true
-    GIDSignIn.sharedInstance().clientID = "633673620136-4jbqdkrnbdlu4pc9ncgf3es05987h33q.apps.googleusercontent.com"
-    GIDSignIn.sharedInstance().delegate = self
-    GIDSignIn.sharedInstance()?.presentingViewController = self
+    
         
         
         TextFieldId.attributedPlaceholder = NSAttributedString(string: "ID", attributes: [NSAttributedString.Key.foregroundColor: BLUE])
@@ -69,12 +45,6 @@ class LoginViewController: UIViewController, GIDSignInDelegate {
         ButtonLogin.layer.shadowOffset = CGSize(width: 0, height: 0)
         ButtonLogin.layer.shadowOpacity = 1
         
-        googleButton.layer.cornerRadius = 4
-        googleButton.layer.shadowColor = BLUE?.cgColor
-        googleButton.layer.shadowRadius = 4
-        googleButton.layer.shadowOffset = CGSize(width: 0, height: 0)
-        googleButton.layer.shadowOpacity = 1
-        
         Labeltest.layer.shadowColor = BLUE?.cgColor
         Labeltest.layer.shadowRadius = 4
         Labeltest.layer.shadowOffset = CGSize(width: 0, height: 0)
@@ -85,10 +55,6 @@ class LoginViewController: UIViewController, GIDSignInDelegate {
         self.hideKeyboard()
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-    }
-    
-    @IBAction func googleButtonPressed(_ sender: Any) {
-    GIDSignIn.sharedInstance()?.signIn()
     }
     
     override func viewWillAppear(_ animated: Bool) {

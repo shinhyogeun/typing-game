@@ -47,7 +47,7 @@ class MainViewController: UIViewController, UITextFieldDelegate {
     let LABEL = UIColor(named: "ColorLabel")
     let BLUE = UIColor(named: "ColorBlue")
     let RED = UIColor(named: "ColorRed")
-    
+
     //가사선택 테스트
     var gameInt: Int = 1
     var gameTitle: String = ""
@@ -60,8 +60,8 @@ class MainViewController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         
         //blur
-        let blur = UIBlurEffect(style: .dark)
-        let underBlur = UIBlurEffect(style: .dark)
+        let blur = UIBlurEffect(style: .light)
+        let underBlur = UIBlurEffect(style: .light)
         
         let blurView = CustomIntensityVisualEffectView(effect: blur, intensity: 0.05)
         let underBlurView = CustomIntensityVisualEffectView(effect: underBlur, intensity: 1)
@@ -179,7 +179,7 @@ class MainViewController: UIViewController, UITextFieldDelegate {
 //          calculate.calculateSpeed()
             
             //심장박동 함수
-            checkBeat()
+//            checkBeat()
         }
     }
     

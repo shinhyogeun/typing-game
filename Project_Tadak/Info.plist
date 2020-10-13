@@ -19,9 +19,11 @@
 	<key>CFBundleURLTypes</key>
 	<array>
 		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>com.googleusercontent.apps.633673620136-4jbqdkrnbdlu4pc9ncgf3es05987h33q</string>
+				<string>com.googleusercontent.apps.320406585671-qn7ebb05jqr6qipoamrioc2q4hbfgt4b</string>
 			</array>
 		</dict>
 	</array>
@@ -29,6 +31,20 @@
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSBluetoothAlwaysUsageDescription</key>
+	<string>NSBluetoothPeripheralUsageDescription</string>
+	<key>NSBluetoothPeripheralUsageDescription</key>
+	<string>NSBluetoothPeripheralUsageDescription</string>
+	<key>UIAppFonts</key>
+	<array>
+		<string>HGGGOTHICSSI_PRO_00G.otf</string>
+		<string>HGGGOTHICSSI_PRO_20G.otf</string>
+		<string>HGGGOTHICSSI_PRO_40G.otf</string>
+		<string>HGGGOTHICSSI_PRO_60G.otf</string>
+		<string>HGGGOTHICSSI_PRO_80G.otf</string>
+		<string>HGGGOTHICSSI_PRO_99G.otf</string>
+		<string>Rix오늘의만화.ttf</string>
+	</array>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
@@ -67,18 +83,5 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
-	<key>UIAppFonts</key>
-	<array>
-		<string>HGGGOTHICSSI_PRO_00G.otf</string>
-		<string>HGGGOTHICSSI_PRO_20G.otf</string>
-		<string>HGGGOTHICSSI_PRO_40G.otf</string>
-		<string>HGGGOTHICSSI_PRO_60G.otf</string>
-		<string>HGGGOTHICSSI_PRO_80G.otf</string>
-		<string>HGGGOTHICSSI_PRO_99G.otf</string>
-	</array>
-	<key>NSBluetoothAlwaysUsageDescription</key>
-	<string>NSBluetoothPeripheralUsageDescription</string>
-	<key>NSBluetoothPeripheralUsageDescription</key>
-	<string>NSBluetoothPeripheralUsageDescription</string>
 </dict>
 </plist>

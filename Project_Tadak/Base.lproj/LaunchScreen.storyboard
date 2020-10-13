@@ -1,72 +1,68 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="HGGGOTHICSSI_PRO_60G.otf">
-            <string>HGGGothicssiP60g</string>
-        </array>
-        <array key="HGGGOTHICSSI_PRO_80G.otf">
-            <string>HGGGothicssiP80g</string>
-        </array>
-    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="EHf-IW-A2E">
             <objects>
                 <viewController id="01J-lp-oVM" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DYa-cj-LkB">
-                                <rect key="frame" x="142.5" y="387.5" width="129.5" height="121.5"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background img" translatesAutoresizingMaskIntoConstraints="NO" id="drc-Qj-IHa">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" name="ColorBackground"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Gb-aV-fTi">
+                                <rect key="frame" x="83.5" y="229.5" width="208" height="208"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="타닥" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2pr-KV-hZt">
-                                        <rect key="frame" x="4" y="4" width="121.5" height="82"/>
-                                        <fontDescription key="fontDescription" name="HGGGothicssiP80g" family="HGGGothicssi_Pro" pointSize="70"/>
-                                        <color key="textColor" name="ColorBlue"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="타 자 게 임" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tIJ-sl-R6G">
-                                        <rect key="frame" x="6.5" y="86" width="116" height="31.5"/>
-                                        <fontDescription key="fontDescription" name="HGGGothicssiP60g" family="HGGGothicssi_Pro" pointSize="27"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="keybord" translatesAutoresizingMaskIntoConstraints="NO" id="bwL-fY-tQI">
+                                        <rect key="frame" x="4" y="4" width="200" height="200"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="200" id="0WO-uK-qfL"/>
+                                            <constraint firstAttribute="width" constant="200" id="Oq3-yN-xZY"/>
+                                        </constraints>
+                                    </imageView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="tIJ-sl-R6G" firstAttribute="centerX" secondItem="DYa-cj-LkB" secondAttribute="centerX" id="3Wh-hG-Srd"/>
-                                    <constraint firstItem="tIJ-sl-R6G" firstAttribute="top" secondItem="2pr-KV-hZt" secondAttribute="bottom" id="5MK-gL-0oC"/>
-                                    <constraint firstItem="2pr-KV-hZt" firstAttribute="top" secondItem="DYa-cj-LkB" secondAttribute="top" constant="4" id="9cG-Ti-0cY"/>
-                                    <constraint firstItem="2pr-KV-hZt" firstAttribute="centerX" secondItem="DYa-cj-LkB" secondAttribute="centerX" id="Tco-HW-Z7c"/>
-                                    <constraint firstItem="2pr-KV-hZt" firstAttribute="leading" secondItem="DYa-cj-LkB" secondAttribute="leading" constant="4" id="UWF-D0-OGE"/>
-                                    <constraint firstAttribute="trailing" secondItem="2pr-KV-hZt" secondAttribute="trailing" constant="4" id="a4X-90-5bx"/>
-                                    <constraint firstAttribute="bottom" secondItem="tIJ-sl-R6G" secondAttribute="bottom" constant="4" id="xfI-kI-5d8"/>
+                                    <constraint firstItem="bwL-fY-tQI" firstAttribute="centerX" secondItem="1Gb-aV-fTi" secondAttribute="centerX" id="Fld-l2-i4Y"/>
+                                    <constraint firstItem="bwL-fY-tQI" firstAttribute="leading" secondItem="1Gb-aV-fTi" secondAttribute="leading" constant="4" id="Jp7-Xp-xRd"/>
+                                    <constraint firstItem="bwL-fY-tQI" firstAttribute="top" secondItem="1Gb-aV-fTi" secondAttribute="top" constant="4" id="Ynd-Tx-Ntk"/>
+                                    <constraint firstAttribute="trailing" secondItem="bwL-fY-tQI" secondAttribute="trailing" constant="4" id="b5V-bx-jVd"/>
+                                    <constraint firstItem="bwL-fY-tQI" firstAttribute="centerX" secondItem="1Gb-aV-fTi" secondAttribute="centerX" id="n16-Qr-Wy1"/>
+                                    <constraint firstItem="bwL-fY-tQI" firstAttribute="centerY" secondItem="1Gb-aV-fTi" secondAttribute="centerY" id="tvR-AN-Te5"/>
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="DYa-cj-LkB" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="Hia-9D-av2"/>
-                            <constraint firstItem="DYa-cj-LkB" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="tde-sM-7IN"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" name="ColorBackground"/>
+                        <constraints>
+                            <constraint firstItem="drc-Qj-IHa" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="JsI-1K-WLK"/>
+                            <constraint firstItem="drc-Qj-IHa" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="RYA-4p-YqJ"/>
+                            <constraint firstItem="1Gb-aV-fTi" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="S3t-e7-Cur"/>
+                            <constraint firstItem="1Gb-aV-fTi" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="cuO-1g-mKI"/>
+                            <constraint firstAttribute="bottom" secondItem="drc-Qj-IHa" secondAttribute="bottom" id="rGC-SU-Gvk"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53" y="375"/>
+            <point key="canvasLocation" x="52.173913043478265" y="375"/>
         </scene>
     </scenes>
     <resources>
-        <namedColor name="ColorBlue">
-            <color red="0.0" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <image name="background img" width="375" height="667"/>
+        <image name="keybord" width="266" height="124"/>
+        <namedColor name="ColorBackground">
+            <color red="1" green="0.99607843137254903" blue="0.99215686274509807" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
     </resources>
 </document>
