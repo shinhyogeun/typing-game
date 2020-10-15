@@ -21,6 +21,7 @@ class AuthViewController: UIViewController {
     @IBAction func verifyPhoneNumber(sender: UIButton) {
         PhoneAuthProvider.provider().verifyPhoneNumber(phoneNumber.text!, uiDelegate: nil) { (verificationID, error) in
             if let error = error{
+                print("인증번호를 보낼 수 없습니다.")
                 print(error.localizedDescription)
                 return
             }
@@ -29,5 +30,11 @@ class AuthViewController: UIViewController {
         }
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "goToCheckingPage"{
+            let destinationVC = segue.destination as! PhoneNumberLoginViewController
+            destinationVC.phoneNumber = phoneNumber.text
+        }
+    }
 
 }

@@ -34,6 +34,7 @@ class test: UIViewController {
         Text_id.attributedPlaceholder = NSAttributedString(string: "ID", attributes: [NSAttributedString.Key.foregroundColor: SHADOW])
         Text_pw.attributedPlaceholder = NSAttributedString(string: "Password", attributes: [NSAttributedString.Key.foregroundColor: SHADOW])
         
+        
     }
     
 

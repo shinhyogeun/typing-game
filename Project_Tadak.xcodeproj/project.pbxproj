@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		154D3275253027E4000239AE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 154D3274253027E4000239AE /* GoogleService-Info.plist */; };
+		156860E825374F8C005C90AB /* NickNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156860E725374F8C005C90AB /* NickNameViewController.swift */; };
+		156860EB25374FF6005C90AB /* PhoneNumberLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156860EA25374FF6005C90AB /* PhoneNumberLoginViewController.swift */; };
 		1572F2C524816D1C004EB34D /* Calculate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1572F2C424816D1C004EB34D /* Calculate.swift */; };
 		158F26A4247FE0260046356C /* Jamo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 158F26A3247FE0260046356C /* Jamo.swift */; };
 		158F26A6247FE5B10046356C /* Text.swift in Sources */ = {isa = PBXBuildFile; fileRef = 158F26A5247FE5B10046356C /* Text.swift */; };
@@ -42,6 +44,8 @@
 /* Begin PBXFileReference section */
 		00D2ED0CE0BAFFD65AB37233 /* Pods-Project_Tadak.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Project_Tadak.release.xcconfig"; path = "Target Support Files/Pods-Project_Tadak/Pods-Project_Tadak.release.xcconfig"; sourceTree = "<group>"; };
 		154D3274253027E4000239AE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		156860E725374F8C005C90AB /* NickNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NickNameViewController.swift; sourceTree = "<group>"; };
+		156860EA25374FF6005C90AB /* PhoneNumberLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneNumberLoginViewController.swift; sourceTree = "<group>"; };
 		1572F2C424816D1C004EB34D /* Calculate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calculate.swift; sourceTree = "<group>"; };
 		158F26A3247FE0260046356C /* Jamo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Jamo.swift; sourceTree = "<group>"; };
 		158F26A5247FE5B10046356C /* Text.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Text.swift; sourceTree = "<group>"; };
@@ -149,9 +153,11 @@
 				9399C4BA2476585400F73CDD /* Main.storyboard */,
 				9378B3C5251C401F00D2FF2D /* StartViewController.swift */,
 				9354CBF3251B3E420048F3DC /* test.swift */,
+				156860EA25374FF6005C90AB /* PhoneNumberLoginViewController.swift */,
 				7720FDF424E6C6BE007552B2 /* NewViewController.swift */,
 				9399C4CC247660E500F73CDD /* ResultViewController.swift */,
 				154D3274253027E4000239AE /* GoogleService-Info.plist */,
+				156860E725374F8C005C90AB /* NickNameViewController.swift */,
 				9399C4CA247660BC00F73CDD /* MainViewController.swift */,
 				9399C4B42476585400F73CDD /* AppDelegate.swift */,
 				9399C4B62476585400F73CDD /* SceneDelegate.swift */,
@@ -314,6 +320,7 @@
 				9378B3C6251C401F00D2FF2D /* StartViewController.swift in Sources */,
 				9399C4C92476608900F73CDD /* SelectionViewController.swift in Sources */,
 				778B1CC624E9082800BB68C6 /* CustomIntensityVisualEffectView.swift in Sources */,
+				156860EB25374FF6005C90AB /* PhoneNumberLoginViewController.swift in Sources */,
 				9354CBF4251B3E420048F3DC /* test.swift in Sources */,
 				77671E6B24E8CEB3009A1A4A /* Text2.swift in Sources */,
 				158F26A6247FE5B10046356C /* Text.swift in Sources */,
@@ -322,6 +329,7 @@
 				9399C4B52476585400F73CDD /* AppDelegate.swift in Sources */,
 				9399C4B72476585400F73CDD /* SceneDelegate.swift in Sources */,
 				9399C4CB247660BC00F73CDD /* MainViewController.swift in Sources */,
+				156860E825374F8C005C90AB /* NickNameViewController.swift in Sources */,
 				7720FDF524E6C6BE007552B2 /* NewViewController.swift in Sources */,
 				158F26A4247FE0260046356C /* Jamo.swift in Sources */,
 				9399C4CD247660E500F73CDD /* ResultViewController.swift in Sources */,
