@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import Firebase
 
 class StartViewController: UIViewController {
 
@@ -25,8 +25,14 @@ class StartViewController: UIViewController {
     }
     
     override func viewDidLoad() {
-        super.viewDidLoad()
-        
+//        super.viewDidLoad()
+//        let firebaseAuth = Auth.auth()
+//        do {
+//            try firebaseAuth.signOut()
+//        } catch  {
+//            print("asd")
+//        }
+        self.Image_logo.transform = CGAffineTransform(translationX: 0, y: 110)
         navigationController?.isNavigationBarHidden = true
 
         Button_start.layer.cornerRadius = 15
@@ -36,27 +42,34 @@ class StartViewController: UIViewController {
         Label_2.alpha = 0
         Button_start.alpha = 0
         
-        //animation
-        self.Image_logo.transform = CGAffineTransform(translationX: 0, y: 109)
-        UIView.animate(withDuration: 0.5, delay: 0.5, options: .curveEaseIn, animations: {
-            self.Image_logo.transform = CGAffineTransform(translationX: 0, y: 0)
-        }, completion: nil)
-        
-        UIView.animate(withDuration: 0.7, delay: 1.3, options: .curveEaseIn, animations: {
-            self.Label_1.alpha = 1
-        }, completion: nil)
-        
-        UIView.animate(withDuration: 0.7, delay: 1.8, options: .curveEaseIn, animations: {
-            self.Label_2.alpha = 1
-        }, completion: nil)
-        
-        UIView.animate(withDuration: 0.7, delay: 3.0, options: .curveEaseIn, animations: {
-            self.Button_start.alpha = 1
-        }, completion: nil)
-        
+        if Auth.auth().currentUser != nil {
+            self.performSegue(withIdentifier: "startSegue", sender: nil)
+        }else{
+            startAnimation()
+        }
         // 화면이 켜지면 바로 밑의 함수를 실행해 로그인 준비를 합니다.
         handlePhoneVerificationLogin()
     }
+    
+    func startAnimation()
+        {
+            //animation
+            UIView.animate(withDuration: 0.5, delay: 0.5, options: .curveEaseIn, animations: {
+                self.Image_logo.transform = CGAffineTransform(translationX: 0, y: 0)
+            }, completion: nil)
+            
+            UIView.animate(withDuration: 0.7, delay: 1.3, options: .curveEaseIn, animations: {
+                self.Label_1.alpha = 1
+            }, completion: nil)
+            
+            UIView.animate(withDuration: 0.7, delay: 1.8, options: .curveEaseIn, animations: {
+                self.Label_2.alpha = 1
+            }, completion: nil)
+            
+            UIView.animate(withDuration: 0.7, delay: 3.0, options: .curveEaseIn, animations: {
+                self.Button_start.alpha = 1
+            }, completion: nil)
+        }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillDisappear(animated)
