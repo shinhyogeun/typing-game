@@ -8,6 +8,7 @@
 
 import UIKit
 import Foundation
+import Firebase
 
 class MainViewController: UIViewController, UITextFieldDelegate {
     
@@ -77,26 +78,26 @@ class MainViewController: UIViewController, UITextFieldDelegate {
         switch gameInt
         {
         case 1:
-            gameTitle = Text2().getTitle(num: 1)
+            gameTitle = Text3().getTitle(num: 1)
         case 2:
-            gameTitle = Text2().getTitle(num: 2)
+            gameTitle = Text3().getTitle(num: 2)
         case 3:
-            gameTitle = Text2().getTitle(num: 3)
+            gameTitle = Text3().getTitle(num: 3)
         default:
-            gameTitle = Text2().getTitle(num: 1)
+            gameTitle = Text3().getTitle(num: 1)
         }
         Label_title.text = gameTitle
         
         switch gameInt
         {
         case 1:
-            gameData = Text2().getData(num: 1)
+            gameData = Text3().getData(num: 1)
         case 2:
-            gameData = Text2().getData(num: 2)
+            gameData = Text3().getData(num: 2)
         case 3:
-            gameData = Text2().getData(num: 3)
+            gameData = Text3().getData(num: 3)
         default:
-            gameData = Text2().getData(num: 1)
+            gameData = Text3().getData(num: 1)
         }
         
         navigationController?.isNavigationBarHidden = true
@@ -105,7 +106,7 @@ class MainViewController: UIViewController, UITextFieldDelegate {
         
         inputTextField.keyboardType = .default
         timeLabel.text = String(format: "%.2f",second)
-        beforeLabel.text = gameData[0]
+         beforeLabel.text = gameData[0]
         self.beforeLabel.alpha = 1
 //        beforeLabel.textColor = LABEL
         viewLabel.text = ""

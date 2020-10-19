@@ -25,13 +25,7 @@ class StartViewController: UIViewController {
     }
     
     override func viewDidLoad() {
-//        super.viewDidLoad()
-//        let firebaseAuth = Auth.auth()
-//        do {
-//            try firebaseAuth.signOut()
-//        } catch  {
-//            print("asd")
-//        }
+        
         self.Image_logo.transform = CGAffineTransform(translationX: 0, y: 110)
         navigationController?.isNavigationBarHidden = true
 

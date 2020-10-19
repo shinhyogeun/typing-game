@@ -7,14 +7,15 @@
 //
 
 import UIKit
+import Firebase
 
 class SelectionViewController: UIViewController {
-
+    var ref:DatabaseReference!
+    var index:Int = 1
     override func viewDidLoad() {
+        ref = Database.database().reference()
         navigationController?.isNavigationBarHidden = true
         super.viewDidLoad()
-
-        
         
     }
     

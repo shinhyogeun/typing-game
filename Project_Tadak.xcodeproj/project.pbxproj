@@ -11,6 +11,7 @@
 		156860E825374F8C005C90AB /* NickNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156860E725374F8C005C90AB /* NickNameViewController.swift */; };
 		156860EB25374FF6005C90AB /* PhoneNumberLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156860EA25374FF6005C90AB /* PhoneNumberLoginViewController.swift */; };
 		1572F2C524816D1C004EB34D /* Calculate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1572F2C424816D1C004EB34D /* Calculate.swift */; };
+		157BF740253C87C700C349B4 /* Text3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 157BF73F253C87C700C349B4 /* Text3.swift */; };
 		158F26A4247FE0260046356C /* Jamo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 158F26A3247FE0260046356C /* Jamo.swift */; };
 		158F26A6247FE5B10046356C /* Text.swift in Sources */ = {isa = PBXBuildFile; fileRef = 158F26A5247FE5B10046356C /* Text.swift */; };
 		15E9A5852534C326008FFC1A /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15E9A5842534C326008FFC1A /* AuthViewController.swift */; };
@@ -47,6 +48,7 @@
 		156860E725374F8C005C90AB /* NickNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NickNameViewController.swift; sourceTree = "<group>"; };
 		156860EA25374FF6005C90AB /* PhoneNumberLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneNumberLoginViewController.swift; sourceTree = "<group>"; };
 		1572F2C424816D1C004EB34D /* Calculate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calculate.swift; sourceTree = "<group>"; };
+		157BF73F253C87C700C349B4 /* Text3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Text3.swift; sourceTree = "<group>"; };
 		158F26A3247FE0260046356C /* Jamo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Jamo.swift; sourceTree = "<group>"; };
 		158F26A5247FE5B10046356C /* Text.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Text.swift; sourceTree = "<group>"; };
 		15E9A5842534C326008FFC1A /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
@@ -99,6 +101,7 @@
 				1572F2C424816D1C004EB34D /* Calculate.swift */,
 				158F26A5247FE5B10046356C /* Text.swift */,
 				77671E6A24E8CEB3009A1A4A /* Text2.swift */,
+				157BF73F253C87C700C349B4 /* Text3.swift */,
 			);
 			path = Brain;
 			sourceTree = "<group>";
@@ -318,6 +321,7 @@
 			files = (
 				9399C4B92476585400F73CDD /* LoginViewController.swift in Sources */,
 				9378B3C6251C401F00D2FF2D /* StartViewController.swift in Sources */,
+				157BF740253C87C700C349B4 /* Text3.swift in Sources */,
 				9399C4C92476608900F73CDD /* SelectionViewController.swift in Sources */,
 				778B1CC624E9082800BB68C6 /* CustomIntensityVisualEffectView.swift in Sources */,
 				156860EB25374FF6005C90AB /* PhoneNumberLoginViewController.swift in Sources */,
