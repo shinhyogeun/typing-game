@@ -94,45 +94,13 @@ class MainViewController: UIViewController, UITextFieldDelegate {
         switch gameInt
         {
         case 1:
-            print("case 들어옴")
-            var temp:Bool = false
-            temp = Text3().loadComplete()
-            while(true) {
-                if(temp) {
-                    isLoad = true
-                    print("isloading success")
-                    gameData = Text3().getData(num: 1)
-                    if(isLoad) {
-                        beforeLabel.text = gameData[0]
-                        print("gameData[0] success")
-                    }
-                    break;
-                }
-            }
+                gameData = MyVariables.completeArray
         case 2:
-            if(Text3().loadComplete()) {
-                isLoad = true
                 gameData = Text3().getData(num: 2)
-                if(isLoad) {
-                    beforeLabel.text = gameData[0]
-                }
-            }
         case 3:
-            if(Text3().loadComplete()) {
-                isLoad = true
                 gameData = Text3().getData(num: 3)
-                if(isLoad) {
-                    beforeLabel.text = gameData[0]
-                }
-            }
         default:
-            if(Text3().loadComplete()) {
-                isLoad = true
                 gameData = Text3().getData(num: 4)
-                if(isLoad) {
-                    beforeLabel.text = gameData[0]
-                }
-            }
         }
         
         navigationController?.isNavigationBarHidden = true
@@ -141,9 +109,8 @@ class MainViewController: UIViewController, UITextFieldDelegate {
         
         inputTextField.keyboardType = .default
         timeLabel.text = String(format: "%.2f",second)
-//        if(isLoad) {
-//            beforeLabel.text = gameData[0]
-//        }
+            beforeLabel.text = gameData[0]
+        
          
         self.beforeLabel.alpha = 1
 //        beforeLabel.textColor = LABEL
@@ -152,10 +119,6 @@ class MainViewController: UIViewController, UITextFieldDelegate {
         afterLabel2.text = ""
         inputTextField.addTarget(self, action: #selector(textFieldDidChange(textField:)), for: UIControl.Event.editingChanged)
         let calculate = Calculate()
-        
-        //gamedata print
-        print("최종 불러와진 gamedata")
-        print(gameData)
     }
     
     //input에 입력될 시 실행

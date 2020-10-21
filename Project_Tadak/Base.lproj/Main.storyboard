@@ -1104,7 +1104,7 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
-                                            <segue destination="Xya-nC-nfH" kind="show" identifier="test1" id="Q2H-p0-lfi"/>
+                                            <action selector="TEST1ButtonPressed:" destination="kfa-as-KIN" eventType="touchUpInside" id="i08-7c-qST"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hQ1-Cm-Xf7">
@@ -1165,6 +1165,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Zis-AP-mq7"/>
+                    <connections>
+                        <segue destination="Xya-nC-nfH" kind="show" identifier="goToGame" id="FZP-qW-N4G"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FS1-vT-EfZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1457,7 +1460,7 @@
     <inferredMetricsTieBreakers>
         <segue reference="j6Z-G1-428"/>
         <segue reference="48b-JK-MTZ"/>
-        <segue reference="D3A-jj-xUE"/>
+        <segue reference="FZP-qW-N4G"/>
         <segue reference="UiM-ND-oXy"/>
     </inferredMetricsTieBreakers>
     <resources>
