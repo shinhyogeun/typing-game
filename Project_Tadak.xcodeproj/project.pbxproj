@@ -12,8 +12,9 @@
 		156860EB25374FF6005C90AB /* PhoneNumberLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156860EA25374FF6005C90AB /* PhoneNumberLoginViewController.swift */; };
 		1572F2C524816D1C004EB34D /* Calculate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1572F2C424816D1C004EB34D /* Calculate.swift */; };
 		157BF740253C87C700C349B4 /* Text3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 157BF73F253C87C700C349B4 /* Text3.swift */; };
+		1582F3E225408DAC00305D4D /* DataMakingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1582F3E125408DAC00305D4D /* DataMakingViewController.swift */; };
+		1582F3E52540922F00305D4D /* GameText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1582F3E42540922F00305D4D /* GameText.swift */; };
 		158F26A4247FE0260046356C /* Jamo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 158F26A3247FE0260046356C /* Jamo.swift */; };
-		158F26A6247FE5B10046356C /* Text.swift in Sources */ = {isa = PBXBuildFile; fileRef = 158F26A5247FE5B10046356C /* Text.swift */; };
 		15E9A5852534C326008FFC1A /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15E9A5842534C326008FFC1A /* AuthViewController.swift */; };
 		7720FDF524E6C6BE007552B2 /* NewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7720FDF424E6C6BE007552B2 /* NewViewController.swift */; };
 		77671E6B24E8CEB3009A1A4A /* Text2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77671E6A24E8CEB3009A1A4A /* Text2.swift */; };
@@ -49,8 +50,9 @@
 		156860EA25374FF6005C90AB /* PhoneNumberLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneNumberLoginViewController.swift; sourceTree = "<group>"; };
 		1572F2C424816D1C004EB34D /* Calculate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calculate.swift; sourceTree = "<group>"; };
 		157BF73F253C87C700C349B4 /* Text3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Text3.swift; sourceTree = "<group>"; };
+		1582F3E125408DAC00305D4D /* DataMakingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataMakingViewController.swift; sourceTree = "<group>"; };
+		1582F3E42540922F00305D4D /* GameText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameText.swift; sourceTree = "<group>"; };
 		158F26A3247FE0260046356C /* Jamo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Jamo.swift; sourceTree = "<group>"; };
-		158F26A5247FE5B10046356C /* Text.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Text.swift; sourceTree = "<group>"; };
 		15E9A5842534C326008FFC1A /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
 		418F3E9CCD0A91B1680A9BB5 /* libPods-Project_Tadak.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Project_Tadak.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7720FDF424E6C6BE007552B2 /* NewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewViewController.swift; sourceTree = "<group>"; };
@@ -99,7 +101,7 @@
 			children = (
 				158F26A3247FE0260046356C /* Jamo.swift */,
 				1572F2C424816D1C004EB34D /* Calculate.swift */,
-				158F26A5247FE5B10046356C /* Text.swift */,
+				1582F3E42540922F00305D4D /* GameText.swift */,
 				77671E6A24E8CEB3009A1A4A /* Text2.swift */,
 				157BF73F253C87C700C349B4 /* Text3.swift */,
 			);
@@ -158,6 +160,7 @@
 				9354CBF3251B3E420048F3DC /* test.swift */,
 				156860EA25374FF6005C90AB /* PhoneNumberLoginViewController.swift */,
 				7720FDF424E6C6BE007552B2 /* NewViewController.swift */,
+				1582F3E125408DAC00305D4D /* DataMakingViewController.swift */,
 				9399C4CC247660E500F73CDD /* ResultViewController.swift */,
 				154D3274253027E4000239AE /* GoogleService-Info.plist */,
 				156860E725374F8C005C90AB /* NickNameViewController.swift */,
@@ -319,6 +322,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1582F3E225408DAC00305D4D /* DataMakingViewController.swift in Sources */,
 				9399C4B92476585400F73CDD /* LoginViewController.swift in Sources */,
 				9378B3C6251C401F00D2FF2D /* StartViewController.swift in Sources */,
 				157BF740253C87C700C349B4 /* Text3.swift in Sources */,
@@ -327,9 +331,9 @@
 				156860EB25374FF6005C90AB /* PhoneNumberLoginViewController.swift in Sources */,
 				9354CBF4251B3E420048F3DC /* test.swift in Sources */,
 				77671E6B24E8CEB3009A1A4A /* Text2.swift in Sources */,
-				158F26A6247FE5B10046356C /* Text.swift in Sources */,
 				15E9A5852534C326008FFC1A /* AuthViewController.swift in Sources */,
 				1572F2C524816D1C004EB34D /* Calculate.swift in Sources */,
+				1582F3E52540922F00305D4D /* GameText.swift in Sources */,
 				9399C4B52476585400F73CDD /* AppDelegate.swift in Sources */,
 				9399C4B72476585400F73CDD /* SceneDelegate.swift in Sources */,
 				9399C4CB247660BC00F73CDD /* MainViewController.swift in Sources */,

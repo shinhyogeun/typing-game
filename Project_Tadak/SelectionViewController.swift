@@ -58,4 +58,11 @@ class SelectionViewController: UIViewController {
         }
     }
     
+    @IBAction func logoutButtonPressed(_ sender: UIButton) {
+        do {
+            try Auth.auth().signOut()
+        } catch let signOutEror as NSError {
+            print("로그아웃을 할 수 없습니다.", signOutEror)
+        }
+    }
 }
