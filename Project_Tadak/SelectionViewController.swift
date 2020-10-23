@@ -43,17 +43,20 @@ class SelectionViewController: UIViewController {
         }
     }
     @IBAction func TEST1ButtonPressed(_ sender: UIButton) {
-        let postRef : DatabaseQuery! = ref.child("users").child(Auth.auth().currentUser!.uid).child("한국어게임")
+        let postRef : DatabaseQuery! = ref.child("game").child("korea").child("애국가")
         postRef.observeSingleEvent(of: DataEventType.value) { (snapshot, key) in
             let children : NSEnumerator = snapshot.children
+            var forTossArray : Array<String> = []
             for (child) in children {
                 let childSnapShot = child as? DataSnapshot
-//                let a = (childSnapShot?.value as? NSArray)! as! Array<String>
-                MyVariables.completeArray = (childSnapShot?.value as? NSArray)! as! Array<String>
-                DispatchQueue.main.async {
-                    print(MyVariables.completeArray)
-                    self.performSegue(withIdentifier: "goToGame", sender: nil)
+                if let data = (childSnapShot?.value as? String){
+                    forTossArray.append(data)
                 }
+                MyVariables.completeArray = forTossArray
+            }
+            DispatchQueue.main.async {
+                print(MyVariables.completeArray)
+                self.performSegue(withIdentifier: "goToGame", sender: nil)
             }
         }
     }
