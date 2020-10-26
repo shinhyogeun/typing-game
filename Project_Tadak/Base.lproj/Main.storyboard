@@ -680,7 +680,7 @@
             <objects>
                 <viewController id="9qd-rM-Fri" customClass="DataMakingViewController" customModule="Project_Tadak" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="oRQ-ne-LIv">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nXK-fp-Fgl">
@@ -716,7 +716,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9Tf-a7-GbH">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="+821090973776" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9Tf-a7-GbH">
                                 <rect key="frame" x="87" y="158" width="198" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -759,7 +759,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ow4-qS-kWo">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="123456" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ow4-qS-kWo">
                                 <rect key="frame" x="101" y="160" width="198" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -813,6 +813,9 @@
                                 <rect key="frame" x="177" y="262" width="31" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="시작!"/>
+                                <connections>
+                                    <action selector="nickNameButtonPressed:" destination="o79-47-05G" eventType="touchUpInside" id="OVJ-08-sU0"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="닉네임을 입력해주세요" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="weO-9K-fMX">
                                 <rect key="frame" x="116" y="131" width="152" height="21"/>
@@ -826,25 +829,14 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="xU7-i6-Z8v"/>
+                    <connections>
+                        <outlet property="nickNameLabel" destination="XBz-ev-RRo" id="amB-Bi-Lfa"/>
+                        <segue destination="kfa-as-KIN" kind="show" identifier="goToMainPage" id="fbI-N2-bU8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0B4-Az-aY8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3532" y="2267.3163418290856"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="3R2-Lh-mZZ">
-            <objects>
-                <viewController id="v65-Qy-JIq" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Dxr-ps-OZp">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="196-rc-Tdm"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="fTu-Rh-PaY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2500" y="878"/>
         </scene>
         <!--Main View Controller-->
         <scene sceneID="6bq-J1-x4W">
@@ -1103,21 +1095,21 @@
             <objects>
                 <viewController id="kfa-as-KIN" customClass="SelectionViewController" customModule="Project_Tadak" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="t8G-25-eSL">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="타자내용 선택" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bCP-pD-aeL">
-                                <rect key="frame" x="133" y="50" width="109.5" height="23.5"/>
+                                <rect key="frame" x="133" y="94" width="109.5" height="23.5"/>
                                 <fontDescription key="fontDescription" name="HGGGothicssiP80g" family="HGGGothicssi_Pro" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="sPN-2r-RMg">
-                                <rect key="frame" x="40" y="88.5" width="295" height="470.5"/>
+                                <rect key="frame" x="40" y="132.5" width="295" height="446.5"/>
                                 <color key="backgroundColor" systemColor="viewFlipsideBackgroundColor"/>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BVh-Zm-Cxv">
-                                <rect key="frame" x="18.5" y="579" width="338" height="48"/>
+                                <rect key="frame" x="18.5" y="599" width="338" height="48"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rFq-kR-YiM">
                                         <rect key="frame" x="4" y="4" width="100" height="40"/>
@@ -1500,8 +1492,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="48b-JK-MTZ"/>
-        <segue reference="FZP-qW-N4G"/>
+        <segue reference="fbI-N2-bU8"/>
+        <segue reference="D3A-jj-xUE"/>
         <segue reference="UiM-ND-oXy"/>
     </inferredMetricsTieBreakers>
     <resources>
