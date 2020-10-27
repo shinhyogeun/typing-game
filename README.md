@@ -1,8 +1,8 @@
 # Tadak
 ------------
-타닥은 IOS버전 타자게임어플입니다.
-email 주소 : tlsgyrms123@gmail.com
-blog 주소 : https://shinhyogeun.tistory.com
+타닥은 IOS버전 타자게임어플입니다.<br />
+email 주소 : tlsgyrms123@gmail.com<br />
+blog 주소 : https://shinhyogeun.tistory.com<br />
 
 ### Introduction
 ------------
