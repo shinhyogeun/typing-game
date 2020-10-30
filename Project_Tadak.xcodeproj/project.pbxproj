@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1527D0C5254BF99E004EBD34 /* CommunicateFirebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1527D0C4254BF99E004EBD34 /* CommunicateFirebase.swift */; };
 		154D3275253027E4000239AE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 154D3274253027E4000239AE /* GoogleService-Info.plist */; };
 		156860E825374F8C005C90AB /* NickNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156860E725374F8C005C90AB /* NickNameViewController.swift */; };
 		156860EB25374FF6005C90AB /* PhoneNumberLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156860EA25374FF6005C90AB /* PhoneNumberLoginViewController.swift */; };
@@ -15,6 +16,11 @@
 		1582F3E225408DAC00305D4D /* DataMakingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1582F3E125408DAC00305D4D /* DataMakingViewController.swift */; };
 		1582F3E52540922F00305D4D /* GameText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1582F3E42540922F00305D4D /* GameText.swift */; };
 		158F26A4247FE0260046356C /* Jamo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 158F26A3247FE0260046356C /* Jamo.swift */; };
+		15AB9DED254C3A060043D39D /* StartViewController_temp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15AB9DEC254C3A060043D39D /* StartViewController_temp.swift */; };
+		15AB9DF3254C3A390043D39D /* Check1ViewController_temp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15AB9DF0254C3A380043D39D /* Check1ViewController_temp.swift */; };
+		15AB9DF4254C3A390043D39D /* Check2ViewController_temp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15AB9DF1254C3A390043D39D /* Check2ViewController_temp.swift */; };
+		15AB9DF5254C3A390043D39D /* Check3ViewController_temp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15AB9DF2254C3A390043D39D /* Check3ViewController_temp.swift */; };
+		15AB9DF8254C3A5C0043D39D /* MainViewController_temp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15AB9DF7254C3A5C0043D39D /* MainViewController_temp.swift */; };
 		15E9A5852534C326008FFC1A /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15E9A5842534C326008FFC1A /* AuthViewController.swift */; };
 		7720FDF524E6C6BE007552B2 /* NewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7720FDF424E6C6BE007552B2 /* NewViewController.swift */; };
 		77671E6B24E8CEB3009A1A4A /* Text2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77671E6A24E8CEB3009A1A4A /* Text2.swift */; };
@@ -45,6 +51,7 @@
 
 /* Begin PBXFileReference section */
 		00D2ED0CE0BAFFD65AB37233 /* Pods-Project_Tadak.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Project_Tadak.release.xcconfig"; path = "Target Support Files/Pods-Project_Tadak/Pods-Project_Tadak.release.xcconfig"; sourceTree = "<group>"; };
+		1527D0C4254BF99E004EBD34 /* CommunicateFirebase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunicateFirebase.swift; sourceTree = "<group>"; };
 		154D3274253027E4000239AE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		156860E725374F8C005C90AB /* NickNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NickNameViewController.swift; sourceTree = "<group>"; };
 		156860EA25374FF6005C90AB /* PhoneNumberLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneNumberLoginViewController.swift; sourceTree = "<group>"; };
@@ -53,6 +60,11 @@
 		1582F3E125408DAC00305D4D /* DataMakingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataMakingViewController.swift; sourceTree = "<group>"; };
 		1582F3E42540922F00305D4D /* GameText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameText.swift; sourceTree = "<group>"; };
 		158F26A3247FE0260046356C /* Jamo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Jamo.swift; sourceTree = "<group>"; };
+		15AB9DEC254C3A060043D39D /* StartViewController_temp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StartViewController_temp.swift; path = ../../../Downloads/Project_Tadak/Project_Tadak/StartViewController_temp.swift; sourceTree = "<group>"; };
+		15AB9DF0254C3A380043D39D /* Check1ViewController_temp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Check1ViewController_temp.swift; sourceTree = "<group>"; };
+		15AB9DF1254C3A390043D39D /* Check2ViewController_temp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Check2ViewController_temp.swift; sourceTree = "<group>"; };
+		15AB9DF2254C3A390043D39D /* Check3ViewController_temp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Check3ViewController_temp.swift; sourceTree = "<group>"; };
+		15AB9DF7254C3A5C0043D39D /* MainViewController_temp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController_temp.swift; sourceTree = "<group>"; };
 		15E9A5842534C326008FFC1A /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
 		418F3E9CCD0A91B1680A9BB5 /* libPods-Project_Tadak.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Project_Tadak.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7720FDF424E6C6BE007552B2 /* NewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewViewController.swift; sourceTree = "<group>"; };
@@ -104,6 +116,7 @@
 				1582F3E42540922F00305D4D /* GameText.swift */,
 				77671E6A24E8CEB3009A1A4A /* Text2.swift */,
 				157BF73F253C87C700C349B4 /* Text3.swift */,
+				1527D0C4254BF99E004EBD34 /* CommunicateFirebase.swift */,
 			);
 			path = Brain;
 			sourceTree = "<group>";
@@ -156,7 +169,13 @@
 				933A64EB251B2F56003EA64A /* fonts */,
 				93790AE6247D5BFA0046349E /* img */,
 				9399C4BA2476585400F73CDD /* Main.storyboard */,
+				15AB9DEC254C3A060043D39D /* StartViewController_temp.swift */,
 				9378B3C5251C401F00D2FF2D /* StartViewController.swift */,
+				15AB9DF0254C3A380043D39D /* Check1ViewController_temp.swift */,
+				15AB9DF1254C3A390043D39D /* Check2ViewController_temp.swift */,
+				15AB9DF2254C3A390043D39D /* Check3ViewController_temp.swift */,
+				15AB9DF7254C3A5C0043D39D /* MainViewController_temp.swift */,
+				9399C4C82476608900F73CDD /* SelectionViewController.swift */,
 				9354CBF3251B3E420048F3DC /* test.swift */,
 				156860EA25374FF6005C90AB /* PhoneNumberLoginViewController.swift */,
 				7720FDF424E6C6BE007552B2 /* NewViewController.swift */,
@@ -169,7 +188,6 @@
 				9399C4B62476585400F73CDD /* SceneDelegate.swift */,
 				9399C4B82476585400F73CDD /* LoginViewController.swift */,
 				15E9A5842534C326008FFC1A /* AuthViewController.swift */,
-				9399C4C82476608900F73CDD /* SelectionViewController.swift */,
 				158F26A2247FDF5E0046356C /* Brain */,
 				9399C4BD2476585500F73CDD /* Assets.xcassets */,
 				9399C4BF2476585500F73CDD /* LaunchScreen.storyboard */,
@@ -330,16 +348,22 @@
 				778B1CC624E9082800BB68C6 /* CustomIntensityVisualEffectView.swift in Sources */,
 				156860EB25374FF6005C90AB /* PhoneNumberLoginViewController.swift in Sources */,
 				9354CBF4251B3E420048F3DC /* test.swift in Sources */,
+				15AB9DED254C3A060043D39D /* StartViewController_temp.swift in Sources */,
+				15AB9DF3254C3A390043D39D /* Check1ViewController_temp.swift in Sources */,
 				77671E6B24E8CEB3009A1A4A /* Text2.swift in Sources */,
 				15E9A5852534C326008FFC1A /* AuthViewController.swift in Sources */,
 				1572F2C524816D1C004EB34D /* Calculate.swift in Sources */,
 				1582F3E52540922F00305D4D /* GameText.swift in Sources */,
 				9399C4B52476585400F73CDD /* AppDelegate.swift in Sources */,
 				9399C4B72476585400F73CDD /* SceneDelegate.swift in Sources */,
+				15AB9DF4254C3A390043D39D /* Check2ViewController_temp.swift in Sources */,
 				9399C4CB247660BC00F73CDD /* MainViewController.swift in Sources */,
 				156860E825374F8C005C90AB /* NickNameViewController.swift in Sources */,
 				7720FDF524E6C6BE007552B2 /* NewViewController.swift in Sources */,
 				158F26A4247FE0260046356C /* Jamo.swift in Sources */,
+				15AB9DF5254C3A390043D39D /* Check3ViewController_temp.swift in Sources */,
+				1527D0C5254BF99E004EBD34 /* CommunicateFirebase.swift in Sources */,
+				15AB9DF8254C3A5C0043D39D /* MainViewController_temp.swift in Sources */,
 				9399C4CD247660E500F73CDD /* ResultViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

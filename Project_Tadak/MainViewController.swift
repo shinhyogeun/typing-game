@@ -109,7 +109,7 @@ class MainViewController: UIViewController, UITextFieldDelegate {
         
         inputTextField.keyboardType = .default
         timeLabel.text = String(format: "%.2f",second)
-            beforeLabel.text = gameData[0]
+        beforeLabel.text = gameData[0]
         
          
         self.beforeLabel.alpha = 1
@@ -342,11 +342,18 @@ class MainViewController: UIViewController, UITextFieldDelegate {
     func endGame() {
         realTime.invalidate()
         //종료시 보이는 문장 수정 : M
-//        afterLabel.text = ""
         
         inputTextField.isHidden = true
         //종료조건 : M
         endStatus = false
+        
+        // 기록을 넣자 개인기록
+        var formatter = DateFormatter()
+        formatter.dateFormat = "yy-MM-dd HH:mm:ss"
+        var whenRecodeIsMade = formatter.string(from: Date())
+        var ranking = second
+        
+        
         self.view.endEditing(true)
         
         

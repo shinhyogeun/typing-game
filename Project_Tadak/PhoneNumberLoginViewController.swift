@@ -18,6 +18,7 @@ class PhoneNumberLoginViewController: UIViewController {
     var ref:DatabaseReference!
     override func viewDidLoad() {
         super.viewDidLoad()
+        hideKeyboard()
         ref = Database.database().reference()
     }
     

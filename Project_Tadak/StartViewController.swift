@@ -46,24 +46,24 @@ class StartViewController: UIViewController {
     }
     
     func startAnimation()
-        {
-            //animation
-            UIView.animate(withDuration: 0.5, delay: 0.5, options: .curveEaseIn, animations: {
-                self.Image_logo.transform = CGAffineTransform(translationX: 0, y: 0)
-            }, completion: nil)
-            
-            UIView.animate(withDuration: 0.7, delay: 1.3, options: .curveEaseIn, animations: {
-                self.Label_1.alpha = 1
-            }, completion: nil)
-            
-            UIView.animate(withDuration: 0.7, delay: 1.8, options: .curveEaseIn, animations: {
-                self.Label_2.alpha = 1
-            }, completion: nil)
-            
-            UIView.animate(withDuration: 0.7, delay: 3.0, options: .curveEaseIn, animations: {
-                self.Button_start.alpha = 1
-            }, completion: nil)
-        }
+    {
+        //animation
+        UIView.animate(withDuration: 0.5, delay: 0.5, options: .curveEaseIn, animations: {
+            self.Image_logo.transform = CGAffineTransform(translationX: 0, y: 0)
+        }, completion: nil)
+        
+        UIView.animate(withDuration: 0.7, delay: 1.3, options: .curveEaseIn, animations: {
+            self.Label_1.alpha = 1
+        }, completion: nil)
+        
+        UIView.animate(withDuration: 0.7, delay: 1.8, options: .curveEaseIn, animations: {
+            self.Label_2.alpha = 1
+        }, completion: nil)
+        
+        UIView.animate(withDuration: 0.7, delay: 3.0, options: .curveEaseIn, animations: {
+            self.Button_start.alpha = 1
+        }, completion: nil)
+    }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillDisappear(animated)

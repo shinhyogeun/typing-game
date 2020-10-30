@@ -15,6 +15,7 @@ class NickNameViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        hideKeyboard()
         ref = Database.database().reference()
     }
     
@@ -28,6 +29,7 @@ class NickNameViewController: UIViewController {
             
             let childUpdate = ["/users/\(Auth.auth().currentUser!.uid)/nickname" : nickname]
             let childUpdate2 = ["/nickname/\(nick)" : nickname2]
+            
             self.ref.updateChildValues(childUpdate) { (error, dataSnapshot) in
                 if let error = error{
                     print(error.localizedDescription , "이미 다른 사람이 쓰고 있는 것 같습니다.")
