@@ -26,5 +26,15 @@ class DataMakingViewController: UIViewController {
             ref.updateChildValues(childUpdate)
         }
     }
-
+    
+    @IBAction func titleUpdateButtonPressed(_ sender: UIButton) {
+        let whereDataLiving = GameText.gameTitle().gameTitle
+        for data in whereDataLiving {
+            let title = data.key
+            let text = data.value
+            let childUpdate = ["/gametitle/\(title)":text]
+            ref.updateChildValues(childUpdate)
+        }
+    }
+    
 }

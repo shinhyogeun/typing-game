@@ -9,6 +9,27 @@
 import Foundation
 
 class GameText {
+    struct gameTitle {
+        var gameTitle : Dictionary<String,Array<String>> = [
+            "한글대전" : [
+                "애국가",
+                "다시 여기 바닷가",
+                "아무노래",
+                "타닥"
+            ],
+            "영어대전" : [
+                "ABC",
+                "hello guys",
+                "Tadak"
+            ],
+            "Extra" : [
+                "Hello World",
+                "Binary1",
+                "Random",
+                "Number"
+            ]
+        ]
+    }
     struct Korea {
         var koreaText : Dictionary<String,Array<String>> = [
             "애국가":

@@ -19,13 +19,13 @@ class StartViewController: UIViewController {
     //이 버튼은 Firebase연동을 통한 문자인증을 위해 임시로 만든 버튼입니다.
     //완료되면 위의 Button_start로 대체하여 연결 할 것입니다.
     @IBOutlet weak var authButton: UIButton!
-    
+
     private func handlePhoneVerificationLogin(){
         authButton.addTarget(self, action: #selector(self.loginPhoneNumber(authButton:)), for: UIControl.Event.touchUpInside)
     }
     
     override func viewDidLoad() {
-        
+        authButton.alpha = 0
         self.Image_logo.transform = CGAffineTransform(translationX: 0, y: 110)
         navigationController?.isNavigationBarHidden = true
 
