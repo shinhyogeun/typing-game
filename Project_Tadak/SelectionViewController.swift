@@ -11,37 +11,22 @@ import Firebase
 
 class SelectionViewController: UIViewController {
     var ref:DatabaseReference!
-    var index:Int = 1
+    var nameArr : [String] = []
+    @IBOutlet weak var gameTableView: UITableView!
+    
     override func viewDidLoad() {
+        gameTableView.delegate = self
+        gameTableView.dataSource = self
+        self.gameTableView.register(UINib(nibName: "gameTableViewCell", bundle: nil), forCellReuseIdentifier: "gameCell")
+        gameTableView.rowHeight = 100
         ref = Database.database().reference()
         navigationController?.isNavigationBarHidden = true
         super.viewDidLoad()
-        
     }
-    
-//    @IBAction func Button_Test1(_ sender: UIButton) {
-//        performSegue(withIdentifier: "test1", sender: self)
-//    }
-//    
-//    @IBAction func Button_Test2(_ sender: UIButton) {
-//        performSegue(withIdentifier: "test2", sender: self)
-//    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
-        if segue.identifier == "test1"{
-            let secondVC = segue.destination as! MainViewController
-            secondVC.gameInt = 1
-        }
-        else if segue.identifier == "test2"{
-            let secondVC = segue.destination as! MainViewController
-            secondVC.gameInt = 2
-        }
-        else if segue.identifier == "test3"{
-            let secondVC = segue.destination as! MainViewController
-            secondVC.gameInt = 3
-        }
     }
+    
     @IBAction func TEST1ButtonPressed(_ sender: UIButton) {
         let postRef : DatabaseQuery! = ref.child("game").child("korea").child("애국가")
         postRef.observeSingleEvent(of: DataEventType.value) { (snapshot, key) in
@@ -60,12 +45,19 @@ class SelectionViewController: UIViewController {
             }
         }
     }
+}
+
+
+extension SelectionViewController : UITableViewDelegate, UITableViewDataSource {
     
-    @IBAction func logoutButtonPressed(_ sender: UIButton) {
-        do {
-            try Auth.auth().signOut()
-        } catch let signOutEror as NSError {
-            print("로그아웃을 할 수 없습니다.", signOutEror)
-        }
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return MyVariables.completeArray.count
     }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = self.gameTableView.dequeueReusableCell(withIdentifier: "gameCell", for: indexPath) as! gameTableViewCell
+        return cell
+    }
+    
+        
 }

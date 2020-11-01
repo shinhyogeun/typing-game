@@ -11,6 +11,11 @@ import Foundation
 class GameText {
     struct gameTitle {
         var gameTitle : Dictionary<String,Array<String>> = [
+            "게임종류" : [
+                "한글대전",
+                "영어대전",
+                "Extra"
+            ],
             "한글대전" : [
                 "애국가",
                 "다시 여기 바닷가",
