@@ -13,6 +13,7 @@ class ResultViewController: UIViewController {
     
     @IBOutlet weak var Label_title: UILabel!
     @IBOutlet weak var Label_secondResult: UILabel!
+    @IBOutlet weak var gameTitleLavel: UILabel!
     
     var data: Double = 0.0
     var gameTitle: String = ""

@@ -77,32 +77,7 @@ class MainViewController: UIViewController, UITextFieldDelegate {
         ImageBackground.sendSubviewToBack(underBlurView)
         upperView.addSubview(blurView)
         upperView.sendSubviewToBack(blurView)
-        
-        switch gameInt
-        {
-        case 1:
-            gameTitle = Text3().getTitle(num: 1)
-        case 2:
-            gameTitle = Text3().getTitle(num: 2)
-        case 3:
-            gameTitle = Text3().getTitle(num: 3)
-        default:
-            gameTitle = Text3().getTitle(num: 1)
-        }
         Label_title.text = gameTitle
-        
-        switch gameInt
-        {
-        case 1:
-                gameData = MyVariables.completeArray
-        case 2:
-                gameData = Text3().getData(num: 2)
-        case 3:
-                gameData = Text3().getData(num: 3)
-        default:
-                gameData = Text3().getData(num: 4)
-        }
-        
         navigationController?.isNavigationBarHidden = true
         
         self.hideKeyboard()
@@ -348,15 +323,12 @@ class MainViewController: UIViewController, UITextFieldDelegate {
         endStatus = false
         
         // 기록을 넣자 개인기록
-        var formatter = DateFormatter()
+        let formatter = DateFormatter()
         formatter.dateFormat = "yy-MM-dd HH:mm:ss"
-        var whenRecodeIsMade = formatter.string(from: Date())
-        var ranking = second
-        
+        let whenRecodeIsMade = formatter.string(from: Date())
+        let ranking = second
         
         self.view.endEditing(true)
-        
-        
         performSegue(withIdentifier: "endView", sender: self)
     }
     

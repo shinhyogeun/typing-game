@@ -75,10 +75,59 @@ class GameText {
         ]
     }
     struct English {
-        //영어 관련 게임 text
+        var englishText : Dictionary<String,Array<String>> = [
+            "ABC":
+            [
+                "hello!! we are in middle of Tadak",
+                "I really hope we have great chance",
+                "i will do my best, and just wait better consequence",
+                "we are Tadak Team"
+            ],
+            "hello guys":
+            [
+                "I never dreamed about success, I worked for it",
+                "Do not try to be original, just try to be good",
+                "Do not be afraid to give up the good to go for the great"
+            ],
+            "Tadak":
+            [
+                "Tell me what I got to do",
+                "The only thing worse than starting something and failing..",
+                "is not starting something."
+            ]
+        ]
     }
-    struct Wierd {
-        //다양한 게임 text
+    struct Extra {
+        var extraText : Dictionary<String,Array<String>> = [
+            "Hello World":
+            [
+                "#includ<iostream>",
+                "int main(int argc, char*, argv[]) {",
+                "std::cout << \"Hello World\" << std::endl;",
+                "return 0;",
+                "}",
+            ],
+            "Binary1":
+            [
+                "100010101000111101001",
+                "11110010101011101010100110",
+                "100101010101110111001010100101010"
+            ],
+            "Random":
+            [
+                "잃킭엫잏케케후릭켃",
+                "할깈킼깈킼깈키키키킼긱킥",
+                "아라아랄알라알라아라아랄"
+            ],
+            "Number":
+            [
+                "546051561854321516",
+                "874189046154785408",
+                "087987401056465073",
+                "459157017567945762"
+            ]
+        ]
+
     }
     
 }

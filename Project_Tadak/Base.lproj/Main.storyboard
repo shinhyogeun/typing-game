@@ -2218,6 +2218,8 @@
                     <navigationItem key="navigationItem" title="start" id="6Va-Gf-rgW"/>
                     <connections>
                         <outlet property="gameTableView" destination="yy5-kj-212" id="bbP-LF-Cch"/>
+                        <outlet property="mainTitle" destination="6pi-64-4Jr" id="EKz-f2-YzQ"/>
+                        <segue destination="b1U-rw-Nb7" kind="show" identifier="goToGamePage" id="eTq-5C-Xch"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="opq-56-Fyb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -2438,6 +2440,13 @@
                                     <constraint firstItem="wu7-89-XG7" firstAttribute="top" secondItem="Pt7-8F-XOr" secondAttribute="top" constant="4" id="gvP-sH-6SM"/>
                                 </constraints>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LPs-Ko-tWq">
+                                <rect key="frame" x="157" y="237" width="60" height="39"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Rockwell-Regular" family="Rockwell" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="wSX-RP-pqB"/>
                         <color key="backgroundColor" name="ColorBackground"/>
@@ -2459,11 +2468,12 @@
                     <connections>
                         <outlet property="Label_secondResult" destination="4QO-li-GWy" id="7Qg-n9-0cm"/>
                         <outlet property="Label_title" destination="tqK-VR-n68" id="7S0-ji-cR8"/>
+                        <outlet property="gameTitleLavel" destination="LPs-Ko-tWq" id="lEa-Go-lRT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xcn-ri-uC8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3310" y="3869"/>
+            <point key="canvasLocation" x="3309.5999999999999" y="3868.5157421289359"/>
         </scene>
         <!--start-->
         <scene sceneID="noB-cc-8ec">
@@ -2563,7 +2573,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="pkm-Gv-7Fg"/>
+        <segue reference="eTq-5C-Xch"/>
         <segue reference="9Qo-Ca-hGV"/>
         <segue reference="fbI-N2-bU8"/>
         <segue reference="FZP-qW-N4G"/>

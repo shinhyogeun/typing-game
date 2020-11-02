@@ -18,11 +18,18 @@ class DataMakingViewController: UIViewController {
     }
 
     @IBAction func updateButtonPressed(_ sender: UIButton) {
-        let whereDataLiving = GameText.Korea().koreaText
+        let whereDataLiving = GameText.English().englishText
+        let whereDataLiving2 = GameText.Extra().extraText
         for data in whereDataLiving{
             let title = data.key
             let text = data.value
-            let childUpdate = ["/game/korea/\(title)" : text]
+            let childUpdate = ["/game/영어대전/\(title)" : text]
+            ref.updateChildValues(childUpdate)
+        }
+        for data in whereDataLiving2{
+            let title = data.key
+            let text = data.value
+            let childUpdate = ["/game/Extra/\(title)" : text]
             ref.updateChildValues(childUpdate)
         }
     }
