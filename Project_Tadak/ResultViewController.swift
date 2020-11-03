@@ -13,7 +13,6 @@ class ResultViewController: UIViewController {
     
     @IBOutlet weak var Label_title: UILabel!
     @IBOutlet weak var Label_secondResult: UILabel!
-    @IBOutlet weak var gameTitleLavel: UILabel!
     
     var data: Double = 0.0
     var gameTitle: String = ""
@@ -35,22 +34,24 @@ class ResultViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        if segue.identifier == "regame"{
+        if segue.identifier == "reGame"{
             let secondVC = segue.destination as! MainViewController
-            switch gameInt
-            {
-            case 1:
-                secondVC.gameInt = 1
-            case 2:
-                secondVC.gameInt = 2
-            case 3:
-                secondVC.gameInt = 3
-            default:
-                secondVC.gameInt = 1
-            }
+            secondVC.gameData = MyVariables.completeGameArray
+            secondVC.gameTitle = MyVariables.gameName
+        }
+        
+        if segue.identifier == "goToRankingPage"{
+            let secondVC = segue.destination as! RankingViewController
+            
         }
         
     }
 
-
+    @IBAction func restartButtonPressed(_ sender: UIButton) {
+        performSegue(withIdentifier: "reGame", sender: nil)
+    }
+    
+    @IBAction func rankingButtonPressed(_ sender: UIButton) {
+        performSegue(withIdentifier: "goToRankingPage", sender: nil)
+    }
 }

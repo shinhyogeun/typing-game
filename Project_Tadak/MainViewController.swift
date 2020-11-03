@@ -59,6 +59,8 @@ class MainViewController: UIViewController, UITextFieldDelegate {
     
     //loading 추가
     var isLoad: Bool = false
+    // firebase
+    var ref:DatabaseReference!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -85,7 +87,6 @@ class MainViewController: UIViewController, UITextFieldDelegate {
         inputTextField.keyboardType = .default
         timeLabel.text = String(format: "%.2f",second)
         beforeLabel.text = gameData[0]
-        
          
         self.beforeLabel.alpha = 1
 //        beforeLabel.textColor = LABEL
@@ -93,6 +94,7 @@ class MainViewController: UIViewController, UITextFieldDelegate {
         afterLabel.text = ""
         afterLabel2.text = ""
         inputTextField.addTarget(self, action: #selector(textFieldDidChange(textField:)), for: UIControl.Event.editingChanged)
+        ref = Database.database().reference()
         let calculate = Calculate()
     }
     
@@ -326,7 +328,12 @@ class MainViewController: UIViewController, UITextFieldDelegate {
         let formatter = DateFormatter()
         formatter.dateFormat = "yy-MM-dd HH:mm:ss"
         let whenRecodeIsMade = formatter.string(from: Date())
-        let ranking = second
+        let recode = second
+        guard let key = ref.child("users").child(Auth.auth().currentUser!.uid).child("recode").child(MyVariables.gameTopic).child(MyVariables.gameName).childByAutoId().key else{ return }
+        let post = ["TIME" : whenRecodeIsMade,
+                    "RECODE" : String(format: "%.3f", recode)]
+        let childUpdate = ["/users/\(Auth.auth().currentUser!.uid)/recode/\(MyVariables.gameTopic)/\(MyVariables.gameName)/\(key)" : post]
+        ref.updateChildValues(childUpdate)
         
         self.view.endEditing(true)
         performSegue(withIdentifier: "endView", sender: self)

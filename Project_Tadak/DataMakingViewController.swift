@@ -44,4 +44,20 @@ class DataMakingViewController: UIViewController {
         }
     }
     
+    @IBAction func readNickNameButtonPressed(_ sender: Any) {
+            let postRef : DatabaseQuery! = ref.child("nickname")
+//        queryOrdered(byChild: "/index")
+            postRef.observeSingleEvent(of: DataEventType.value) { (snapshot, key) in
+                let children : NSEnumerator = snapshot.children
+                for (child) in children {
+                    let childSnapShot = child as? DataSnapshot
+                    let childPost : NSDictionary = (childSnapShot?.value as? NSDictionary)!
+                    //print("CHILD KEY: [\(childSnapShot?.key ?? "")]")
+                    print(childPost.value(forKey: "nickname") ?? "")
+//                    for (key, value) in childPost{
+//                        print("\(key) : \(value) \n")
+//                    }
+                }
+            }
+    }
 }

@@ -10,6 +10,7 @@
 		1527D0C5254BF99E004EBD34 /* CommunicateFirebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1527D0C4254BF99E004EBD34 /* CommunicateFirebase.swift */; };
 		153CC4F1254C7B2500252568 /* GameTopicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 153CC4F0254C7B2500252568 /* GameTopicViewController.swift */; };
 		154D3275253027E4000239AE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 154D3274253027E4000239AE /* GoogleService-Info.plist */; };
+		15554D9C25507107005B6102 /* RankingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15554D9B25507107005B6102 /* RankingViewController.swift */; };
 		156860E825374F8C005C90AB /* NickNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156860E725374F8C005C90AB /* NickNameViewController.swift */; };
 		156860EB25374FF6005C90AB /* PhoneNumberLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156860EA25374FF6005C90AB /* PhoneNumberLoginViewController.swift */; };
 		1572F2C524816D1C004EB34D /* Calculate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1572F2C424816D1C004EB34D /* Calculate.swift */; };
@@ -56,6 +57,7 @@
 		1527D0C4254BF99E004EBD34 /* CommunicateFirebase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunicateFirebase.swift; sourceTree = "<group>"; };
 		153CC4F0254C7B2500252568 /* GameTopicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameTopicViewController.swift; sourceTree = "<group>"; };
 		154D3274253027E4000239AE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		15554D9B25507107005B6102 /* RankingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingViewController.swift; sourceTree = "<group>"; };
 		156860E725374F8C005C90AB /* NickNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NickNameViewController.swift; sourceTree = "<group>"; };
 		156860EA25374FF6005C90AB /* PhoneNumberLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneNumberLoginViewController.swift; sourceTree = "<group>"; };
 		1572F2C424816D1C004EB34D /* Calculate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calculate.swift; sourceTree = "<group>"; };
@@ -193,6 +195,7 @@
 				9399C4B42476585400F73CDD /* AppDelegate.swift */,
 				9399C4B62476585400F73CDD /* SceneDelegate.swift */,
 				9399C4B82476585400F73CDD /* LoginViewController.swift */,
+				15554D9B25507107005B6102 /* RankingViewController.swift */,
 				15E9A5842534C326008FFC1A /* AuthViewController.swift */,
 				158F26A2247FDF5E0046356C /* Brain */,
 				9399C4BD2476585500F73CDD /* Assets.xcassets */,
@@ -355,6 +358,7 @@
 				778B1CC624E9082800BB68C6 /* CustomIntensityVisualEffectView.swift in Sources */,
 				156860EB25374FF6005C90AB /* PhoneNumberLoginViewController.swift in Sources */,
 				9354CBF4251B3E420048F3DC /* test.swift in Sources */,
+				15554D9C25507107005B6102 /* RankingViewController.swift in Sources */,
 				153CC4F1254C7B2500252568 /* GameTopicViewController.swift in Sources */,
 				15AB9DED254C3A060043D39D /* StartViewController_temp.swift in Sources */,
 				15AB9DF3254C3A390043D39D /* Check1ViewController_temp.swift in Sources */,

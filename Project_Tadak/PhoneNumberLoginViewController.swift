@@ -35,31 +35,26 @@ class PhoneNumberLoginViewController: UIViewController {
                     print(error.localizedDescription)
                     return
                 }
-                // 이거 왜 안되는지 나중에 체크하기
-//                    let postRef : DatabaseQuery! = self.ref.child("users").child("\(Auth.auth().currentUser!.uid)").child("uid")
-//                    postRef.observeSingleEvent(of: DataEventType.value) { (snapshot, key) in
-//                        let children : NSEnumerator = snapshot.children
-//                        print(children)
-//                        for (child) in children {
-//                            print("child = ", child)
-//                            let childSnapShot = child as? DataSnapshot
-//                                if let data = (childSnapShot?.value as? String){
-//                                    print(data)
-//                                } else{
-//                                    print("신규회원입니다!")
-//                                }
-//                        }
-//                        print(children)
-//                    }
                 let uid = ["uid":"\(Auth.auth().currentUser!.uid)"]
-                let phoneNumebr = ["PhoneNumber":"\(String(describing: Auth.auth().currentUser!.phoneNumber))"]                
+                let phoneNumebr = ["PhoneNumber":"\(String(describing: Auth.auth().currentUser!.phoneNumber))"]
                 
                 let childUpdate = ["/users/\(Auth.auth().currentUser!.uid)/uid" : uid,
                                    "/users/\(Auth.auth().currentUser!.uid)/PhoneNumber" : phoneNumebr]
-                self.ref.updateChildValues(childUpdate)
-                DispatchQueue.main.async {
-                    self.performSegue(withIdentifier:"goToNickNamePage", sender: self)
+                self.ref.updateChildValues(childUpdate) { (error , databaseRef) in
+                    
+                    if let error = error {
+                        DispatchQueue.main.async {
+                            self.performSegue(withIdentifier:"directToMain", sender: self)
+                        }
+                    } else {
+                        DispatchQueue.main.async {
+                            self.performSegue(withIdentifier:"goToNickNamePage", sender: self)
+                        }
+                        
+                    }
+                    
                 }
+                
             }
         }else{ return print("인증번호를 입력하지 않았습니다.") }
     }

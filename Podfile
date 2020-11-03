@@ -9,7 +9,7 @@ target 'Project_Tadak' do
    pod 'GoogleSignIn', '< 5.0.0'
    pod 'Firebase/Database'
    pod 'Firebase/Analytics'
-
+   pod 'Firebase/Functions'
   # Pods for Project_Tadak
 
 end

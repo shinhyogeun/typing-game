@@ -68,4 +68,6 @@ class Text3 {
 struct MyVariables {
     static var completeArray : Array<String> = []
     static var completeGameArray : Array<String> = []
+    static var gameTopic : String = ""
+    static var gameName : String = ""
 }

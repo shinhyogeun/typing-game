@@ -18,6 +18,7 @@ class SelectionViewController: UIViewController {
     var mainTitleString = ""
     var gameTitleString = ""
     override func viewDidLoad() {
+        self.gameTableView.separatorStyle = UITableViewCell.SeparatorStyle.none
         
         gameTableView.delegate = self
         gameTableView.dataSource = self
@@ -30,6 +31,7 @@ class SelectionViewController: UIViewController {
         super.viewDidLoad()
     }
 }
+
 
 extension SelectionViewController : UITableViewDelegate, UITableViewDataSource {
     
@@ -47,6 +49,7 @@ extension SelectionViewController : UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         MyVariables.completeGameArray = []
         gameTitleString = MyVariables.completeArray[indexPath.row]
+        MyVariables.gameName = MyVariables.completeArray[indexPath.row]
         let postRef : DatabaseQuery! = ref.child("game").child(mainTitleString).child(MyVariables.completeArray[indexPath.row])
         postRef.observeSingleEvent(of: DataEventType.value) { (snapshot, key) in
             let children : NSEnumerator = snapshot.children
