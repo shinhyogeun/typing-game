@@ -325,13 +325,42 @@ class MainViewController: UIViewController, UITextFieldDelegate {
         endStatus = false
         
         // 기록을 넣자 개인기록
+        // 중요한 알고리즘입니다. 처음으로는 지금 만들어진 기록이
+        // 현재 유저가 가진 기록들 중에 최고인지를 확인합니다.
+        // 1. 유저가 가진 최고 기록을 불러오자
+        let postRef : DatabaseQuery! = ref.child("users").child(Auth.auth().currentUser!.uid).child("recode").child(MyVariables.gameTopic).child(MyVariables.gameName).queryOrdered(byChild: "/RECODE").queryLimited(toFirst: 1)
+        postRef.observeSingleEvent(of: DataEventType.value) { (snapshot, key) in
+            let children : NSEnumerator = snapshot.children
+            for (child) in children {
+                let childSnapShot = child as? DataSnapshot
+                let childPost : NSDictionary = (childSnapShot?.value as? NSDictionary)!
+                if childPost.value(forKey: "RECODE")! as? NSString == NSString(format: "%.2f", self.second){
+                        // 개인 신기록을 달성했을때!!! MAIN RECODE노드를 건드리자!
+                    var recodePost : [String : Any] = [:]
+                    for (key, value) in childPost {
+                        recodePost[key as! String] = value
+                    }
+                    let childUpdate = ["/ranking/\(MyVariables.gameTopic)/\(MyVariables.gameName)/\(Auth.auth().currentUser!.uid)" : recodePost]
+                    self.ref.updateChildValues(childUpdate)
+                }
+            }
+        }
+            
         let formatter = DateFormatter()
         formatter.dateFormat = "yy-MM-dd HH:mm:ss"
+        
+        //
         let whenRecodeIsMade = formatter.string(from: Date())
         let recode = second
+        let when = Firebase.ServerValue.timestamp()
+        //
+        
         guard let key = ref.child("users").child(Auth.auth().currentUser!.uid).child("recode").child(MyVariables.gameTopic).child(MyVariables.gameName).childByAutoId().key else{ return }
-        let post = ["TIME" : whenRecodeIsMade,
-                    "RECODE" : String(format: "%.3f", recode)]
+        let post : [String : Any] = [
+                                     "TIME" : whenRecodeIsMade,
+                                     "WHEN" : when,
+                                     "RECODE" : String(format: "%.2f", recode)
+                                    ]
         let childUpdate = ["/users/\(Auth.auth().currentUser!.uid)/recode/\(MyVariables.gameTopic)/\(MyVariables.gameName)/\(key)" : post]
         ref.updateChildValues(childUpdate)
         
@@ -340,9 +369,7 @@ class MainViewController: UIViewController, UITextFieldDelegate {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
         if segue.identifier == "endView"{
-            
             let secondVC = segue.destination as! ResultViewController
             secondVC.data = second
             secondVC.gameTitle = gameTitle
