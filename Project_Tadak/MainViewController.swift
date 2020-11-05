@@ -61,6 +61,8 @@ class MainViewController: UIViewController, UITextFieldDelegate {
     var isLoad: Bool = false
     // firebase
     var ref:DatabaseReference!
+    // 100초이상의 경우 여부 저장
+    var timeOver: Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -133,6 +135,7 @@ class MainViewController: UIViewController, UITextFieldDelegate {
                     viewLabel.textColor = .white
                     completeTrigger2 = 0
                 }
+                
                 //내용이 틀리지만 글자수가 동일한 경우
                 else if Array(viewLabel.text!).count < Array(input).count{
                     calculate.missArr = []
@@ -150,19 +153,16 @@ class MainViewController: UIViewController, UITextFieldDelegate {
     }
     
     @objc func updateCounter(){
-        if second < 0.0 {
+        if second > 99.9 {
+            timeOver = true
             endGame()
             timeLabel.text = String(0.00)
-//          calculate.calculateSpeed( timeLabel.text, )
-            //시간제한이 끝났을때 일어날 일(세그웨이로 실패한 페이지 혹은 팝업을 띄운다.)
+
         }
         else {
             second = second + 0.01
             timeLabel.text = String(format: "%.2f",second)
-//          calculate.calculateSpeed()
-            
-            //심장박동 함수
-//            checkBeat()
+
         }
     }
     
@@ -181,11 +181,6 @@ class MainViewController: UIViewController, UITextFieldDelegate {
             self.viewLabel.alpha = 1
         }
         
-//        viewLabel.layer.shadowColor = BLUE?.cgColor
-//        viewLabel.layer.shadowRadius = 2
-//        viewLabel.layer.shadowOffset = CGSize(width: 0, height: 0)
-//        viewLabel.layer.shadowOpacity = 0.7
-
         self.beforeLabel.transform = CGAffineTransform(translationX: 0, y: 48)
         self.beforeLabel.alpha = 0
         UIView.animate(withDuration: 0.3) {
@@ -324,46 +319,12 @@ class MainViewController: UIViewController, UITextFieldDelegate {
         //종료조건 : M
         endStatus = false
         
-        // 기록을 넣자 개인기록
-        // 중요한 알고리즘입니다. 처음으로는 지금 만들어진 기록이
-        // 현재 유저가 가진 기록들 중에 최고인지를 확인합니다.
-        // 1. 유저가 가진 최고 기록을 불러오자
-        let postRef : DatabaseQuery! = ref.child("users").child(Auth.auth().currentUser!.uid).child("recode").child(MyVariables.gameTopic).child(MyVariables.gameName).queryOrdered(byChild: "/RECODE").queryLimited(toFirst: 1)
-        postRef.observeSingleEvent(of: DataEventType.value) { (snapshot, key) in
-            let children : NSEnumerator = snapshot.children
-            for (child) in children {
-                let childSnapShot = child as? DataSnapshot
-                let childPost : NSDictionary = (childSnapShot?.value as? NSDictionary)!
-                if childPost.value(forKey: "RECODE")! as? NSString == NSString(format: "%.2f", self.second){
-                        // 개인 신기록을 달성했을때!!! MAIN RECODE노드를 건드리자!
-                    var recodePost : [String : Any] = [:]
-                    for (key, value) in childPost {
-                        recodePost[key as! String] = value
-                    }
-                    let childUpdate = ["/ranking/\(MyVariables.gameTopic)/\(MyVariables.gameName)/\(Auth.auth().currentUser!.uid)" : recodePost]
-                    self.ref.updateChildValues(childUpdate)
-                }
-            }
+        if(!timeOver) {
+            firebaseUpload()
         }
-            
-        let formatter = DateFormatter()
-        formatter.dateFormat = "yy-MM-dd HH:mm:ss"
-        
-        //
-        let whenRecodeIsMade = formatter.string(from: Date())
-        let recode = second
-        let when = Firebase.ServerValue.timestamp()
-        //
-        
-        guard let key = ref.child("users").child(Auth.auth().currentUser!.uid).child("recode").child(MyVariables.gameTopic).child(MyVariables.gameName).childByAutoId().key else{ return }
-        let post : [String : Any] = [
-                                     "TIME" : whenRecodeIsMade,
-                                     "WHEN" : when,
-                                     "RECODE" : String(format: "%.2f", recode)
-                                    ]
-        let childUpdate = ["/users/\(Auth.auth().currentUser!.uid)/recode/\(MyVariables.gameTopic)/\(MyVariables.gameName)/\(key)" : post]
-        ref.updateChildValues(childUpdate)
-        
+        else {
+            second = -1
+        }
         self.view.endEditing(true)
         performSegue(withIdentifier: "endView", sender: self)
     }
@@ -379,17 +340,12 @@ class MainViewController: UIViewController, UITextFieldDelegate {
     
     func setTextFirst()
     {
-//        viewLabel.text = Text.init().textArray[a]
-//        beforeLabel.text = Text.init().textArray[a+1]
         viewLabel.text = gameData[a]
         beforeLabel.text = gameData[a+1]
     }
     
     func setTextSecond()
     {
-//        afterLabel.text = Text.init().textArray[a-1]
-//        viewLabel.text = Text.init().textArray[a]
-//        beforeLabel.text = Text.init().textArray[a+1]
         afterLabel.text = gameData[a-1]
         viewLabel.text = gameData[a]
         beforeLabel.text = gameData[a+1]
@@ -397,10 +353,6 @@ class MainViewController: UIViewController, UITextFieldDelegate {
     
     func setTextNomal()
     {
-//        afterLabel2.text = Text.init().textArray[a-2]
-//        afterLabel.text = Text.init().textArray[a-1]
-//        viewLabel.text = Text.init().textArray[a]
-//        beforeLabel.text = Text.init().textArray[a+1]
         afterLabel2.text = gameData[a-2]
         afterLabel.text = gameData[a-1]
         viewLabel.text = gameData[a]
@@ -409,10 +361,6 @@ class MainViewController: UIViewController, UITextFieldDelegate {
     
     func setTextLast()
     {
-//        afterLabel2.text = Text.init().textArray[a-2]
-//        afterLabel.text = Text.init().textArray[a-1]
-//        viewLabel.text = Text.init().textArray[a]
-//        beforeLabel.text = ""
         afterLabel2.text = gameData[a-2]
         afterLabel.text = gameData[a-1]
         viewLabel.text = gameData[a]
@@ -421,10 +369,6 @@ class MainViewController: UIViewController, UITextFieldDelegate {
     
     func setTextEnd()
     {
-//        afterLabel2.text = Text.init().textArray[a-2]
-//        afterLabel.text = Text.init().textArray[a-1]
-//        viewLabel.text = "게임이 종료되었습니다."
-//        beforeLabel.text = ""
         afterLabel2.text = gameData[a-2]
         afterLabel.text = gameData[a-1]
         viewLabel.text = "게임이 종료되었습니다."
@@ -443,99 +387,68 @@ class MainViewController: UIViewController, UITextFieldDelegate {
         }, completion: nil)
     }
     
-    func checkBeat()
+    func firebaseUpload()
     {
-        if(second < 1)
-        {
-            if(beatNum == 9)
-            {
-                heartBeat()
-                beatNum = 10
+        // 기록을 넣자 개인기록
+        // 중요한 알고리즘입니다. 처음으로는 지금 만들어진 기록이
+        // 현재 유저가 가진 기록들 중에 최고인지를 확인합니다.
+        // 1. 유저가 가진 최고 기록을 불러오자
+        let postRef : DatabaseQuery! = ref.child("users").child(Auth.auth().currentUser!.uid).child("recode").child(MyVariables.gameTopic).child(MyVariables.gameName).queryOrdered(byChild: "/RECODE").queryLimited(toFirst: 2)
+        
+        
+        postRef.observeSingleEvent(of: DataEventType.value) { (snapshot, key) in
+            let children : NSEnumerator = snapshot.children
+            var forChange : [NSString] = []
+            var childPost : NSDictionary = [:]
+            var parentChildPost : [NSDictionary] = []
+            
+            for (child) in children {
+                let childSnapShot = child as? DataSnapshot
+                childPost = (childSnapShot?.value as? NSDictionary)!
+                forChange.append(childPost.value(forKey: "RECODE")! as! NSString)
+                parentChildPost.append(childPost)
+            }
+            
+            if forChange[0] == NSString(format: "%.2f", self.second){
+                    // 개인 신기록을 달성했을때!!! MAIN RECODE노드를 건드리자!
+                let childUpdate = ["/ranking/\(MyVariables.gameTopic)/\(MyVariables.gameName)/TOTAL/\(Auth.auth().currentUser!.uid)" : parentChildPost[0]]
+                self.ref.updateChildValues(childUpdate)
             }
             
         }
-        else if(second < 2)
-        {
-            if(beatNum == 8)
-            {
-                heartBeat()
-                beatNum = 9
+        
+        //오래된 데이터(30일 이상이 된 DATA)를 지우자
+        let now = (Date().timeIntervalSince1970) * 1000
+        let cutOff = now - 30*24*60*60*1000
+        let postRefAboutOldData = ref.child("users").child(Auth.auth().currentUser!.uid).child("recode").child(MyVariables.gameTopic).child(MyVariables.gameName).queryOrdered(byChild: "/WHEN").queryEnding(atValue: cutOff)
+        
+        let removePost = ref.child("users").child(Auth.auth().currentUser!.uid).child("recode").child(MyVariables.gameTopic).child(MyVariables.gameName)
+        
+        postRefAboutOldData.observeSingleEvent(of: DataEventType.value) { (snapshot, key) in
+            let children : NSEnumerator = snapshot.children
+            for child in children {
+                let childSnapShot = child as? DataSnapshot
+                removePost.child("\(childSnapShot!.key)").removeValue()
             }
-            
         }
-        else if(second < 3)
-        {
-            if(beatNum == 7)
-            {
-                heartBeat()
-                beatNum = 8
-            }
-            
-        }
-        else if(second < 4)
-        {
-            if(beatNum == 6)
-            {
-                heartBeat()
-                beatNum = 7
-            }
-            
-        }
-        else if(second < 5)
-        {
-            if(beatNum == 5)
-            {
-                heartBeat()
-                beatNum = 6
-            }
-            
-        }
-        else if(second < 6)
-        {
-            if(beatNum == 4)
-            {
-                heartBeat()
-                beatNum = 5
-            }
-            
-        }
-        else if(second < 7)
-        {
-            if(beatNum == 3)
-            {
-                heartBeat()
-                beatNum = 4
-            }
-            
-        }
-        else if(second < 8)
-        {
-            if(beatNum == 2)
-            {
-                heartBeat()
-                beatNum = 3
-            }
-            
-        }
-        else if(second < 9)
-        {
-            if(beatNum == 1)
-            {
-                heartBeat()
-                beatNum = 2
-            }
-            
-        }
-        else if(second < 10)
-        {
-            if(beatNum == 0)
-            {
-                timeLabel.textColor = UIColor.red
-                heartBeat()
-                beatNum = 1
-            }
-            
-        }
+        
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yy-MM-dd HH:mm:ss"
+        
+        //
+        let whenRecodeIsMade = formatter.string(from: Date())
+        let recode = second
+        let when = Firebase.ServerValue.timestamp()
+        //
+        
+        guard let key = ref.child("users").child(Auth.auth().currentUser!.uid).child("recode").child(MyVariables.gameTopic).child(MyVariables.gameName).childByAutoId().key else{ return }
+        let post : [String : Any] = [
+                                     "TIME" : whenRecodeIsMade,
+                                     "WHEN" : when,
+                                     "RECODE" : String(format: "%.2f", recode)
+                                    ]
+        let childUpdate = ["/users/\(Auth.auth().currentUser!.uid)/recode/\(MyVariables.gameTopic)/\(MyVariables.gameName)/\(key)" : post]
+        ref.updateChildValues(childUpdate)
     }
 
     

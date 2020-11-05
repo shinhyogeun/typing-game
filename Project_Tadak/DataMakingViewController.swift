@@ -60,4 +60,16 @@ class DataMakingViewController: UIViewController {
                 }
             }
     }
+    
+    
+    @IBAction func recodeBorderButtonPressed(_ sender: UIButton) {
+        let a = Array(1...100)
+        for name in MyVariables.gameKoreaArr{
+            for i in a{
+            let sum = ["sum_\(i)" : 0]
+            let childUpdate = ["/ranking/영어대전/\(name)/\(i)/" : sum]
+                ref.updateChildValues(childUpdate)
+            }
+        }
+    }
 }

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1527D0C5254BF99E004EBD34 /* CommunicateFirebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1527D0C4254BF99E004EBD34 /* CommunicateFirebase.swift */; };
+		15290C022553C5D600E5955D /* SetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15290C012553C5D600E5955D /* SetViewController.swift */; };
 		153CC4F1254C7B2500252568 /* GameTopicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 153CC4F0254C7B2500252568 /* GameTopicViewController.swift */; };
 		154D3275253027E4000239AE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 154D3274253027E4000239AE /* GoogleService-Info.plist */; };
 		15554D9C25507107005B6102 /* RankingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15554D9B25507107005B6102 /* RankingViewController.swift */; };
@@ -55,6 +56,7 @@
 /* Begin PBXFileReference section */
 		00D2ED0CE0BAFFD65AB37233 /* Pods-Project_Tadak.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Project_Tadak.release.xcconfig"; path = "Target Support Files/Pods-Project_Tadak/Pods-Project_Tadak.release.xcconfig"; sourceTree = "<group>"; };
 		1527D0C4254BF99E004EBD34 /* CommunicateFirebase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunicateFirebase.swift; sourceTree = "<group>"; };
+		15290C012553C5D600E5955D /* SetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetViewController.swift; sourceTree = "<group>"; };
 		153CC4F0254C7B2500252568 /* GameTopicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameTopicViewController.swift; sourceTree = "<group>"; };
 		154D3274253027E4000239AE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		15554D9B25507107005B6102 /* RankingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingViewController.swift; sourceTree = "<group>"; };
@@ -189,6 +191,7 @@
 				7720FDF424E6C6BE007552B2 /* NewViewController.swift */,
 				1582F3E125408DAC00305D4D /* DataMakingViewController.swift */,
 				9399C4CC247660E500F73CDD /* ResultViewController.swift */,
+				15290C012553C5D600E5955D /* SetViewController.swift */,
 				154D3274253027E4000239AE /* GoogleService-Info.plist */,
 				156860E725374F8C005C90AB /* NickNameViewController.swift */,
 				9399C4CA247660BC00F73CDD /* MainViewController.swift */,
@@ -375,6 +378,7 @@
 				7720FDF524E6C6BE007552B2 /* NewViewController.swift in Sources */,
 				158F26A4247FE0260046356C /* Jamo.swift in Sources */,
 				15AB9DF5254C3A390043D39D /* Check3ViewController_temp.swift in Sources */,
+				15290C022553C5D600E5955D /* SetViewController.swift in Sources */,
 				1527D0C5254BF99E004EBD34 /* CommunicateFirebase.swift in Sources */,
 				9399C4CD247660E500F73CDD /* ResultViewController.swift in Sources */,
 			);

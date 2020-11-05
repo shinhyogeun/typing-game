@@ -695,7 +695,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UL0-QB-g2M">
-                                <rect key="frame" x="101" y="251" width="173" height="30"/>
+                                <rect key="frame" x="101" y="200" width="173" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="game title change Button"/>
                                 <connections>
@@ -703,11 +703,19 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nhR-Ow-Efj">
-                                <rect key="frame" x="108" y="405" width="159" height="30"/>
+                                <rect key="frame" x="108" y="289" width="159" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="read the nicknameData"/>
                                 <connections>
                                     <action selector="readNickNameButtonPressed:" destination="9qd-rM-Fri" eventType="touchUpInside" id="y8O-gx-JcG"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="85f-6J-jqQ">
+                                <rect key="frame" x="120" y="402" width="135" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="make recodeBorder"/>
+                                <connections>
+                                    <action selector="recodeBorderButtonPressed:" destination="9qd-rM-Fri" eventType="touchUpInside" id="6cV-v1-5ZX"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -718,7 +726,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DeC-GL-L8r" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="102" y="5037"/>
+            <point key="canvasLocation" x="101.59999999999999" y="5036.1319340329837"/>
         </scene>
         <!--AuthViewController-->
         <scene sceneID="pOO-dN-Tud">
@@ -1728,7 +1736,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N0W-WI-IMY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4040.8000000000002" y="4099.7001499250382"/>
+            <point key="canvasLocation" x="4215" y="4022"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Ia9-US-WpZ">
@@ -2500,12 +2508,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xcn-ri-uC8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3309.5999999999999" y="4099.7001499250382"/>
+            <point key="canvasLocation" x="3402" y="4100"/>
         </scene>
         <!--start-->
         <scene sceneID="noB-cc-8ec">
             <objects>
-                <viewController storyboardIdentifier="set" id="vxD-lf-V6l" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="set" id="vxD-lf-V6l" customClass="SetViewController" customModule="Project_Tadak" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="akh-2j-M0O">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2522,21 +2530,37 @@
                                             <constraint firstAttribute="height" constant="25" id="AWN-9E-9vT"/>
                                         </constraints>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SET" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1g9-XL-SIT">
-                                        <rect key="frame" x="131" y="270" width="73.5" height="47"/>
-                                        <fontDescription key="fontDescription" name="RixTodaytoon" family="RixTodaytoon" pointSize="40"/>
-                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2aX-pH-bFG">
+                                        <rect key="frame" x="54" y="74" width="219" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="닉네임 변경하기!"/>
+                                        <connections>
+                                            <action selector="nickNameChangeButtonPressed:" destination="vxD-lf-V6l" eventType="touchUpInside" id="FYv-DM-kcL"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lVN-WG-qoJ">
+                                        <rect key="frame" x="107" y="148" width="112" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="나의 계정 삭제하기"/>
+                                        <connections>
+                                            <action selector="deleteMyIDButtonPressed:" destination="vxD-lf-V6l" eventType="touchUpInside" id="xqC-U6-z8d"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d24-LN-S9h">
+                                        <rect key="frame" x="126" y="219" width="82" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="로그아웃 하기"/>
+                                        <connections>
+                                            <action selector="logoutButtonPressed:" destination="vxD-lf-V6l" eventType="touchUpInside" id="iBF-N1-cUL"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" name="ColorBackground"/>
                                 <constraints>
                                     <constraint firstItem="czI-WM-vHA" firstAttribute="top" secondItem="ExY-Y9-LSu" secondAttribute="top" id="EFg-yX-MaG"/>
-                                    <constraint firstItem="1g9-XL-SIT" firstAttribute="centerY" secondItem="ExY-Y9-LSu" secondAttribute="centerY" id="FO5-ih-ciA"/>
                                     <constraint firstAttribute="trailing" secondItem="czI-WM-vHA" secondAttribute="trailing" constant="4" id="ZXj-2d-Oqa"/>
                                     <constraint firstAttribute="centerX" secondItem="ExY-Y9-LSu" secondAttribute="centerX" id="dpd-s1-8x0"/>
                                     <constraint firstItem="czI-WM-vHA" firstAttribute="leading" secondItem="ExY-Y9-LSu" secondAttribute="leading" constant="4" id="i1g-RQ-2QE"/>
-                                    <constraint firstItem="1g9-XL-SIT" firstAttribute="centerX" secondItem="ExY-Y9-LSu" secondAttribute="centerX" id="xHd-qs-lqO"/>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="설정" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2mX-Ne-8bg">
@@ -2578,7 +2602,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="alj-1I-KTY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="129" y="4100"/>
+            <point key="canvasLocation" x="128.80000000000001" y="4099.7001499250382"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Jhc-vb-d7x">
@@ -2856,10 +2880,9 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="pkm-Gv-7Fg"/>
         <segue reference="aik-Jg-IEL"/>
-        <segue reference="9Qo-Ca-hGV"/>
-        <segue reference="fbI-N2-bU8"/>
+        <segue reference="Hrx-co-hdr"/>
+        <segue reference="TP7-fe-4in"/>
         <segue reference="FZP-qW-N4G"/>
         <segue reference="cg0-z8-QPC"/>
     </inferredMetricsTieBreakers>

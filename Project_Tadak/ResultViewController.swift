@@ -23,11 +23,13 @@ class ResultViewController: UIViewController {
         super.viewDidLoad()
         
         Label_title.text = gameTitle
-        if(data < 0)
-        {
-            data = 0
+        if(data == -1) {
+            Label_secondResult.text = "시간초과!"
         }
-        Label_secondResult.text = String(format: "%.2f",data)
+        else {
+            Label_secondResult.text = String(format: "%.2f",data)
+        }
+        
 
         
     }
