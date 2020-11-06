@@ -389,43 +389,82 @@ class MainViewController: UIViewController, UITextFieldDelegate {
     
     func firebaseUpload()
     {
-        // 기록을 넣자 개인기록
-        // 중요한 알고리즘입니다. 처음으로는 지금 만들어진 기록이
-        // 현재 유저가 가진 기록들 중에 최고인지를 확인합니다.
-        // 1. 유저가 가진 최고 기록을 불러오자
-        let postRef : DatabaseQuery! = ref.child("users").child(Auth.auth().currentUser!.uid).child("recode").child(MyVariables.gameTopic).child(MyVariables.gameName).queryOrdered(byChild: "/RECODE").queryLimited(toFirst: 2)
+        ////////////////////////////////////////////////////////////////////////////////////////////////////////////////매번 일어나는 저장 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yy-MM-dd HH:mm:ss"
+        //
+        let whenRecodeIsMade = formatter.string(from: Date())
+        let recode = second
+        let when = Firebase.ServerValue.timestamp()
+        var post : [String : Any] = [:]
         
+        var forChange : [NSString] = []
+        var childPost : NSDictionary = [:]
+        var parentChildPost : [NSDictionary] = []
+        //
+        guard let key = ref.child("users").child(Auth.auth().currentUser!.uid).child("recode").child(MyVariables.gameTopic).child(MyVariables.gameName).childByAutoId().key else{ return }
+                post  = [
+                         "TIME" : whenRecodeIsMade,
+                         "WHEN" : when,
+                         "RECODE" : String(format: "%.2f", recode)
+                        ]
+        forChange.append(String(format: "%.2f", recode) as NSString)
+        parentChildPost.append(post as NSDictionary)
         
-        postRef.observeSingleEvent(of: DataEventType.value) { (snapshot, key) in
-            let children : NSEnumerator = snapshot.children
-            var forChange : [NSString] = []
-            var childPost : NSDictionary = [:]
-            var parentChildPost : [NSDictionary] = []
+        let childUpdate = ["/users/\(Auth.auth().currentUser!.uid)/recode/\(MyVariables.gameTopic)/\(MyVariables.gameName)/\(key)" : post]
+        ref.updateChildValues(childUpdate)
+        ////////////////////////////////////////////////////////////////////////////////////////////////////////////////매번 일어나는 저장 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        
+        let KINGROOT : DatabaseQuery! = ref.child("users").child(Auth.auth().currentUser!.uid).child("recode").child(MyVariables.gameTopic).child(MyVariables.gameName).child("RECODE")
             
-            for (child) in children {
-                let childSnapShot = child as? DataSnapshot
-                childPost = (childSnapShot?.value as? NSDictionary)!
-                forChange.append(childPost.value(forKey: "RECODE")! as! NSString)
-                parentChildPost.append(childPost)
-            }
-            
-            if forChange[0] == NSString(format: "%.2f", self.second){
-                    // 개인 신기록을 달성했을때!!! MAIN RECODE노드를 건드리자!
-                let childUpdate = ["/ranking/\(MyVariables.gameTopic)/\(MyVariables.gameName)/TOTAL/\(Auth.auth().currentUser!.uid)" : parentChildPost[0]]
-                self.ref.updateChildValues(childUpdate)
-                let intValue = forChange[0].integerValue
-                let postRef2 = self.ref.child("ranking").child(MyVariables.gameTopic).child(MyVariables.gameName)
-                postRef2.child("\(intValue)").child("sum_\(intValue)").observeSingleEvent(of: DataEventType.value) { (snapshot, key) in
-                    let children = (snapshot.value as! NSNumber).intValue
-                    postRef2.child("\(intValue)").child("sum_\(intValue)").setValue(children+1)
-                    let childUpdate = ["/ranking/\(MyVariables.gameTopic)/\(MyVariables.gameName)/\(intValue)/total_\(intValue)/\(Auth.auth().currentUser!.uid)" : parentChildPost[0]]
+            KINGROOT.observeSingleEvent(of: DataEventType.value) { (snapshot,key) in
+                let KING = snapshot.value as? NSDictionary ?? [:]
+                if KING != [:] {
+                    forChange.append(KING["RECODE"] as! NSString)
+                    parentChildPost.append(KING)
+                    // 드디어 자신의 모든 기록을 깬 신기록 탄생!!!
+                    if forChange[0].integerValue < forChange[1].integerValue {
+                        
+                        let intValue = forChange[0].integerValue
+                        let childUpdate = ["/users/\(Auth.auth().currentUser!.uid)/recode/\(MyVariables.gameTopic)/\(MyVariables.gameName)/RECODE" : post,
+                                           "/ranking/\(MyVariables.gameTopic)/\(MyVariables.gameName)/\(intValue)/total_\(intValue)/\(Auth.auth().currentUser!.uid)" : post,
+                                           "/ranking/\(MyVariables.gameTopic)/\(MyVariables.gameName)/RECODES/\(Auth.auth().currentUser!.uid)" : post]
+                        self.ref.updateChildValues(childUpdate)
+                        
+                        let ROOTFORRANK = self.ref.child("ranking").child(MyVariables.gameTopic).child(MyVariables.gameName).child("\(intValue)").child("sum_\(intValue)")
+                        ROOTFORRANK.observeSingleEvent(of: DataEventType.value) { (snapshot, key) in
+                            let value = (snapshot.value as! NSNumber).intValue
+                            let reverseUpdate = ["/ranking/\(MyVariables.gameTopic)/\(MyVariables.gameName)/\(intValue)/sum_\(intValue)" : value+1]
+                            self.ref.updateChildValues(reverseUpdate) }
+                        
+                        // 기존의 기록에 대한것들은 없에라!!
+                        let intValue2 = forChange[1].integerValue
+                        let ROOTFORRANK2 = self.ref.child("ranking").child(MyVariables.gameTopic).child(MyVariables.gameName).child("\(intValue2)")
+                        
+                        ROOTFORRANK2.child("sum_\(intValue2)").observeSingleEvent(of: DataEventType.value) { (snapshot, key) in
+                            let value = (snapshot.value as! NSNumber).intValue
+                            let reverseUpdate = ["/ranking/\(MyVariables.gameTopic)/\(MyVariables.gameName)/\(intValue2)/sum_\(intValue2)" : value-1]
+                            self.ref.updateChildValues(reverseUpdate)
+                        }
+                        ROOTFORRANK2.child("total_\(intValue2)").child(Auth.auth().currentUser!.uid).removeValue()
+                    }
+                } else {
+                    let intValue = forChange[0].integerValue
+                    let childUpdate = ["/users/\(Auth.auth().currentUser!.uid)/recode/\(MyVariables.gameTopic)/\(MyVariables.gameName)/RECODE" : post,
+                                       "/ranking/\(MyVariables.gameTopic)/\(MyVariables.gameName)/\(intValue)/total_\(intValue)/\(Auth.auth().currentUser!.uid)" : post,
+                                       "/ranking/\(MyVariables.gameTopic)/\(MyVariables.gameName)/RECODES/\(Auth.auth().currentUser!.uid)" : post]
                     self.ref.updateChildValues(childUpdate)
+                    let ROOTFORRANK = self.ref.child("ranking").child(MyVariables.gameTopic).child(MyVariables.gameName).child("\(intValue)").child("sum_\(intValue)")
+                    ROOTFORRANK.observeSingleEvent(of: DataEventType.value) { (snapshot, key) in
+                        let value = (snapshot.value as! NSNumber).intValue
+                        let reverseUpdate = ["/ranking/\(MyVariables.gameTopic)/\(MyVariables.gameName)/\(intValue)/sum_\(intValue)" : value+1]
+                        self.ref.updateChildValues(reverseUpdate)
+                    }
                 }
-                
-                
             }
-            
-        }
+        
+        
+        
         
         //오래된 데이터(30일 이상이 된 DATA)를 지우자
         let now = (Date().timeIntervalSince1970) * 1000
@@ -441,24 +480,6 @@ class MainViewController: UIViewController, UITextFieldDelegate {
                 removePost.child("\(childSnapShot!.key)").removeValue()
             }
         }
-        
-        let formatter = DateFormatter()
-        formatter.dateFormat = "yy-MM-dd HH:mm:ss"
-        
-        //
-        let whenRecodeIsMade = formatter.string(from: Date())
-        let recode = second
-        let when = Firebase.ServerValue.timestamp()
-        //
-        
-        guard let key = ref.child("users").child(Auth.auth().currentUser!.uid).child("recode").child(MyVariables.gameTopic).child(MyVariables.gameName).childByAutoId().key else{ return }
-        let post : [String : Any] = [
-                                     "TIME" : whenRecodeIsMade,
-                                     "WHEN" : when,
-                                     "RECODE" : String(format: "%.2f", recode)
-                                    ]
-        let childUpdate = ["/users/\(Auth.auth().currentUser!.uid)/recode/\(MyVariables.gameTopic)/\(MyVariables.gameName)/\(key)" : post]
-        ref.updateChildValues(childUpdate)
     }
 
     
