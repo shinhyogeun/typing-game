@@ -72,5 +72,5 @@ struct MyVariables {
     static var gameName : String = ""
     static var gameTopicArr = ["한글대전","영어대전","Extar"]
     static var gameKoreaArr = ["아무노래","타닥","애국가","다시 여기 바닷가"]
-    static var rakingRangeArr = [00,10,20,30,40,50,60,70,80,90]
+    static var NICKNAME = ""
 }

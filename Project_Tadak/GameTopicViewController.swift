@@ -38,11 +38,11 @@ class GameTopicViewController: UIViewController {
         ref = Database.database().reference()
         navigationController?.isNavigationBarHidden = true
         self.view.addSubview(self.activityIndicator)
-        
                 self.koreaLabel.text = self.nameArr[0]
                 self.englishLabel.text = self.nameArr[1]
                 self.extraLabel.text = self.nameArr[2]
                 self.activityIndicator.stopAnimating()
+        
         
     }
 

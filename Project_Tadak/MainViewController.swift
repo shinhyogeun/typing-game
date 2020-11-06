@@ -413,6 +413,16 @@ class MainViewController: UIViewController, UITextFieldDelegate {
                     // 개인 신기록을 달성했을때!!! MAIN RECODE노드를 건드리자!
                 let childUpdate = ["/ranking/\(MyVariables.gameTopic)/\(MyVariables.gameName)/TOTAL/\(Auth.auth().currentUser!.uid)" : parentChildPost[0]]
                 self.ref.updateChildValues(childUpdate)
+                let intValue = forChange[0].integerValue
+                let postRef2 = self.ref.child("ranking").child(MyVariables.gameTopic).child(MyVariables.gameName)
+                postRef2.child("\(intValue)").child("sum_\(intValue)").observeSingleEvent(of: DataEventType.value) { (snapshot, key) in
+                    let children = (snapshot.value as! NSNumber).intValue
+                    postRef2.child("\(intValue)").child("sum_\(intValue)").setValue(children+1)
+                    let childUpdate = ["/ranking/\(MyVariables.gameTopic)/\(MyVariables.gameName)/\(intValue)/total_\(intValue)/\(Auth.auth().currentUser!.uid)" : parentChildPost[0]]
+                    self.ref.updateChildValues(childUpdate)
+                }
+                
+                
             }
             
         }
