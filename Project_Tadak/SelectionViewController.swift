@@ -19,7 +19,6 @@ class SelectionViewController: UIViewController {
     var gameTitleString = ""
     override func viewDidLoad() {
         self.gameTableView.separatorStyle = UITableViewCell.SeparatorStyle.none
-        
         gameTableView.delegate = self
         gameTableView.dataSource = self
         self.gameTableView.register(UINib(nibName: "gameTableViewCell", bundle: nil), forCellReuseIdentifier: "gameCell")

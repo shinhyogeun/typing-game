@@ -36,6 +36,10 @@ class GameTopicViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         ref = Database.database().reference()
+        let NICKNAMEROOT = ref.child("users").child(Auth.auth().currentUser!.uid).child("nickname").child("nickname")
+        NICKNAMEROOT.observeSingleEvent(of: DataEventType.value) { (snapshot, key) in
+            MyVariables.NICKNAME = (snapshot.value as! NSString) as String
+        }
         navigationController?.isNavigationBarHidden = true
         self.view.addSubview(self.activityIndicator)
                 self.koreaLabel.text = self.nameArr[0]

@@ -13,6 +13,7 @@ class ResultViewController: UIViewController {
     
     @IBOutlet weak var Label_title: UILabel!
     @IBOutlet weak var Label_secondResult: UILabel!
+    @IBOutlet weak var rankingLabel: UIButton!
     
     var data: Double = 0.0
     var gameTitle: String = ""
@@ -25,6 +26,7 @@ class ResultViewController: UIViewController {
         Label_title.text = gameTitle
         if(data == -1) {
             Label_secondResult.text = "시간초과!"
+            rankingLabel.isHidden = true
         }
         else {
             Label_secondResult.text = String(format: "%.2f",data)
@@ -44,7 +46,7 @@ class ResultViewController: UIViewController {
         
         if segue.identifier == "goToRankingPage"{
             let secondVC = segue.destination as! RankingViewController
-            
+            secondVC.score = Int(Label_secondResult.text!)
         }
         
     }

@@ -440,7 +440,6 @@ class MainViewController: UIViewController, UITextFieldDelegate {
                         // 기존의 기록에 대한것들은 없에라!!
                         let intValue2 = forChange[1].integerValue
                         let ROOTFORRANK2 = self.ref.child("ranking").child(MyVariables.gameTopic).child(MyVariables.gameName).child("\(intValue2)")
-                        
                         ROOTFORRANK2.child("sum_\(intValue2)").observeSingleEvent(of: DataEventType.value) { (snapshot, key) in
                             let value = (snapshot.value as! NSNumber).intValue
                             let reverseUpdate = ["/ranking/\(MyVariables.gameTopic)/\(MyVariables.gameName)/\(intValue2)/sum_\(intValue2)" : value-1]
