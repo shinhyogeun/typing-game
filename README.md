@@ -24,3 +24,9 @@ blog 주소 : https://shinhyogeun.tistory.com<br />
 - Xcode
 - Firebase
 - Xd
+
+### Refactoring
+---------------
+- 현재 진행상황 정리[ ]
+- 구현목록 정리[ ]
+- 함수화 및 구조화 정리[ ]
