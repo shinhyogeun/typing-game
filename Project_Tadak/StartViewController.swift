@@ -10,7 +10,7 @@ import UIKit
 import Firebase
 
 class StartViewController: UIViewController {
-
+    
     @IBOutlet weak var imageLogo: UIImageView!
     @IBOutlet weak var mainTitle: UILabel!
     @IBOutlet weak var subTitle: UILabel!

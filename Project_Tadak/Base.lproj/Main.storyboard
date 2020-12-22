@@ -1655,7 +1655,7 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
-                                            <action selector="verifyPhoneNumberWithSender:" destination="vvf-qu-nyV" eventType="touchUpInside" id="ep3-uI-BQ8"/>
+                                            <action selector="sendNumberButtonPressedWithSender:" destination="vvf-qu-nyV" eventType="touchUpInside" id="aap-CD-q0U"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -1685,7 +1685,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="fTW-r0-phM"/>
                     <connections>
-                        <outlet property="phoneNumber" destination="R28-dA-jpv" id="jWz-rx-XAi"/>
+                        <outlet property="phoneNumberInput" destination="R28-dA-jpv" id="i6E-n3-PfX"/>
                         <segue destination="oV2-Aw-6i9" kind="show" identifier="goToCheckingPage" id="jeo-z2-xsd"/>
                     </connections>
                 </viewController>
@@ -2882,7 +2882,7 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="aik-Jg-IEL"/>
-        <segue reference="7DH-pI-fsd"/>
+        <segue reference="YTu-vh-SYU"/>
         <segue reference="TP7-fe-4in"/>
         <segue reference="FZP-qW-N4G"/>
         <segue reference="cg0-z8-QPC"/>

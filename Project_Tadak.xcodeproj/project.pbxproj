@@ -19,6 +19,8 @@
 		1582F3E225408DAC00305D4D /* DataMakingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1582F3E125408DAC00305D4D /* DataMakingViewController.swift */; };
 		1582F3E52540922F00305D4D /* GameText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1582F3E42540922F00305D4D /* GameText.swift */; };
 		158F26A4247FE0260046356C /* Jamo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 158F26A3247FE0260046356C /* Jamo.swift */; };
+		15A3C6FB25921649004CB4D5 /* AlertText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A3C6FA25921649004CB4D5 /* AlertText.swift */; };
+		15A3C6FF25921BB9004CB4D5 /* Text.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A3C6FE25921BB9004CB4D5 /* Text.swift */; };
 		15AB9DED254C3A060043D39D /* StartViewController_temp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15AB9DEC254C3A060043D39D /* StartViewController_temp.swift */; };
 		15AB9DF3254C3A390043D39D /* Check1ViewController_temp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15AB9DF0254C3A380043D39D /* Check1ViewController_temp.swift */; };
 		15AB9DF4254C3A390043D39D /* Check2ViewController_temp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15AB9DF1254C3A390043D39D /* Check2ViewController_temp.swift */; };
@@ -67,6 +69,8 @@
 		1582F3E125408DAC00305D4D /* DataMakingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataMakingViewController.swift; sourceTree = "<group>"; };
 		1582F3E42540922F00305D4D /* GameText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameText.swift; sourceTree = "<group>"; };
 		158F26A3247FE0260046356C /* Jamo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Jamo.swift; sourceTree = "<group>"; };
+		15A3C6FA25921649004CB4D5 /* AlertText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertText.swift; sourceTree = "<group>"; };
+		15A3C6FE25921BB9004CB4D5 /* Text.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Text.swift; sourceTree = "<group>"; };
 		15AB9DEC254C3A060043D39D /* StartViewController_temp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StartViewController_temp.swift; path = ../../../Downloads/Project_Tadak/Project_Tadak/StartViewController_temp.swift; sourceTree = "<group>"; };
 		15AB9DF0254C3A380043D39D /* Check1ViewController_temp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Check1ViewController_temp.swift; sourceTree = "<group>"; };
 		15AB9DF1254C3A390043D39D /* Check2ViewController_temp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Check2ViewController_temp.swift; sourceTree = "<group>"; };
@@ -129,6 +133,15 @@
 			path = Brain;
 			sourceTree = "<group>";
 		};
+		15A3C6F92592161D004CB4D5 /* components */ = {
+			isa = PBXGroup;
+			children = (
+				15A3C6FA25921649004CB4D5 /* AlertText.swift */,
+				15A3C6FE25921BB9004CB4D5 /* Text.swift */,
+			);
+			path = components;
+			sourceTree = "<group>";
+		};
 		933A64EB251B2F56003EA64A /* fonts */ = {
 			isa = PBXGroup;
 			children = (
@@ -174,6 +187,7 @@
 		9399C4B32476585400F73CDD /* Project_Tadak */ = {
 			isa = PBXGroup;
 			children = (
+				15A3C6F92592161D004CB4D5 /* components */,
 				933A64EB251B2F56003EA64A /* fonts */,
 				93790AE6247D5BFA0046349E /* img */,
 				9399C4BA2476585400F73CDD /* Main.storyboard */,
@@ -369,7 +383,9 @@
 				15E9A5852534C326008FFC1A /* AuthViewController.swift in Sources */,
 				1572F2C524816D1C004EB34D /* Calculate.swift in Sources */,
 				1582F3E52540922F00305D4D /* GameText.swift in Sources */,
+				15A3C6FF25921BB9004CB4D5 /* Text.swift in Sources */,
 				15C7BB29254EDF0400222DB3 /* gameTableViewCell.swift in Sources */,
+				15A3C6FB25921649004CB4D5 /* AlertText.swift in Sources */,
 				9399C4B52476585400F73CDD /* AppDelegate.swift in Sources */,
 				9399C4B72476585400F73CDD /* SceneDelegate.swift in Sources */,
 				15AB9DF4254C3A390043D39D /* Check2ViewController_temp.swift in Sources */,
