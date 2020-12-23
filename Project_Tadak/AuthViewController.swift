@@ -16,7 +16,6 @@ class AuthViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         hideKeyboard()
-        
     }
 
     @IBAction func sendNumberButtonPressed(sender: UIButton) {

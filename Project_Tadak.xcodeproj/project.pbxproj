@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1527BCAF25937C1C0013A8AF /* LoginProccese.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1527BCAE25937C1C0013A8AF /* LoginProccese.swift */; };
 		1527D0C5254BF99E004EBD34 /* CommunicateFirebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1527D0C4254BF99E004EBD34 /* CommunicateFirebase.swift */; };
 		15290C022553C5D600E5955D /* SetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15290C012553C5D600E5955D /* SetViewController.swift */; };
 		153CC4F1254C7B2500252568 /* GameTopicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 153CC4F0254C7B2500252568 /* GameTopicViewController.swift */; };
@@ -57,6 +58,7 @@
 
 /* Begin PBXFileReference section */
 		00D2ED0CE0BAFFD65AB37233 /* Pods-Project_Tadak.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Project_Tadak.release.xcconfig"; path = "Target Support Files/Pods-Project_Tadak/Pods-Project_Tadak.release.xcconfig"; sourceTree = "<group>"; };
+		1527BCAE25937C1C0013A8AF /* LoginProccese.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginProccese.swift; sourceTree = "<group>"; };
 		1527D0C4254BF99E004EBD34 /* CommunicateFirebase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunicateFirebase.swift; sourceTree = "<group>"; };
 		15290C012553C5D600E5955D /* SetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetViewController.swift; sourceTree = "<group>"; };
 		153CC4F0254C7B2500252568 /* GameTopicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameTopicViewController.swift; sourceTree = "<group>"; };
@@ -120,6 +122,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1527BCAD25937BF80013A8AF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1527BCAE25937C1C0013A8AF /* LoginProccese.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		158F26A2247FDF5E0046356C /* Brain */ = {
 			isa = PBXGroup;
 			children = (
@@ -201,6 +211,7 @@
 				9354CBF3251B3E420048F3DC /* test.swift */,
 				15C7BB27254EDF0400222DB3 /* gameTableViewCell.swift */,
 				15C7BB28254EDF0400222DB3 /* gameTableViewCell.xib */,
+				1527BCAD25937BF80013A8AF /* Model */,
 				156860EA25374FF6005C90AB /* PhoneNumberLoginViewController.swift */,
 				7720FDF424E6C6BE007552B2 /* NewViewController.swift */,
 				1582F3E125408DAC00305D4D /* DataMakingViewController.swift */,
@@ -379,6 +390,7 @@
 				153CC4F1254C7B2500252568 /* GameTopicViewController.swift in Sources */,
 				15AB9DED254C3A060043D39D /* StartViewController_temp.swift in Sources */,
 				15AB9DF3254C3A390043D39D /* Check1ViewController_temp.swift in Sources */,
+				1527BCAF25937C1C0013A8AF /* LoginProccese.swift in Sources */,
 				77671E6B24E8CEB3009A1A4A /* Text2.swift in Sources */,
 				15E9A5852534C326008FFC1A /* AuthViewController.swift in Sources */,
 				1572F2C524816D1C004EB34D /* Calculate.swift in Sources */,

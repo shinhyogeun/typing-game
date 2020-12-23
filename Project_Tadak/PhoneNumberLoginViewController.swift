@@ -15,24 +15,26 @@ class PhoneNumberLoginViewController: UIViewController {
     
     // 인증번호를 다시 받아야 할 때를 위해 AuthViewController에서 가져옴
     var phoneNumber : String?
-    var ref:DatabaseReference!
+    var dataBase:DatabaseReference!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         hideKeyboard()
-        ref = Database.database().reference()
+        dataBase = Database.database().reference()
     }
     
     //로그인 실행
     @IBAction func verificationButtonPressed(_ sender: UIButton) {
-        if let text = verificationCode.text {
-            guard let verificationID = UserDefaults.standard.string(forKey: "authVerificationID")
-            else { return print("아직 유저디폴트에 값이 없습니다.") }
-            let credential = PhoneAuthProvider.provider().credential(withVerificationID: verificationID, verificationCode: text)
+        if let verificationCode = verificationCode.text {
+            guard let verificationID = UserDefaults.standard.string(forKey: Text.VERIFICATION_ID)
+            else { return print(AlertText.DONT_HAVE_VERIFICATION_ID) }
+            let credential = PhoneAuthProvider.provider().credential(withVerificationID: verificationID, verificationCode: verificationCode)
             
             Auth.auth().signIn(with: credential) { (authResult, error) in
                 if let error = error{
-                    print("로그인에 실패했습니다.")
+                    print(AlertText.FAIL_LOGIN)
                     print(error.localizedDescription)
+                    
                     return
                 }
                 let uid = ["uid":"\(Auth.auth().currentUser!.uid)"]
@@ -40,8 +42,7 @@ class PhoneNumberLoginViewController: UIViewController {
                 
                 let childUpdate = ["/users/\(Auth.auth().currentUser!.uid)/uid" : uid,
                                    "/users/\(Auth.auth().currentUser!.uid)/PhoneNumber" : phoneNumebr]
-                self.ref.updateChildValues(childUpdate) { (error , databaseRef) in
-                    
+                self.dataBase.updateChildValues(childUpdate) { (error , databaseRef) in
                     if let error = error {
                         DispatchQueue.main.async {
                             self.performSegue(withIdentifier:"directToMain", sender: self)
