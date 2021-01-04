@@ -1504,15 +1504,15 @@
             <objects>
                 <viewController storyboardIdentifier="start" id="ylT-En-guc" customClass="StartViewController" customModule="Project_Tadak" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1rm-oe-BTZ">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background img" translatesAutoresizingMaskIntoConstraints="NO" id="SLd-Kd-jrq">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                                 <color key="backgroundColor" name="ColorBackground"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l4D-k8-Kki">
-                                <rect key="frame" x="73.5" y="156.5" width="228" height="354"/>
+                                <rect key="frame" x="73.5" y="156.5" width="228" height="334"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="keybord" translatesAutoresizingMaskIntoConstraints="NO" id="yXu-ic-5iO">
                                         <rect key="frame" x="14" y="4" width="200" height="124"/>
@@ -1533,7 +1533,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qQ2-Zv-Mda">
-                                        <rect key="frame" x="4" y="310" width="220" height="40"/>
+                                        <rect key="frame" x="4" y="290" width="220" height="40"/>
                                         <color key="backgroundColor" name="ColorInput"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="WAS-H4-Vbg"/>
@@ -1563,7 +1563,7 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ozh-TK-GrB">
-                                <rect key="frame" x="77.5" y="540.5" width="220" height="40"/>
+                                <rect key="frame" x="77.5" y="520.5" width="220" height="40"/>
                                 <color key="backgroundColor" name="ColorInput"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="K3T-UJ-PeF"/>
@@ -1611,14 +1611,14 @@
             <objects>
                 <viewController storyboardIdentifier="check1" id="vvf-qu-nyV" customClass="AuthViewController" customModule="Project_Tadak" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="30Z-l9-0Os">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background img" translatesAutoresizingMaskIntoConstraints="NO" id="iYI-G0-0a8">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1L7-ue-jNx">
-                                <rect key="frame" x="26" y="117" width="323" height="433"/>
+                                <rect key="frame" x="26" y="107" width="323" height="433"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="핸드폰 인증" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fGh-Og-2xb">
                                         <rect key="frame" x="90" y="4" width="143" height="37"/>
@@ -1774,14 +1774,14 @@
             <objects>
                 <viewController storyboardIdentifier="check2" id="oV2-Aw-6i9" customClass="PhoneNumberLoginViewController" customModule="Project_Tadak" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="157-ST-5kJ">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background img" translatesAutoresizingMaskIntoConstraints="NO" id="VRo-X2-nv0">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T2j-Tr-gk3">
-                                <rect key="frame" x="26" y="46.5" width="323" height="574"/>
+                                <rect key="frame" x="26" y="36.5" width="323" height="574"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="핸드폰 인증" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mA6-cG-rYX">
                                         <rect key="frame" x="90" y="75" width="143" height="37"/>
@@ -1879,14 +1879,14 @@
             <objects>
                 <viewController storyboardIdentifier="check3" id="pgf-6J-y3j" customClass="NickNameViewController" customModule="Project_Tadak" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="BjR-gX-BuK">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background img" translatesAutoresizingMaskIntoConstraints="NO" id="S89-HV-47c">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="04m-X1-S66">
-                                <rect key="frame" x="26" y="117" width="323" height="433"/>
+                                <rect key="frame" x="26" y="107" width="323" height="433"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="닉네임 설정" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ca0-UR-Jus">
                                         <rect key="frame" x="90" y="4" width="143" height="37"/>
@@ -1966,14 +1966,14 @@
             <objects>
                 <viewController storyboardIdentifier="main" id="AVR-Eg-2pv" customClass="GameTopicViewController" customModule="Project_Tadak" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ZoJ-0P-8Zm">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background img" translatesAutoresizingMaskIntoConstraints="NO" id="YsY-HN-KVB">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NqQ-mH-qzW" userLabel="View fraim">
-                                <rect key="frame" x="20" y="84" width="335" height="563"/>
+                                <rect key="frame" x="20" y="40" width="335" height="587"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="triangle" translatesAutoresizingMaskIntoConstraints="NO" id="5Fi-C6-7MT">
                                         <rect key="frame" x="4" y="0.0" width="327" height="25"/>
@@ -1982,7 +1982,7 @@
                                         </constraints>
                                     </imageView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fuu-by-snZ" userLabel="view_button">
-                                        <rect key="frame" x="11" y="237.5" width="313" height="88"/>
+                                        <rect key="frame" x="11" y="249.5" width="313" height="88"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ibc-Dx-prE">
                                                 <rect key="frame" x="4" y="4" width="305" height="80"/>
@@ -2012,7 +2012,7 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="p4v-Um-kzf" userLabel="view_button">
-                                        <rect key="frame" x="11" y="340.5" width="313" height="88"/>
+                                        <rect key="frame" x="11" y="352.5" width="313" height="88"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Ji-4g-HO0">
                                                 <rect key="frame" x="4" y="4" width="305" height="80"/>
@@ -2042,7 +2042,7 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nIJ-LM-EiV" userLabel="view_button">
-                                        <rect key="frame" x="11" y="134.5" width="313" height="88"/>
+                                        <rect key="frame" x="11" y="146.5" width="313" height="88"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="avI-SZ-a2u">
                                                 <rect key="frame" x="4" y="4" width="305" height="80"/>
@@ -2076,7 +2076,7 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="Button"/>
                                         <connections>
-                                            <segue destination="9qd-rM-Fri" kind="show" id="uDd-a6-zpX"/>
+                                            <segue destination="ylT-En-guc" kind="show" identifier="goToStartPage" id="TCm-ig-7zo"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -2095,7 +2095,7 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bzA-6u-OF9">
-                                <rect key="frame" x="330" y="49" width="25" height="25"/>
+                                <rect key="frame" x="330" y="5" width="25" height="25"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="25" id="1Fy-5J-2Nz"/>
                                     <constraint firstAttribute="height" constant="25" id="65e-op-awA"/>
@@ -2106,13 +2106,13 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="게임 목록" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tay-NJ-RSe">
-                                <rect key="frame" x="141" y="46.5" width="93.5" height="29.5"/>
+                                <rect key="frame" x="141" y="2.5" width="93.5" height="29.5"/>
                                 <fontDescription key="fontDescription" name="RixTodaytoon" family="RixTodaytoon" pointSize="25"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ai5-Kw-Edt">
-                                <rect key="frame" x="127.5" y="597" width="120" height="40"/>
+                                <rect key="frame" x="127.5" y="577" width="120" height="40"/>
                                 <color key="backgroundColor" name="ColorPupple"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="120" id="TbE-3C-H4f"/>
@@ -2158,21 +2158,21 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BCA-bj-mJG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1177" y="4100"/>
+            <point key="canvasLocation" x="1068" y="4162"/>
         </scene>
         <!--start-->
         <scene sceneID="h4C-Yk-ok3">
             <objects>
                 <viewController storyboardIdentifier="kor" id="CsF-6w-Mnj" customClass="SelectionViewController" customModule="Project_Tadak" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="WZv-V4-WcM">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background img" translatesAutoresizingMaskIntoConstraints="NO" id="fWL-RU-JvF">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y7g-hS-vr5">
-                                <rect key="frame" x="20" y="84" width="335" height="563"/>
+                                <rect key="frame" x="20" y="40" width="335" height="587"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="triangle" translatesAutoresizingMaskIntoConstraints="NO" id="hjm-ZX-Enf">
                                         <rect key="frame" x="4" y="0.0" width="327" height="25"/>
@@ -2203,7 +2203,7 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lo5-uT-xbF">
-                                <rect key="frame" x="330" y="49" width="25" height="25"/>
+                                <rect key="frame" x="330" y="5" width="25" height="25"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="25" id="NOK-Bf-vKN"/>
                                     <constraint firstAttribute="height" constant="25" id="QgZ-Uo-OUi"/>
@@ -2211,13 +2211,13 @@
                                 <state key="normal" image="set"/>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="한글대전" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6pi-64-4Jr">
-                                <rect key="frame" x="144.5" y="46" width="86.5" height="30"/>
+                                <rect key="frame" x="144.5" y="2" width="86.5" height="30"/>
                                 <fontDescription key="fontDescription" name="RixTodaytoon" family="RixTodaytoon" pointSize="25"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qq4-hi-DsW">
-                                <rect key="frame" x="20" y="49" width="25" height="25"/>
+                                <rect key="frame" x="20" y="5" width="25" height="25"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="25" id="aWa-Wa-gmh"/>
                                     <constraint firstAttribute="width" constant="25" id="uKc-hO-4T3"/>
@@ -2516,14 +2516,14 @@
             <objects>
                 <viewController storyboardIdentifier="set" id="vxD-lf-V6l" customClass="SetViewController" customModule="Project_Tadak" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="akh-2j-M0O">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background img" translatesAutoresizingMaskIntoConstraints="NO" id="MaK-c3-Qio">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ExY-Y9-LSu">
-                                <rect key="frame" x="20" y="84" width="335" height="563"/>
+                                <rect key="frame" x="20" y="40" width="335" height="587"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="triangle" translatesAutoresizingMaskIntoConstraints="NO" id="czI-WM-vHA">
                                         <rect key="frame" x="4" y="0.0" width="327" height="25"/>
@@ -2565,13 +2565,13 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="설정" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2mX-Ne-8bg">
-                                <rect key="frame" x="166" y="46" width="43.5" height="30"/>
+                                <rect key="frame" x="166" y="2" width="43.5" height="30"/>
                                 <fontDescription key="fontDescription" name="RixTodaytoon" family="RixTodaytoon" pointSize="25"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P9i-IL-TRJ">
-                                <rect key="frame" x="20" y="49" width="25" height="25"/>
+                                <rect key="frame" x="20" y="5" width="25" height="25"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="25" id="9t9-jf-dmP"/>
                                     <constraint firstAttribute="height" constant="25" id="yT9-Vp-DUg"/>
@@ -2882,7 +2882,8 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="aik-Jg-IEL"/>
-        <segue reference="7DH-pI-fsd"/>
+        <segue reference="Hrx-co-hdr"/>
+        <segue reference="TCm-ig-7zo"/>
         <segue reference="TP7-fe-4in"/>
         <segue reference="FZP-qW-N4G"/>
         <segue reference="cg0-z8-QPC"/>

@@ -65,7 +65,7 @@ class StartViewController: UIViewController {
     
     
     @IBAction func goPhoneNumberInputPage(authButton: UIButton) {
-        self.performSegue(withIdentifier: "goToAuthPage", sender: nil)
+        self.performSegue(withIdentifier: "check1", sender: nil)
     }
     
 }

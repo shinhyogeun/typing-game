@@ -279,8 +279,7 @@ class MainViewController: UIViewController, UITextFieldDelegate {
                 self.viewLabel.transform = CGAffineTransform(translationX: 0, y: 0)
                 self.viewLabel.alpha = 1
             }
-            
-            
+
             inputTextField.text = ""
         }
         else if a > numOfArray-1
@@ -462,14 +461,10 @@ class MainViewController: UIViewController, UITextFieldDelegate {
                 }
             }
         
-        
-        
-        
         //오래된 데이터(30일 이상이 된 DATA)를 지우자
         let now = (Date().timeIntervalSince1970) * 1000
         let cutOff = now - 30*24*60*60*1000
         let postRefAboutOldData = ref.child("users").child(Auth.auth().currentUser!.uid).child("recode").child(MyVariables.gameTopic).child(MyVariables.gameName).queryOrdered(byChild: "/WHEN").queryEnding(atValue: cutOff)
-        
         let removePost = ref.child("users").child(Auth.auth().currentUser!.uid).child("recode").child(MyVariables.gameTopic).child(MyVariables.gameName)
         
         postRefAboutOldData.observeSingleEvent(of: DataEventType.value) { (snapshot, key) in

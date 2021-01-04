@@ -10,14 +10,6 @@ import UIKit
 import Firebase
 
 class GameTopicViewController: UIViewController {
-    // 원형상태바
-    lazy var activityIndicator: UIActivityIndicatorView = {
-        let activityIndicator = UIActivityIndicatorView()
-        activityIndicator.frame = CGRect(x: 0, y: 0, width: 50, height: 50)
-        activityIndicator.center = self.view.center
-        activityIndicator.startAnimating()
-        return activityIndicator
-    }()
     
     var ref:DatabaseReference!
         
@@ -41,12 +33,9 @@ class GameTopicViewController: UIViewController {
             MyVariables.NICKNAME = (snapshot.value as! NSString) as String
         }
         navigationController?.isNavigationBarHidden = true
-        self.view.addSubview(self.activityIndicator)
                 self.koreaLabel.text = self.nameArr[0]
                 self.englishLabel.text = self.nameArr[1]
                 self.extraLabel.text = self.nameArr[2]
-                self.activityIndicator.stopAnimating()
-        
         
     }
 
@@ -97,6 +86,7 @@ class GameTopicViewController: UIViewController {
     @IBAction func logOutButtonPressed(_ sender: UIButton) {
         do {
             try Auth.auth().signOut()
+            self.performSegue(withIdentifier: "goToStartPage", sender: nil)
         } catch let signOutError as NSError {
             print("로그아웃을 할 수 없습니다.", signOutError)
         }

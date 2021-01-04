@@ -15,6 +15,7 @@ class Calculate {
     let BLUE = UIColor(named: "ColorBlue")
     var missArr : Array<Int> = []
     var firstCharThatExceptionInArr : Int = 0
+    
     func countMiss(_ input : String, whatYouHaveToWrite : String, whatYouAlreadyWrite : String) -> Int {
         var miss = 0
         var returnValue = 0

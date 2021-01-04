@@ -22,7 +22,6 @@
 		158F26A4247FE0260046356C /* Jamo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 158F26A3247FE0260046356C /* Jamo.swift */; };
 		15A3C6FB25921649004CB4D5 /* AlertText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A3C6FA25921649004CB4D5 /* AlertText.swift */; };
 		15A3C6FF25921BB9004CB4D5 /* Text.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A3C6FE25921BB9004CB4D5 /* Text.swift */; };
-		15AB9DED254C3A060043D39D /* StartViewController_temp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15AB9DEC254C3A060043D39D /* StartViewController_temp.swift */; };
 		15AB9DF3254C3A390043D39D /* Check1ViewController_temp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15AB9DF0254C3A380043D39D /* Check1ViewController_temp.swift */; };
 		15AB9DF4254C3A390043D39D /* Check2ViewController_temp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15AB9DF1254C3A390043D39D /* Check2ViewController_temp.swift */; };
 		15AB9DF5254C3A390043D39D /* Check3ViewController_temp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15AB9DF2254C3A390043D39D /* Check3ViewController_temp.swift */; };
@@ -73,7 +72,6 @@
 		158F26A3247FE0260046356C /* Jamo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Jamo.swift; sourceTree = "<group>"; };
 		15A3C6FA25921649004CB4D5 /* AlertText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertText.swift; sourceTree = "<group>"; };
 		15A3C6FE25921BB9004CB4D5 /* Text.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Text.swift; sourceTree = "<group>"; };
-		15AB9DEC254C3A060043D39D /* StartViewController_temp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StartViewController_temp.swift; path = ../../../Downloads/Project_Tadak/Project_Tadak/StartViewController_temp.swift; sourceTree = "<group>"; };
 		15AB9DF0254C3A380043D39D /* Check1ViewController_temp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Check1ViewController_temp.swift; sourceTree = "<group>"; };
 		15AB9DF1254C3A390043D39D /* Check2ViewController_temp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Check2ViewController_temp.swift; sourceTree = "<group>"; };
 		15AB9DF2254C3A390043D39D /* Check3ViewController_temp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Check3ViewController_temp.swift; sourceTree = "<group>"; };
@@ -201,7 +199,6 @@
 				933A64EB251B2F56003EA64A /* fonts */,
 				93790AE6247D5BFA0046349E /* img */,
 				9399C4BA2476585400F73CDD /* Main.storyboard */,
-				15AB9DEC254C3A060043D39D /* StartViewController_temp.swift */,
 				9378B3C5251C401F00D2FF2D /* StartViewController.swift */,
 				15AB9DF0254C3A380043D39D /* Check1ViewController_temp.swift */,
 				15AB9DF1254C3A390043D39D /* Check2ViewController_temp.swift */,
@@ -388,7 +385,6 @@
 				9354CBF4251B3E420048F3DC /* test.swift in Sources */,
 				15554D9C25507107005B6102 /* RankingViewController.swift in Sources */,
 				153CC4F1254C7B2500252568 /* GameTopicViewController.swift in Sources */,
-				15AB9DED254C3A060043D39D /* StartViewController_temp.swift in Sources */,
 				15AB9DF3254C3A390043D39D /* Check1ViewController_temp.swift in Sources */,
 				1527BCAF25937C1C0013A8AF /* LoginProccese.swift in Sources */,
 				77671E6B24E8CEB3009A1A4A /* Text2.swift in Sources */,
