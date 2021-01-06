@@ -16,6 +16,7 @@ class gameTableViewCell: UITableViewCell {
     var mainTitleString = ""
     var dataSource : String = ""
     var ref:DatabaseReference!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         ref = Database.database().reference()

@@ -13,22 +13,19 @@ class CommunicateFirebase
 {
     var ref : DatabaseReference = Database.database().reference()
     
-    func findOutAndUpdate(ref:DatabaseReference, originRecode : NSNumber, newRecode : Double) {
+    func storeData(Data : Any, where : String){
         
-        let whatOriginRoom : Int = Int(originRecode)
-        let whatRoom : Int = Int(newRecode)
-
+    }
+    
+    func fatchData(where : String) {
         
-        // 기존의 정보 없에기
+    }
+    
+    func fatchRanking(where: String){
         
-        
-        
-        
-        // 새로운 업데이트
-        
-        
-        
-        
+    }
+    
+    func changeData(from:String,to:String,where:String){
         
     }
     

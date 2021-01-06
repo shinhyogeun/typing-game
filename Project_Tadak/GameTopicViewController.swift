@@ -10,8 +10,6 @@ import UIKit
 import Firebase
 
 class GameTopicViewController: UIViewController {
-    
-    var ref:DatabaseReference!
         
     @IBOutlet weak var koreaButton: UIButton!
     @IBOutlet weak var englishButton: UIButton!
@@ -21,21 +19,9 @@ class GameTopicViewController: UIViewController {
     @IBOutlet weak var englishLabel: UILabel!
     @IBOutlet weak var extraLabel: UILabel!
     
-    var nameArr : [String] = ["한글대전","영어대전","Extra"]
-    var gameNameArr : [String] = []
-    var whatButtonYouChoose = ""
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        ref = Database.database().reference()
-        let NICKNAMEROOT = ref.child("users").child(Auth.auth().currentUser!.uid).child("nickname").child("nickname")
-        NICKNAMEROOT.observeSingleEvent(of: DataEventType.value) { (snapshot, key) in
-            MyVariables.NICKNAME = (snapshot.value as! NSString) as String
-        }
         navigationController?.isNavigationBarHidden = true
-                self.koreaLabel.text = self.nameArr[0]
-                self.englishLabel.text = self.nameArr[1]
-                self.extraLabel.text = self.nameArr[2]
         
     }
 
@@ -44,51 +30,23 @@ class GameTopicViewController: UIViewController {
         navigationController?.isNavigationBarHidden = true
     }
     
-    @IBAction func topicButtonPressed(_ sender: UIButton) {
-        var postRef : DatabaseQuery! = ref
+    @IBAction func topicButtonPressed(_ sender: UIButton) -> Void{
         if sender == koreaButton {
-            postRef = ref.child("gametitle").child("한글대전")
-            whatButtonYouChoose = self.nameArr[0]
-            MyVariables.gameTopic = self.nameArr[0]
-        } else if sender == englishButton {
-            postRef = ref.child("gametitle").child("영어대전")
-            whatButtonYouChoose = self.nameArr[1]
-            MyVariables.gameTopic = self.nameArr[1]
-        } else if sender == extraButton {
-            postRef = ref.child("gametitle").child("Extra")
-            whatButtonYouChoose = self.nameArr[2]
-            MyVariables.gameTopic = self.nameArr[2]
-        }
-        
-        postRef.observeSingleEvent(of: DataEventType.value) { (snapshot, key) in
-            let children : NSEnumerator = snapshot.children
-            for (child) in children {
-                let childSnapShot = child as? DataSnapshot
-                if let data = (childSnapShot?.value as? String){
-                    self.gameNameArr.append(data)
-                }
-            }
-            DispatchQueue.main.async {
-                MyVariables.completeArray = self.gameNameArr
+            GameList.getGameListAndThen(pressedButtonText: koreaLabel.text!) {
                 self.performSegue(withIdentifier: "goToSelectionPage", sender: nil)
             }
-        }
-        
-    }
-//maintitle을 바꾸는 역할
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "goToSelectionPage" {
-            let secondVC = segue.destination as! SelectionViewController
-            secondVC.mainTitleString = whatButtonYouChoose
+        }else if sender == englishButton {
+            GameList.getGameListAndThen(pressedButtonText: englishLabel.text!) {
+                self.performSegue(withIdentifier: "goToSelectionPage", sender: nil)
+            }
+        }else if sender == extraButton{
+            GameList.getGameListAndThen(pressedButtonText: extraLabel.text!) {
+                self.performSegue(withIdentifier: "goToSelectionPage", sender: nil)
+            }
         }
     }
     
     @IBAction func logOutButtonPressed(_ sender: UIButton) {
-        do {
-            try Auth.auth().signOut()
-            self.performSegue(withIdentifier: "goToStartPage", sender: nil)
-        } catch let signOutError as NSError {
-            print("로그아웃을 할 수 없습니다.", signOutError)
-        }
+        Logout.tryLogout()
     }
 }

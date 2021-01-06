@@ -100,4 +100,8 @@ class Calculate {
         viewLabel.attributedText = attr
     }
     
+    func resetMissArr () -> Void {
+        self.missArr = []
+    }
+    
 }

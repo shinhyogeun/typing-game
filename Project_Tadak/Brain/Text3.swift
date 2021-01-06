@@ -70,7 +70,4 @@ struct MyVariables {
     static var completeGameArray : Array<String> = []
     static var gameTopic : String = ""
     static var gameName : String = ""
-    static var gameTopicArr = ["한글대전","영어대전","Extar"]
-    static var gameKoreaArr = ["아무노래","타닥","애국가","다시 여기 바닷가"]
-    static var NICKNAME = ""
 }

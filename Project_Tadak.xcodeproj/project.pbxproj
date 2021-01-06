@@ -7,9 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1527BCAF25937C1C0013A8AF /* LoginProccese.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1527BCAE25937C1C0013A8AF /* LoginProccese.swift */; };
+		1515F57E25A1FA0900442031 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1515F57D25A1FA0900442031 /* Login.swift */; };
 		1527D0C5254BF99E004EBD34 /* CommunicateFirebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1527D0C4254BF99E004EBD34 /* CommunicateFirebase.swift */; };
-		15290C022553C5D600E5955D /* SetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15290C012553C5D600E5955D /* SetViewController.swift */; };
 		153CC4F1254C7B2500252568 /* GameTopicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 153CC4F0254C7B2500252568 /* GameTopicViewController.swift */; };
 		154D3275253027E4000239AE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 154D3274253027E4000239AE /* GoogleService-Info.plist */; };
 		15554D9C25507107005B6102 /* RankingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15554D9B25507107005B6102 /* RankingViewController.swift */; };
@@ -19,9 +18,11 @@
 		157BF740253C87C700C349B4 /* Text3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 157BF73F253C87C700C349B4 /* Text3.swift */; };
 		1582F3E225408DAC00305D4D /* DataMakingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1582F3E125408DAC00305D4D /* DataMakingViewController.swift */; };
 		1582F3E52540922F00305D4D /* GameText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1582F3E42540922F00305D4D /* GameText.swift */; };
+		1589E5FA25A32A75005510BE /* Recode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1589E5F925A32A75005510BE /* Recode.swift */; };
 		158F26A4247FE0260046356C /* Jamo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 158F26A3247FE0260046356C /* Jamo.swift */; };
-		15A3C6FB25921649004CB4D5 /* AlertText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A3C6FA25921649004CB4D5 /* AlertText.swift */; };
-		15A3C6FF25921BB9004CB4D5 /* Text.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A3C6FE25921BB9004CB4D5 /* Text.swift */; };
+		159688CE25A2243100E250DF /* GameList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 159688CD25A2243100E250DF /* GameList.swift */; };
+		159688D225A233C200E250DF /* Logout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 159688D125A233C200E250DF /* Logout.swift */; };
+		159688D525A2D66F00E250DF /* GameContents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 159688D425A2D66F00E250DF /* GameContents.swift */; };
 		15AB9DF3254C3A390043D39D /* Check1ViewController_temp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15AB9DF0254C3A380043D39D /* Check1ViewController_temp.swift */; };
 		15AB9DF4254C3A390043D39D /* Check2ViewController_temp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15AB9DF1254C3A390043D39D /* Check2ViewController_temp.swift */; };
 		15AB9DF5254C3A390043D39D /* Check3ViewController_temp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15AB9DF2254C3A390043D39D /* Check3ViewController_temp.swift */; };
@@ -57,9 +58,8 @@
 
 /* Begin PBXFileReference section */
 		00D2ED0CE0BAFFD65AB37233 /* Pods-Project_Tadak.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Project_Tadak.release.xcconfig"; path = "Target Support Files/Pods-Project_Tadak/Pods-Project_Tadak.release.xcconfig"; sourceTree = "<group>"; };
-		1527BCAE25937C1C0013A8AF /* LoginProccese.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginProccese.swift; sourceTree = "<group>"; };
+		1515F57D25A1FA0900442031 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 		1527D0C4254BF99E004EBD34 /* CommunicateFirebase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunicateFirebase.swift; sourceTree = "<group>"; };
-		15290C012553C5D600E5955D /* SetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetViewController.swift; sourceTree = "<group>"; };
 		153CC4F0254C7B2500252568 /* GameTopicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameTopicViewController.swift; sourceTree = "<group>"; };
 		154D3274253027E4000239AE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		15554D9B25507107005B6102 /* RankingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingViewController.swift; sourceTree = "<group>"; };
@@ -69,9 +69,11 @@
 		157BF73F253C87C700C349B4 /* Text3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Text3.swift; sourceTree = "<group>"; };
 		1582F3E125408DAC00305D4D /* DataMakingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataMakingViewController.swift; sourceTree = "<group>"; };
 		1582F3E42540922F00305D4D /* GameText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameText.swift; sourceTree = "<group>"; };
+		1589E5F925A32A75005510BE /* Recode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recode.swift; sourceTree = "<group>"; };
 		158F26A3247FE0260046356C /* Jamo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Jamo.swift; sourceTree = "<group>"; };
-		15A3C6FA25921649004CB4D5 /* AlertText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertText.swift; sourceTree = "<group>"; };
-		15A3C6FE25921BB9004CB4D5 /* Text.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Text.swift; sourceTree = "<group>"; };
+		159688CD25A2243100E250DF /* GameList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameList.swift; sourceTree = "<group>"; };
+		159688D125A233C200E250DF /* Logout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logout.swift; sourceTree = "<group>"; };
+		159688D425A2D66F00E250DF /* GameContents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameContents.swift; sourceTree = "<group>"; };
 		15AB9DF0254C3A380043D39D /* Check1ViewController_temp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Check1ViewController_temp.swift; sourceTree = "<group>"; };
 		15AB9DF1254C3A390043D39D /* Check2ViewController_temp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Check2ViewController_temp.swift; sourceTree = "<group>"; };
 		15AB9DF2254C3A390043D39D /* Check3ViewController_temp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Check3ViewController_temp.swift; sourceTree = "<group>"; };
@@ -120,34 +122,43 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1527BCAD25937BF80013A8AF /* Model */ = {
+		1515F57A25A1F9C800442031 /* viewModel */ = {
 			isa = PBXGroup;
 			children = (
-				1527BCAE25937C1C0013A8AF /* LoginProccese.swift */,
 			);
-			path = Model;
+			path = viewModel;
+			sourceTree = "<group>";
+		};
+		1515F57B25A1F9DF00442031 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				1515F57D25A1FA0900442031 /* Login.swift */,
+				159688D125A233C200E250DF /* Logout.swift */,
+				159688CD25A2243100E250DF /* GameList.swift */,
+				159688D425A2D66F00E250DF /* GameContents.swift */,
+				1589E5F925A32A75005510BE /* Recode.swift */,
+				1572F2C424816D1C004EB34D /* Calculate.swift */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		1578D8F725A2E8940025395B /* components */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = components;
 			sourceTree = "<group>";
 		};
 		158F26A2247FDF5E0046356C /* Brain */ = {
 			isa = PBXGroup;
 			children = (
 				158F26A3247FE0260046356C /* Jamo.swift */,
-				1572F2C424816D1C004EB34D /* Calculate.swift */,
 				1582F3E42540922F00305D4D /* GameText.swift */,
 				77671E6A24E8CEB3009A1A4A /* Text2.swift */,
 				157BF73F253C87C700C349B4 /* Text3.swift */,
 				1527D0C4254BF99E004EBD34 /* CommunicateFirebase.swift */,
 			);
 			path = Brain;
-			sourceTree = "<group>";
-		};
-		15A3C6F92592161D004CB4D5 /* components */ = {
-			isa = PBXGroup;
-			children = (
-				15A3C6FA25921649004CB4D5 /* AlertText.swift */,
-				15A3C6FE25921BB9004CB4D5 /* Text.swift */,
-			);
-			path = components;
 			sourceTree = "<group>";
 		};
 		933A64EB251B2F56003EA64A /* fonts */ = {
@@ -195,7 +206,9 @@
 		9399C4B32476585400F73CDD /* Project_Tadak */ = {
 			isa = PBXGroup;
 			children = (
-				15A3C6F92592161D004CB4D5 /* components */,
+				1578D8F725A2E8940025395B /* components */,
+				1515F57B25A1F9DF00442031 /* model */,
+				1515F57A25A1F9C800442031 /* viewModel */,
 				933A64EB251B2F56003EA64A /* fonts */,
 				93790AE6247D5BFA0046349E /* img */,
 				9399C4BA2476585400F73CDD /* Main.storyboard */,
@@ -208,12 +221,10 @@
 				9354CBF3251B3E420048F3DC /* test.swift */,
 				15C7BB27254EDF0400222DB3 /* gameTableViewCell.swift */,
 				15C7BB28254EDF0400222DB3 /* gameTableViewCell.xib */,
-				1527BCAD25937BF80013A8AF /* Model */,
 				156860EA25374FF6005C90AB /* PhoneNumberLoginViewController.swift */,
 				7720FDF424E6C6BE007552B2 /* NewViewController.swift */,
 				1582F3E125408DAC00305D4D /* DataMakingViewController.swift */,
 				9399C4CC247660E500F73CDD /* ResultViewController.swift */,
-				15290C012553C5D600E5955D /* SetViewController.swift */,
 				154D3274253027E4000239AE /* GoogleService-Info.plist */,
 				156860E725374F8C005C90AB /* NickNameViewController.swift */,
 				9399C4CA247660BC00F73CDD /* MainViewController.swift */,
@@ -379,21 +390,22 @@
 				9399C4B92476585400F73CDD /* LoginViewController.swift in Sources */,
 				9378B3C6251C401F00D2FF2D /* StartViewController.swift in Sources */,
 				157BF740253C87C700C349B4 /* Text3.swift in Sources */,
+				1515F57E25A1FA0900442031 /* Login.swift in Sources */,
 				9399C4C92476608900F73CDD /* SelectionViewController.swift in Sources */,
 				778B1CC624E9082800BB68C6 /* CustomIntensityVisualEffectView.swift in Sources */,
+				159688D225A233C200E250DF /* Logout.swift in Sources */,
 				156860EB25374FF6005C90AB /* PhoneNumberLoginViewController.swift in Sources */,
 				9354CBF4251B3E420048F3DC /* test.swift in Sources */,
 				15554D9C25507107005B6102 /* RankingViewController.swift in Sources */,
+				159688D525A2D66F00E250DF /* GameContents.swift in Sources */,
 				153CC4F1254C7B2500252568 /* GameTopicViewController.swift in Sources */,
 				15AB9DF3254C3A390043D39D /* Check1ViewController_temp.swift in Sources */,
-				1527BCAF25937C1C0013A8AF /* LoginProccese.swift in Sources */,
 				77671E6B24E8CEB3009A1A4A /* Text2.swift in Sources */,
 				15E9A5852534C326008FFC1A /* AuthViewController.swift in Sources */,
 				1572F2C524816D1C004EB34D /* Calculate.swift in Sources */,
 				1582F3E52540922F00305D4D /* GameText.swift in Sources */,
-				15A3C6FF25921BB9004CB4D5 /* Text.swift in Sources */,
 				15C7BB29254EDF0400222DB3 /* gameTableViewCell.swift in Sources */,
-				15A3C6FB25921649004CB4D5 /* AlertText.swift in Sources */,
+				1589E5FA25A32A75005510BE /* Recode.swift in Sources */,
 				9399C4B52476585400F73CDD /* AppDelegate.swift in Sources */,
 				9399C4B72476585400F73CDD /* SceneDelegate.swift in Sources */,
 				15AB9DF4254C3A390043D39D /* Check2ViewController_temp.swift in Sources */,
@@ -402,9 +414,9 @@
 				7720FDF524E6C6BE007552B2 /* NewViewController.swift in Sources */,
 				158F26A4247FE0260046356C /* Jamo.swift in Sources */,
 				15AB9DF5254C3A390043D39D /* Check3ViewController_temp.swift in Sources */,
-				15290C022553C5D600E5955D /* SetViewController.swift in Sources */,
 				1527D0C5254BF99E004EBD34 /* CommunicateFirebase.swift in Sources */,
 				9399C4CD247660E500F73CDD /* ResultViewController.swift in Sources */,
+				159688CE25A2243100E250DF /* GameList.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -550,7 +562,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 84VBKW5JLN;
+				DEVELOPMENT_TEAM = 2C96RNDN63;
 				INFOPLIST_FILE = Project_Tadak/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -570,7 +582,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 84VBKW5JLN;
+				DEVELOPMENT_TEAM = 68JMS7YZ2S;
 				INFOPLIST_FILE = Project_Tadak/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (

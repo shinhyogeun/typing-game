@@ -9,31 +9,22 @@
 import UIKit
 
 class ResultViewController: UIViewController {
-
-    
     @IBOutlet weak var Label_title: UILabel!
     @IBOutlet weak var Label_secondResult: UILabel!
-    @IBOutlet weak var rankingLabel: UIButton!
     
-    var data: Double = 0.0
-    var gameTitle: String = ""
+    var data: Double = GameContents.time
+    var gameTitle: String = GameContents.name
     var gameInt: Int = 1
     
     override func viewDidLoad() {
         navigationController?.isNavigationBarHidden = true
         super.viewDidLoad()
-        
         Label_title.text = gameTitle
         if(data == -1) {
             Label_secondResult.text = "시간초과!"
-            rankingLabel.isHidden = true
-        }
-        else {
+        } else{
             Label_secondResult.text = String(format: "%.2f",data)
         }
-        
-
-        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -41,12 +32,12 @@ class ResultViewController: UIViewController {
         if segue.identifier == "reGame"{
             let secondVC = segue.destination as! MainViewController
             secondVC.gameData = MyVariables.completeGameArray
-            secondVC.gameTitle = MyVariables.gameName
+            secondVC.gameTitle.text = MyVariables.gameName
         }
         
         if segue.identifier == "goToRankingPage"{
             let secondVC = segue.destination as! RankingViewController
-            secondVC.score = Int(Label_secondResult.text!)
+            
         }
         
     }

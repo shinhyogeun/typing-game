@@ -10,62 +10,55 @@ import UIKit
 import Firebase
 
 class StartViewController: UIViewController {
-    
-    @IBOutlet weak var imageLogo: UIImageView!
-    @IBOutlet weak var mainTitle: UILabel!
-    @IBOutlet weak var subTitle: UILabel!
-    @IBOutlet weak var startButton: UIButton!
+
+    @IBOutlet weak var Image_logo: UIImageView!
+    @IBOutlet weak var Label_1: UILabel!
+    @IBOutlet weak var Label_2: UILabel!
+    @IBOutlet weak var Button_start: UIButton!
     
     override func viewDidLoad() {
-        
-        if Auth.auth().currentUser != nil {
-            return self.performSegue(withIdentifier: "startSegue", sender: nil)
+        if Login.isAlreadyIn() {
+            return goToMainPage()
         }
         
-        baseSetup()
-        fadeInAnimation()
-        tryLoginWhenStartButtonPressed()
+        animationSetup()
+        showLogoToUser()
     }
     
-    func baseSetup(){
-        startButton.alpha = 0
-        mainTitle.alpha = 0
-        subTitle.alpha = 0
-        startButton.alpha = 0
-        startButton.layer.cornerRadius = 15
-        self.imageLogo.transform = CGAffineTransform(translationX: 0, y: 110)
+    func animationSetup() -> Void {
+        self.Image_logo.transform = CGAffineTransform(translationX: 0, y: 110)
         navigationController?.isNavigationBarHidden = true
+        Button_start.layer.cornerRadius = 15
+        Label_1.alpha = 0
+        Label_2.alpha = 0
+        Button_start.alpha = 0
     }
     
-    func fadeInAnimation(){
+    func goToMainPage() -> Void {
+        self.performSegue(withIdentifier: "startSegue", sender: nil)
+    }
+    
+    func showLogoToUser() -> Void {
         UIView.animate(withDuration: 0.5, delay: 0.5, options: .curveEaseIn, animations: {
-            self.imageLogo.transform = CGAffineTransform(translationX: 0, y: 0)
+            self.Image_logo.transform = CGAffineTransform(translationX: 0, y: 0)
         }, completion: nil)
         
         UIView.animate(withDuration: 0.7, delay: 1.3, options: .curveEaseIn, animations: {
-            self.mainTitle.alpha = 1
+            self.Label_1.alpha = 1
         }, completion: nil)
         
         UIView.animate(withDuration: 0.7, delay: 1.8, options: .curveEaseIn, animations: {
-            self.subTitle.alpha = 1
+            self.Label_2.alpha = 1
         }, completion: nil)
         
         UIView.animate(withDuration: 0.7, delay: 3.0, options: .curveEaseIn, animations: {
-            self.startButton.alpha = 1
+            self.Button_start.alpha = 1
         }, completion: nil)
-    }
-    
-    private func tryLoginWhenStartButtonPressed(){
-        startButton.addTarget(self, action: #selector(self.goPhoneNumberInputPage(authButton:)), for: UIControl.Event.touchUpInside)
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-    }
-    
-    
-    @IBAction func goPhoneNumberInputPage(authButton: UIButton) {
-        self.performSegue(withIdentifier: "check1", sender: nil)
+        navigationController?.isNavigationBarHidden = true
     }
     
 }
