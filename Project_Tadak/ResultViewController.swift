@@ -12,7 +12,7 @@ class ResultViewController: UIViewController {
     @IBOutlet weak var Label_title: UILabel!
     @IBOutlet weak var Label_secondResult: UILabel!
     
-    var data: Double = GameContents.time
+    var recode: Double = GameContents.time
     var gameTitle: String = GameContents.name
     var gameInt: Int = 1
     
@@ -20,18 +20,19 @@ class ResultViewController: UIViewController {
         navigationController?.isNavigationBarHidden = true
         super.viewDidLoad()
         Label_title.text = gameTitle
-        if(data == -1) {
+        if recode == -1 {
             Label_secondResult.text = "시간초과!"
         } else{
-            Label_secondResult.text = String(format: "%.2f",data)
+            Label_secondResult.text = String(format: "%.2f", recode)
         }
+        GameContents.reset()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if segue.identifier == "reGame"{
             let secondVC = segue.destination as! MainViewController
-            secondVC.gameData = MyVariables.completeGameArray
+//            secondVC.gameData = MyVariables.completeGameArray
             secondVC.gameTitle.text = MyVariables.gameName
         }
         

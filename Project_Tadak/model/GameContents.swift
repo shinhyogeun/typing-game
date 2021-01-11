@@ -10,6 +10,7 @@ import Foundation
 import Firebase
 
 class GameContents {
+    
     static var name : String = "Empty"
     static var body : [String] = []
     static var time : Double = 00.00
@@ -51,11 +52,19 @@ class GameContents {
         self.body = []
     }
     
-    static func resetIndex () -> Void {
+    static func reset () -> Void {
+        self.name = "Empty"
+        self.body = []
         self.index = 0
+        self.time = 00.00
     }
     
     static func updateIndex () -> Void {
         self.index += 1
     }
+    
+    static func isTimeOver () -> Bool{
+        return time > 99.99
+    }
+    
 }

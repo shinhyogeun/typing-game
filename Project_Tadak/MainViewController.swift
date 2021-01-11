@@ -29,7 +29,7 @@ class MainViewController: UIViewController, UITextFieldDelegate {
     var isThisChangeOccuredFirstTime : Bool = true
     var endStatus : Bool = true
     var timeOver : Bool = false
-    var realTime : Timer = Timer()
+    var timer : Timer = Timer()
     var second : Double = 00.00
     var calculate : Calculate = Calculate.init()
     var miss : Int = 0
@@ -105,7 +105,8 @@ class MainViewController: UIViewController, UITextFieldDelegate {
     
     //첫 실행시 타이머 작동 메소드
     func startGame() {
-        realTime = Timer.scheduledTimer(timeInterval: 0.01, target: self, selector: #selector(updateCounter), userInfo: nil, repeats: true)
+        //타이머를 시작한다.
+        timer = Timer.scheduledTimer(timeInterval: 0.01, target: self, selector: #selector(updateCounter), userInfo: nil, repeats: true)
         isThisChangeOccuredFirstTime = false
         setTextFirst()
         UISetUp()
@@ -128,18 +129,16 @@ class MainViewController: UIViewController, UITextFieldDelegate {
     }
     
     @objc func updateCounter() {
-        if GameContents.time > 99.99 {
-            endGame()
-            timeOver = true
-            return
+        if GameContents.isTimeOver() {
+            return endGame()
         }
+        
         GameContents.updateTime()
         timeLabel.text = String(format: "%.2f",GameContents.time)
     }
     
     func showUpdatedContents() {
         //화면에 내용을 보이는 코드
-        print("GameContents.index", GameContents.index,"GameContents.body.count", GameContents.body.count)
         
         if(GameContents.index == 1) {
             setTextSecond()
@@ -240,15 +239,16 @@ class MainViewController: UIViewController, UITextFieldDelegate {
     }
     
     func endGame() {
-        realTime.invalidate()
+        timer.invalidate()
         inputTextField.isHidden = true
         endStatus = false
         
-        if(!timeOver) {
-            Recode.updateRecode()
-        } else {
+        if(GameContents.isTimeOver()) {
             GameContents.time = -1
+        } else {
+            Recode.updateRecode()
         }
+        
         self.view.endEditing(true)
         performSegue(withIdentifier: "endView", sender: self)
     }
