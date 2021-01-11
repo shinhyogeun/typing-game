@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		150DBD8125ACA0330031F87D /* RecodeCheckor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 150DBD8025ACA0330031F87D /* RecodeCheckor.swift */; };
+		150DBD8825ACA2850031F87D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 150DBD8725ACA2850031F87D /* User.swift */; };
 		1515F57E25A1FA0900442031 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1515F57D25A1FA0900442031 /* Login.swift */; };
 		1527D0C5254BF99E004EBD34 /* CommunicateFirebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1527D0C4254BF99E004EBD34 /* CommunicateFirebase.swift */; };
 		153CC4F1254C7B2500252568 /* GameTopicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 153CC4F0254C7B2500252568 /* GameTopicViewController.swift */; };
@@ -58,6 +60,8 @@
 
 /* Begin PBXFileReference section */
 		00D2ED0CE0BAFFD65AB37233 /* Pods-Project_Tadak.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Project_Tadak.release.xcconfig"; path = "Target Support Files/Pods-Project_Tadak/Pods-Project_Tadak.release.xcconfig"; sourceTree = "<group>"; };
+		150DBD8025ACA0330031F87D /* RecodeCheckor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecodeCheckor.swift; sourceTree = "<group>"; };
+		150DBD8725ACA2850031F87D /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		1515F57D25A1FA0900442031 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 		1527D0C4254BF99E004EBD34 /* CommunicateFirebase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunicateFirebase.swift; sourceTree = "<group>"; };
 		153CC4F0254C7B2500252568 /* GameTopicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameTopicViewController.swift; sourceTree = "<group>"; };
@@ -122,21 +126,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1515F57A25A1F9C800442031 /* viewModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = viewModel;
-			sourceTree = "<group>";
-		};
 		1515F57B25A1F9DF00442031 /* model */ = {
 			isa = PBXGroup;
 			children = (
 				1515F57D25A1FA0900442031 /* Login.swift */,
+				150DBD8725ACA2850031F87D /* User.swift */,
 				159688D125A233C200E250DF /* Logout.swift */,
 				159688CD25A2243100E250DF /* GameList.swift */,
 				159688D425A2D66F00E250DF /* GameContents.swift */,
 				1589E5F925A32A75005510BE /* Recode.swift */,
+				150DBD8025ACA0330031F87D /* RecodeCheckor.swift */,
 				1572F2C424816D1C004EB34D /* Calculate.swift */,
 			);
 			path = model;
@@ -208,7 +207,6 @@
 			children = (
 				1578D8F725A2E8940025395B /* components */,
 				1515F57B25A1F9DF00442031 /* model */,
-				1515F57A25A1F9C800442031 /* viewModel */,
 				933A64EB251B2F56003EA64A /* fonts */,
 				93790AE6247D5BFA0046349E /* img */,
 				9399C4BA2476585400F73CDD /* Main.storyboard */,
@@ -406,6 +404,7 @@
 				1582F3E52540922F00305D4D /* GameText.swift in Sources */,
 				15C7BB29254EDF0400222DB3 /* gameTableViewCell.swift in Sources */,
 				1589E5FA25A32A75005510BE /* Recode.swift in Sources */,
+				150DBD8825ACA2850031F87D /* User.swift in Sources */,
 				9399C4B52476585400F73CDD /* AppDelegate.swift in Sources */,
 				9399C4B72476585400F73CDD /* SceneDelegate.swift in Sources */,
 				15AB9DF4254C3A390043D39D /* Check2ViewController_temp.swift in Sources */,
@@ -417,6 +416,7 @@
 				1527D0C5254BF99E004EBD34 /* CommunicateFirebase.swift in Sources */,
 				9399C4CD247660E500F73CDD /* ResultViewController.swift in Sources */,
 				159688CE25A2243100E250DF /* GameList.swift in Sources */,
+				150DBD8125ACA0330031F87D /* RecodeCheckor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

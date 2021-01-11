@@ -9,7 +9,7 @@
 import Foundation
 import Firebase
 
-class GameContents {
+struct GameContents {
     
     static var name : String = "Empty"
     static var body : [String] = []

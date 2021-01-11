@@ -35,11 +35,17 @@ class GameTopicViewController: UIViewController {
             GameList.getGameListAndThen(pressedButtonText: koreaLabel.text!) {
                 self.performSegue(withIdentifier: "goToSelectionPage", sender: nil)
             }
-        }else if sender == englishButton {
+            return
+        }
+        
+        if sender == englishButton {
             GameList.getGameListAndThen(pressedButtonText: englishLabel.text!) {
                 self.performSegue(withIdentifier: "goToSelectionPage", sender: nil)
             }
-        }else if sender == extraButton{
+            return
+        }
+        
+        if sender == extraButton{
             GameList.getGameListAndThen(pressedButtonText: extraLabel.text!) {
                 self.performSegue(withIdentifier: "goToSelectionPage", sender: nil)
             }

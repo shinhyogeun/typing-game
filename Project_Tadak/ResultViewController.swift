@@ -12,33 +12,36 @@ class ResultViewController: UIViewController {
     @IBOutlet weak var Label_title: UILabel!
     @IBOutlet weak var Label_secondResult: UILabel!
     
-    var recode: Double = GameContents.time
-    var gameTitle: String = GameContents.name
-    var gameInt: Int = 1
-    
     override func viewDidLoad() {
         navigationController?.isNavigationBarHidden = true
         super.viewDidLoad()
-        Label_title.text = gameTitle
-        if recode == -1 {
+        showResult()
+    }
+    
+    func showResult () -> Void {
+        Label_title.text = GameContents.name
+        
+        if GameContents.time == -1 {
             Label_secondResult.text = "시간초과!"
         } else{
-            Label_secondResult.text = String(format: "%.2f", recode)
+            Label_secondResult.text = String(format: "%.2f", GameContents.time)
         }
-        GameContents.reset()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
         if segue.identifier == "reGame"{
+            GameContents.index = 0
+            GameContents.time = 00.00
             let secondVC = segue.destination as! MainViewController
-//            secondVC.gameData = MyVariables.completeGameArray
-            secondVC.gameTitle.text = MyVariables.gameName
         }
         
         if segue.identifier == "goToRankingPage"{
-            let secondVC = segue.destination as! RankingViewController
-            
+            let secondVC = segue.destination as! RankingViewController   
+        }
+        
+        if segue.identifier == "select" {
+            GameContents.reset()
+            let secondVC = segue.destination as! GameTopicViewController
         }
         
     }
@@ -49,5 +52,9 @@ class ResultViewController: UIViewController {
     
     @IBAction func rankingButtonPressed(_ sender: UIButton) {
         performSegue(withIdentifier: "goToRankingPage", sender: nil)
+    }
+    
+    @IBAction func selectButtonPressed(_ sender: UIButton) {
+        performSegue(withIdentifier: "select", sender: nil)
     }
 }

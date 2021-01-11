@@ -1,21 +1,22 @@
 //
-//  UpdateRecode.swift
+//  RecodeCheckor.swift
 //  Project_Tadak
 //
-//  Created by 신효근 on 2021/01/04.
+//  Created by 신효근 on 2021/01/12.
 //  Copyright © 2021 Tadak_Team. All rights reserved.
 //
 
 import Foundation
 import Firebase
 
-class Recode {
+class RecodeCheckor {
     private static var ref : DatabaseReference! = Database.database().reference()
     
     static func updateRecode(){
         // 넣을 재료들을 만든다.
         let formatter = DateFormatter()
         formatter.dateFormat = "yy-MM-dd HH:mm:ss"
+        let
         let whenRecodeIsMade = formatter.string(from: Date())
         let when = Firebase.ServerValue.timestamp()
         let recode = GameContents.time

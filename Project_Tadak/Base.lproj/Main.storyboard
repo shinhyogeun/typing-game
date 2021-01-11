@@ -2422,7 +2422,7 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
-                                            <segue destination="AVR-Eg-2pv" kind="show" identifier="select" id="Hrx-co-hdr"/>
+                                            <action selector="selectButtonPressed:" destination="Rhy-LK-xGJ" eventType="touchUpInside" id="iy7-3Y-LXU"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wu7-89-XG7">
@@ -2478,6 +2478,7 @@
                         <outlet property="Label_title" destination="tqK-VR-n68" id="7S0-ji-cR8"/>
                         <segue destination="b1U-rw-Nb7" kind="show" identifier="reGame" id="aik-Jg-IEL"/>
                         <segue destination="2ey-65-oci" kind="show" identifier="goToRankingPage" id="nd4-re-hGJ"/>
+                        <segue destination="AVR-Eg-2pv" kind="show" identifier="select" id="XiF-Kq-WE0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xcn-ri-uC8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -2838,9 +2839,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="pkm-Gv-7Fg"/>
         <segue reference="aik-Jg-IEL"/>
-        <segue reference="Hrx-co-hdr"/>
+        <segue reference="XiF-Kq-WE0"/>
         <segue reference="TP7-fe-4in"/>
         <segue reference="FZP-qW-N4G"/>
         <segue reference="cg0-z8-QPC"/>
