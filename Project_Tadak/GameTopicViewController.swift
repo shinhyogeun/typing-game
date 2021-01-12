@@ -21,13 +21,13 @@ class GameTopicViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationController?.isNavigationBarHidden = true
-        
+        navigationController?.isNavigationBarHidden = true        
     }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         navigationController?.isNavigationBarHidden = true
+        print(RecodeCheckor().makeRecodeArray())
     }
     
     @IBAction func topicButtonPressed(_ sender: UIButton) -> Void{
